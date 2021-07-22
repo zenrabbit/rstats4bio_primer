@@ -72,17 +72,20 @@ The final two weeks, that hackathon is a warm up to the test. Grab the dataset, 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.  
 
 ### Tidy data in R {-}  
-Tidiness is next to naturalness. We are wired up to see patterns and organize. Put that tendecy to good work in data and statistical critical thinking.  
+Tidiness is next to naturalness. We are wired up to see patterns and organize. Put that tendency to good work in data and statistical critical thinking.  
 
 #### Learning outcomes {-}  
 1. Consider data structures such as long versus wide.  
 2. Read in a dataset to the R enviroment.   
 3. Do a t-test.  
 
-#### Context {-}  
-Tidy data thinking was pioneered in the R world [@RN4416].  This philosphy to first considering the basic format of your data is transformational and profound. It beautifully connects to logic. Better yet, it sets you up for easier stats and plots in many environments including R.  
+#### Critical thinking {-}  
+Tidy data thinking was pioneered in the R world [@RN4416].  This philosophy to first considering the basic format of your data is transformational and profound. It beautifully connects to logic. Better yet, it sets you up for easier stats and plots in many environments including R.  
 
-#### Challenge {-}  
+#### Adventure time {-}  
+
+
+#### Reflection questions {-}  
 
 
 
