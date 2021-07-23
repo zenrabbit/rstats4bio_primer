@@ -15,14 +15,19 @@ Tidy data make your life easier. Data structures should match intuition and comm
 Literate coding [@RN4414] should capture a workflow that includes the wrangling you did to get your data ready. Literate code should be able to read by a human AND a machine. If data are already very clean in a spreadsheet, they can easily become a literate, logical dataframe. Nonetheless, you should still use annotation within the introductory code to explain the meta-data of your data to some extent and what you did pre-R to get it tidy. The philosophy here is very similar to the data viz lesson forthcoming that promotes critical thinking statistically through documented and described steps that are replicable and clear.  
 
 #### Adventure time {-}  
-Describe..
+Many years ago in a galaxy far, far away, a student sowed seeds in the desert at different densities for their PhD research. Here are the [data](https://figshare.com/articles/dataset/Density_experiment_in_Negev_Desert_Israel/669703), and here is the [publication](https://besjournals.onlinelibrary.wiley.com/doi/10.1046/j.1365-2745.2002.00686.x) too [@RN3094]. This student was not strong in the force, but it was a good adventure in beginning to understand the relative importance of significance biologically and statistically by exploring critical thinking.  
 
 ```{r include=TRUE, warning=FALSE, message=FALSE}
 library(tidyverse)
-simple_life <- read_csv(url("https://ndownloader.figshare.com/files/28920855"))
-simple_life
+density <- read_csv(url("https://ndownloader.figshare.com/files/28934310"))
+density
 
 ```
 
 #### Reflection questions {-}  
+1. What is the difference between a t-test and an ANOVA?  
+2. What is the difference between an ANOVA and GLM?  
+3. What are some of the ways that these simple data can be further analyzed?  
+4. When you explored annotation and describing your decisions and workflow for these data adventure, was it logical and clear to you if you ignored the R code?    
+
 

@@ -334,30 +334,31 @@ Literate coding \citep{RN4414} should capture a workflow that includes the wrang
 \subsubsection*{Adventure time}\label{adventure-time-1}}
 \addcontentsline{toc}{subsubsection}{Adventure time}
 
-Describe..
+Many years ago in a galaxy far, far away, a student sowed seeds in the desert at different densities for their PhD research. Here are the \href{https://figshare.com/articles/dataset/Density_experiment_in_Negev_Desert_Israel/669703}{data}, and here is the \href{https://besjournals.onlinelibrary.wiley.com/doi/10.1046/j.1365-2745.2002.00686.x}{publication} too \citep{RN3094}. This student was not strong in the force, but it was a good adventure in beginning to understand the relative importance of significance biologically and statistically by exploring critical thinking.
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \FunctionTok{library}\NormalTok{(tidyverse)}
-\NormalTok{simple\_life }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\FunctionTok{url}\NormalTok{(}\StringTok{"https://ndownloader.figshare.com/files/28920855"}\NormalTok{))}
-\NormalTok{simple\_life}
+\NormalTok{density }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\FunctionTok{url}\NormalTok{(}\StringTok{"https://ndownloader.figshare.com/files/28934310"}\NormalTok{))}
+\NormalTok{density}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 9 x 7
-##   simple_date steps_fitbit sleep_fitbit    hr steps_watch sleep_watch
-##   <date>             <dbl>        <dbl> <dbl>       <dbl>       <dbl>
-## 1 2021-06-02         20913          429    54       25197         314
-## 2 2021-06-03          6904          447    53       13042         302
-## 3 2021-06-04         19548          449    56       23285         413
-## 4 2021-06-05         19311          423    56       25832         355
-## 5 2021-06-06         26159          435    58       29533         385
-## 6 2021-06-07         21618          358    56       27796         240
-## 7 2021-06-08         20890          492    53       24360         434
-## 8 2021-06-09         12008          541    53       14517         399
-## 9 2021-06-10         18058          436    57       22392         403
-## # ... with 1 more variable: meditation_mins <dbl>
+## # A tibble: 152 x 6
+##     year transect seed_density_pe~ final_plant_den~ survivorship mean_plant_size
+##    <dbl>    <dbl>            <dbl>            <dbl>        <dbl>           <dbl>
+##  1  1998        1           0.0625               41        0.461           0.554
+##  2  1998        1           0.0625               47        0.712           0.356
+##  3  1998        1           0.0625               60        0.698           0.301
+##  4  1998        1           0.25                 31        0.525           0.808
+##  5  1998        1           0.25                 50        0.505           0.212
+##  6  1998        1           0.25                 58        0.563           0.148
+##  7  1998        1           1                    30        0.273           0.578
+##  8  1998        1           1                    42        0.243           1.28 
+##  9  1998        1           1                    73        0.619           0.719
+## 10  1998        1           2                    46        0.263           0.652
+## # ... with 142 more rows
 \end{verbatim}
 
 \hypertarget{reflection-questions-1}{%
