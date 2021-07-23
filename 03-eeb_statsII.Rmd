@@ -1,1 +1,41 @@
-# Stats used in eeb II {#eebII}
+# Stats used in eeb II {#eebII}  
+
+![](./eebII.png){width=3in}   
+
+There is much counting in ecology & evolutionary biology (eeb). We count individuals, species, populations, interactions, and then map out diversity and distributions to infer process. Many disciplines use similar logic in the structure of their evidence and experimental design with statistics.    
+
+#### Learning outcomes {-}  
+1. Practice your critical workflow for data and statistics that is replicable and literate.  
+2. Appreciate the value of generalized statistical models that connect to one another conceptually.   
+3. Do a GLM.  
+
+#### Critical thinking {-}  
+Exploratory data analyses is everything we have done. This is a primary approach to better understanding your evidence without introducing bias. Transparency is key.  
+
+Workflow we have developed but that you nuance based on your cognitive and critical thinking style and strengths.  
+
+a. Tidy data.  
+b. Inspect data structure.  
+c. Data viz.  
+d. Basic exploratory data analyses.  
+
+However, now that we are ready to apply models, we add in one more tiny step. Continue to visualize the data to better understand its typology and underlying distribution. Then, you are ready to fit your models. Exploratory data analyses is an intermediate step to this end. EDA includes testing assumptions in the data, fitting basic models that ignore covariates, fitting relevant and logical models to explore the data, training your data, and exploring sensitivity [@RN1755]. This process builds a viable path for further inquiry, and it is a model builder that is predicated upon critital thinking to ensure you inference (deduction, induction) is aligned with your evidence [@RN6096].  
+
+A statistical model is an elegant, representative simplification of the patterns you have identified through data viz and EDA [@RN6911]. It is a formal mathematical relationship between factors of interest. It should capture data/experimental structure including the key variables, appropriate levels, and relevant covariation or contexts that mediate outcomes. It should support the data viz. It should provide an estimate of the statistical likelihood or probability of differences. Ideally, the underlying coefficients should also be mined to convey an estimate of effect sizes. A t.test, chi.square test, regression/linear model, general linear model, or generalized linear mixed model are all examples of models that describe and summarize patterns and each have associated assumptions about the data they embody. Hence, the final step pre-model fit, is explore distributions.
+
+Conceptually, there are two kind of models. Those that look back and those that look forward. Think tardis or time machine. A model is always a snapshot using your time machine. It can be a grab of what happened or a future snap of what you predict. In R, there is simple code to time travel in either direction. Actually, there is no time - Arrow of time - only an observer potential perception of it. Statistical models are our observers here. These observers use ‘probability distributions’ as we described in the first week sensu statistical thinking to calibrate what the think critically when  observed or will observe given the evidence at hand. Here are two super resources to further support this in a proximate sense that align with critical thinking. [Choosing the correct statistical test made easy](https://med.cmb.ac.lk/SMJ/VOLUME%203%20DOWNLOADS/Page%2033-37%20-%20Choosing%20the%20correct%20statistical%20test%20made%20easy.pdf) [@RN7257], and a [flowchart](./flowchart.jpg) for selecting commonly used statistics developed by Bates College.   
+
+#### Adventure time {-}  
+Here is an impressive [dataset](https://knb.ecoinformatics.org/view/doi%3A10.5063%2F6M357V) describing bird counts in Toronto. These data were collected by York University undergraduates in an experimental design course. Explore whether there is a bias in detection by behaviour and identify the most common species by location in Toronto - at least as estimated using these data. For your curiosity, here are data collected in another larger citizen science endeavour - The [Christmas Bird Count for Southern Ontario region centered around the Greater Toronto Area](https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1RF5SDJ). If you wish to adventure further afield, contrast the two datasets.          
+
+```{r include=TRUE, warning=FALSE, message=FALSE}
+library(tidyverse)
+birds <- read_csv(url("https://knb.ecoinformatics.org/knb/d1/mn/v2/object/urn%3Auuid%3Aa84a9673-878a-4c43-ba08-570b2d38bdc9"))
+birds
+
+```
+
+#### Reflection questions {-}  
+1. When do you move from EDA to model fitting?  
+2. Are there ways to mitigate bias and [p-hacking](https://www.wired.com/story/were-all-p-hacking-now/) through formal workflows?  
+3. Did building a model such as GLM align with critical thinking and intuition, i.e from critical thinking was it accurate and fair? Did the EDA-to-model process legitimately represent the patterns in the observations recorded. 

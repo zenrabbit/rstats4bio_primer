@@ -197,7 +197,54 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="hackathon" class="section level1" number="5">
 <h1><span class="header-section-number">Chapter 5</span> Hackathon</h1>
+<p><img src="hackathon.png" style="width:3in" /></p>
+<p>All models are wrong but some are useful <span class="citation">(<a href="references.html#ref-RN6467" role="doc-biblioref">Stouffer 2019</a>; <a href="references.html#ref-RN7258" role="doc-biblioref">Box 1976</a>)</span>. Critical thinking with statistics is thus critical to ensure that we best support evidence informed decision making in society <span class="citation">(<a href="references.html#ref-RN6861" role="doc-biblioref">Lortie and Owen 2020</a>; <a href="references.html#ref-RN7180" role="doc-biblioref">Neelen and Kirschner 2020</a>)</span>.</p>
+<div id="learning-outcomes-5" class="section level4 unnumbered">
+<h4>Learning outcomes</h4>
+<ol style="list-style-type: decimal">
+<li>Appreciate the challenge of working with data to apply a critical design mindset to statistical solutions.<br />
+</li>
+<li>Practice your workflow and literate coding.<br />
+</li>
+<li>Refine your thinking and coding for efficiency.</li>
+</ol>
+</div>
+<div id="critical-thinking-4" class="section level4 unnumbered">
+<h4>Critical thinking</h4>
+<p><a href="https://en.wikipedia.org/wiki/Efficiency_(statistics)">Efficiency</a> is a fascinating topic in statistics <span class="citation">(<a href="references.html#ref-RN7261" role="doc-biblioref">Craycraft 1999</a>; <a href="references.html#ref-RN7260" role="doc-biblioref">Kenett, Coleman, and Stewardson 2003</a>; <a href="references.html#ref-RN7259" role="doc-biblioref">Norman 2003</a>)</span>. Here, we can simplify this using the critical thinking criteria we have extensively refined and applied to numerous, tidy challenges. Efficiency = sufficiency (provided it is logical, fair, and accurate). Your plots and statistical models should represent a reasonable and likely description of the data at hand. This section is a formative opportunity for you to evaluate your skills and strengths in logic, efficiency, fair adventuring, workflows, and literate coding prior to the final section - a test. You are provided with a general dataset(s). The adventure is solve a very generalized challenge that is embodied in the evidence.</p>
+</div>
+<div id="adventure-time-4" class="section level4 unnumbered">
+<h4>Adventure time</h4>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="hackathon.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="hackathon.html#cb1-2" aria-hidden="true" tabindex="-1"></a>birds <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">url</span>(<span class="st">&quot;https://knb.ecoinformatics.org/knb/d1/mn/v2/object/urn%3Auuid%3Aa84a9673-878a-4c43-ba08-570b2d38bdc9&quot;</span>))</span>
+<span id="cb1-3"><a href="hackathon.html#cb1-3" aria-hidden="true" tabindex="-1"></a>birds</span></code></pre></div>
+<pre><code>## # A tibble: 826 x 11
+##     year experiment   source   rep date   location  species  frequency behaviour
+##    &lt;dbl&gt; &lt;chr&gt;        &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;        &lt;dbl&gt; &lt;chr&gt;    
+##  1  2020 balcony bir… full       1 10/13… Holditch… Agelaiu…         3 flying   
+##  2  2020 balcony bir… full       1 10/13… Holditch… Agelaiu…         4 flying   
+##  3  2020 balcony bir… full       1 10/13… Holditch… Agelaiu…         1 perching 
+##  4  2020 balcony bir… full       1 10/16… High Park Aix spi…         4 swimming 
+##  5  2020 balcony bir… full       1 10/9/… Vaughan   Anas pl…         4 flying   
+##  6  2020 balcony bir… full       1 10/9/… Vaughan   Anas pl…         6 flying   
+##  7  2020 balcony bir… full       1 10/9/… Vaughan   Anas pl…         9 flying   
+##  8  2020 balcony bir… full       1 10/9/… Vaughan   Anas pl…        10 flying   
+##  9  2020 balcony bir… full       1 10/9/… Vaughan   Anas pl…         2 inactive 
+## 10  2020 balcony bir… full       1 10/9/… Vaughan   Anas pl…         2 inactive 
+## # … with 816 more rows, and 2 more variables: inititals &lt;chr&gt;,
+## #   citation_DOI &lt;chr&gt;</code></pre>
+</div>
+<div id="reflection-questions-4" class="section level4 unnumbered">
+<h4>Reflection questions</h4>
+<ol style="list-style-type: decimal">
+<li>When do you move from EDA to model fitting?<br />
+</li>
+<li>Are there ways to mitigate bias and <a href="https://www.wired.com/story/were-all-p-hacking-now/">p-hacking</a> through formal workflows?<br />
+</li>
+<li>Did building a model such as GLM align with critical thinking and intuition, i.e from critical thinking was it accurate and fair? Did the EDA-to-model process legitimately represent the patterns in the observations recorded.</li>
+</ol>
 
+</div>
 </div>
             </section>
 

@@ -15,7 +15,7 @@ Clean simple graphics are powerful tools in statistics (and in scientific commun
 Evolution of plotting in statistics using R in particular went from base-R then onto lattice then to the ggvis universe with the most recent library being ggplot [@RN4413]. Base-R is certainly useful in some contexts as is the lattice and lattice extra library. However, ggplot now encompasses all these capacities with a much simpler set of grammar (i.e. rules and order). Nonetheless, you should be able to read base-R code for plots and be able to do some as well. The philosophy or grammar of modern graphics is well articulated and includes the following key principles. The grammar of graphics layers primacy of ideas (simple first, then more complex) i.e. you build up your plots data are mapped to aesthetic attributes and geometric objects data first then statistics even in plots [@RN7255]. This directly supports critical thinking statistically because it promotes depth (literally), precision, and also accuracy in the decisions you make to show your evidence.   
 
 #### Adventure time {-}  
-Here are a deeper set of quanitified life [data](https://figshare.com/articles/dataset/Quantified_life/12803105). Explore whether movement predicts total sleep or its efficiency. Plot out some patterns first, then, do a regression.      
+Here are a deeper set of quantified life [data](https://figshare.com/articles/dataset/Quantified_life/12803105). Explore whether movement predicts total sleep or its efficiency. Plot out some patterns first, then, do a regression.      
 
 ```{r include=TRUE, warning=FALSE, message=FALSE}
 library(tidyverse)

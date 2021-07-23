@@ -1,1 +1,28 @@
 # Hackathon {#hackathon}
+
+![](./hackathon.png){width=3in}   
+
+All models are wrong but some are useful [@RN6467; @RN7258]. Critical thinking with statistics is thus critical to ensure that we best support evidence informed decision making in society [@RN6861; @RN7180].    
+
+#### Learning outcomes {-}  
+1. Appreciate the challenge of working with data to apply a critical design mindset to statistical solutions.  
+2. Practice your workflow and literate coding.   
+3. Refine your thinking and coding for efficiency.    
+
+#### Critical thinking {-}  
+[Efficiency](https://en.wikipedia.org/wiki/Efficiency_(statistics)) is a fascinating topic in statistics [@RN7261; @RN7260; @RN7259]. Here, we can simplify this using the critical thinking criteria we have extensively refined and applied to numerous, tidy challenges. Efficiency = sufficiency (provided it is logical, fair, and accurate). Your plots and statistical models should represent a reasonable and likely description of the data at hand. This section is a formative opportunity for you to evaluate your skills and strengths in logic, efficiency, fair adventuring, workflows, and literate coding prior to the final section - a test. You are provided with a general dataset(s). The adventure is solve a very generalized challenge that is embodied in the evidence.    
+
+#### Adventure time {-}  
+
+
+```{r include=TRUE, warning=FALSE, message=FALSE}
+library(tidyverse)
+birds <- read_csv(url("https://knb.ecoinformatics.org/knb/d1/mn/v2/object/urn%3Auuid%3Aa84a9673-878a-4c43-ba08-570b2d38bdc9"))
+birds
+
+```
+
+#### Reflection questions {-}  
+1. When do you move from EDA to model fitting?  
+2. Are there ways to mitigate bias and [p-hacking](https://www.wired.com/story/were-all-p-hacking-now/) through formal workflows?  
+3. Did building a model such as GLM align with critical thinking and intuition, i.e from critical thinking was it accurate and fair? Did the EDA-to-model process legitimately represent the patterns in the observations recorded. 

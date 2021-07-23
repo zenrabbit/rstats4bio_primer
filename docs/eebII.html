@@ -197,7 +197,68 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="eebII" class="section level1" number="4">
 <h1><span class="header-section-number">Chapter 4</span> Stats used in eeb II</h1>
+<p><img src="eebII.png" style="width:3in" /></p>
+<p>There is much counting in ecology &amp; evolutionary biology (eeb). We count individuals, species, populations, interactions, and then map out diversity and distributions to infer process. Many disciplines use similar logic in the structure of their evidence and experimental design with statistics.</p>
+<div id="learning-outcomes-4" class="section level4 unnumbered">
+<h4>Learning outcomes</h4>
+<ol style="list-style-type: decimal">
+<li>Practice your critical workflow for data and statistics that is replicable and literate.<br />
+</li>
+<li>Appreciate the value of generalized statistical models that connect to one another conceptually.<br />
+</li>
+<li>Do a GLM.</li>
+</ol>
+</div>
+<div id="critical-thinking-3" class="section level4 unnumbered">
+<h4>Critical thinking</h4>
+<p>Exploratory data analyses is everything we have done. This is a primary approach to better understanding your evidence without introducing bias. Transparency is key.</p>
+<p>Workflow we have developed but that you nuance based on your cognitive and critical thinking style and strengths.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Tidy data.<br />
+</li>
+<li>Inspect data structure.<br />
+</li>
+<li>Data viz.<br />
+</li>
+<li>Basic exploratory data analyses.</li>
+</ol>
+<p>However, now that we are ready to apply models, we add in one more tiny step. Continue to visualize the data to better understand its typology and underlying distribution. Then, you are ready to fit your models. Exploratory data analyses is an intermediate step to this end. EDA includes testing assumptions in the data, fitting basic models that ignore covariates, fitting relevant and logical models to explore the data, training your data, and exploring sensitivity <span class="citation">(<a href="references.html#ref-RN1755" role="doc-biblioref">Ellison 2001</a>)</span>. This process builds a viable path for further inquiry, and it is a model builder that is predicated upon critital thinking to ensure you inference (deduction, induction) is aligned with your evidence <span class="citation">(<a href="references.html#ref-RN6096" role="doc-biblioref">Yu 1994</a>)</span>.</p>
+<p>A statistical model is an elegant, representative simplification of the patterns you have identified through data viz and EDA <span class="citation">(<a href="references.html#ref-RN6911" role="doc-biblioref">Mengersen et al. 2013</a>)</span>. It is a formal mathematical relationship between factors of interest. It should capture data/experimental structure including the key variables, appropriate levels, and relevant covariation or contexts that mediate outcomes. It should support the data viz. It should provide an estimate of the statistical likelihood or probability of differences. Ideally, the underlying coefficients should also be mined to convey an estimate of effect sizes. A t.test, chi.square test, regression/linear model, general linear model, or generalized linear mixed model are all examples of models that describe and summarize patterns and each have associated assumptions about the data they embody. Hence, the final step pre-model fit, is explore distributions.</p>
+<p>Conceptually, there are two kind of models. Those that look back and those that look forward. Think tardis or time machine. A model is always a snapshot using your time machine. It can be a grab of what happened or a future snap of what you predict. In R, there is simple code to time travel in either direction. Actually, there is no time - Arrow of time - only an observer potential perception of it. Statistical models are our observers here. These observers use ‘probability distributions’ as we described in the first week sensu statistical thinking to calibrate what the think critically when observed or will observe given the evidence at hand. Here are two super resources to further support this in a proximate sense that align with critical thinking. <a href="https://med.cmb.ac.lk/SMJ/VOLUME%203%20DOWNLOADS/Page%2033-37%20-%20Choosing%20the%20correct%20statistical%20test%20made%20easy.pdf">Choosing the correct statistical test made easy</a> <span class="citation">(<a href="references.html#ref-RN7257" role="doc-biblioref">Gunawardana 2004</a>)</span>, and a <a href="./flowchart.jpg">flowchart</a> for selecting commonly used statistics developed by Bates College.</p>
+</div>
+<div id="adventure-time-3" class="section level4 unnumbered">
+<h4>Adventure time</h4>
+<p>Here is an impressive <a href="https://knb.ecoinformatics.org/view/doi%3A10.5063%2F6M357V">dataset</a> describing bird counts in Toronto. These data were collected by York University undergraduates in an experimental design course. Explore whether there is a bias in detection by behaviour and identify the most common species by location in Toronto - at least as estimated using these data. For your curiosity, here are data collected in another larger citizen science endeavour - The <a href="https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1RF5SDJ">Christmas Bird Count for Southern Ontario region centered around the Greater Toronto Area</a>. If you wish to adventure further afield, contrast the two datasets.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="eebII.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb7-2"><a href="eebII.html#cb7-2" aria-hidden="true" tabindex="-1"></a>birds <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">url</span>(<span class="st">&quot;https://knb.ecoinformatics.org/knb/d1/mn/v2/object/urn%3Auuid%3Aa84a9673-878a-4c43-ba08-570b2d38bdc9&quot;</span>))</span>
+<span id="cb7-3"><a href="eebII.html#cb7-3" aria-hidden="true" tabindex="-1"></a>birds</span></code></pre></div>
+<pre><code>## # A tibble: 826 x 11
+##     year experiment   source   rep date   location  species  frequency behaviour
+##    &lt;dbl&gt; &lt;chr&gt;        &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;        &lt;dbl&gt; &lt;chr&gt;    
+##  1  2020 balcony bir… full       1 10/13… Holditch… Agelaiu…         3 flying   
+##  2  2020 balcony bir… full       1 10/13… Holditch… Agelaiu…         4 flying   
+##  3  2020 balcony bir… full       1 10/13… Holditch… Agelaiu…         1 perching 
+##  4  2020 balcony bir… full       1 10/16… High Park Aix spi…         4 swimming 
+##  5  2020 balcony bir… full       1 10/9/… Vaughan   Anas pl…         4 flying   
+##  6  2020 balcony bir… full       1 10/9/… Vaughan   Anas pl…         6 flying   
+##  7  2020 balcony bir… full       1 10/9/… Vaughan   Anas pl…         9 flying   
+##  8  2020 balcony bir… full       1 10/9/… Vaughan   Anas pl…        10 flying   
+##  9  2020 balcony bir… full       1 10/9/… Vaughan   Anas pl…         2 inactive 
+## 10  2020 balcony bir… full       1 10/9/… Vaughan   Anas pl…         2 inactive 
+## # … with 816 more rows, and 2 more variables: inititals &lt;chr&gt;,
+## #   citation_DOI &lt;chr&gt;</code></pre>
+</div>
+<div id="reflection-questions-3" class="section level4 unnumbered">
+<h4>Reflection questions</h4>
+<ol style="list-style-type: decimal">
+<li>When do you move from EDA to model fitting?<br />
+</li>
+<li>Are there ways to mitigate bias and <a href="https://www.wired.com/story/were-all-p-hacking-now/">p-hacking</a> through formal workflows?<br />
+</li>
+<li>Did building a model such as GLM align with critical thinking and intuition, i.e from critical thinking was it accurate and fair? Did the EDA-to-model process legitimately represent the patterns in the observations recorded.</li>
+</ol>
 
+</div>
 </div>
             </section>
 
