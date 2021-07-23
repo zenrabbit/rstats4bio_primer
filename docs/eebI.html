@@ -197,7 +197,55 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="eebI" class="section level1" number="3">
 <h1><span class="header-section-number">Chapter 3</span> Stats used in eeb I</h1>
+<p><img src="eebI.png" style="width:3in" /></p>
+<p>Many approaches and critical thinking heuristics in ecology &amp; evolutionary biology (eeb) are relevant to other disciplines.</p>
+<div id="learning-outcomes-3" class="section level4 unnumbered">
+<h4>Learning outcomes</h4>
+<ol style="list-style-type: decimal">
+<li>Develop your data viz skills.<br />
+</li>
+<li>Hone your critical thinking statistically by iterative plotting-modeling a dataset.<br />
+</li>
+<li>Do a regression analysis.</li>
+</ol>
+</div>
+<div id="critical-thinking-2" class="section level4 unnumbered">
+<h4>Critical thinking</h4>
+<p>Clean simple graphics are powerful tools in statistics (and in scientific communication). <a href="https://www.edwardtufte.com/tufte/">Tufte</a> <span class="citation">(<a href="references.html#ref-RN2096" role="doc-biblioref">Tufte 2006</a>)</span> and others have shaped data scientists and statisticians in developing more libraries, new standards, and assumptions associated with graphical representations of data. Data viz must highlight the differences, show underlying data structures, and provide insights into the specific research project. R is infinitely customizable in all these respects. There are at least two major current paradigms (there are more these are the two dominant idea sets). Base R plots are simple, relatively flexible, and very easy. However, their grammar, i.e their rules of coding are not modern. Ggplot and related libraries invoke a new, formal grammar of graphics <span class="citation">(<a href="references.html#ref-RN7256" role="doc-biblioref">Leland 2005</a>)</span> that is more logical, more flexible, but divergent from base R code. It is worth the time to understand the differences and know when to use each.</p>
+<p>Evolution of plotting in statistics using R in particular went from base-R then onto lattice then to the ggvis universe with the most recent library being ggplot <span class="citation">(<a href="references.html#ref-RN4413" role="doc-biblioref">Wickham 2016</a>)</span>. Base-R is certainly useful in some contexts as is the lattice and lattice extra library. However, ggplot now encompasses all these capacities with a much simpler set of grammar (i.e. rules and order). Nonetheless, you should be able to read base-R code for plots and be able to do some as well. The philosophy or grammar of modern graphics is well articulated and includes the following key principles. The grammar of graphics layers primacy of ideas (simple first, then more complex) i.e. you build up your plots data are mapped to aesthetic attributes and geometric objects data first then statistics even in plots <span class="citation">(<a href="references.html#ref-RN7255" role="doc-biblioref">Wickham 2010</a>)</span>. This directly supports critical thinking statistically because it promotes depth (literally), precision, and also accuracy in the decisions you make to show your evidence.</p>
+</div>
+<div id="adventure-time-2" class="section level4 unnumbered">
+<h4>Adventure time</h4>
+<p>Here are a deeper set of quanitified life <a href="https://figshare.com/articles/dataset/Quantified_life/12803105">data</a>. Explore whether movement predicts total sleep or its efficiency. Plot out some patterns first, then, do a regression.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="eebI.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb5-2"><a href="eebI.html#cb5-2" aria-hidden="true" tabindex="-1"></a>life <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">url</span>(<span class="st">&quot;https://ndownloader.figshare.com/files/28920729&quot;</span>))</span>
+<span id="cb5-3"><a href="eebI.html#cb5-3" aria-hidden="true" tabindex="-1"></a>life</span></code></pre></div>
+<pre><code>## # A tibble: 4,561 x 7
+##    simple_date  year steps mins_asleep efficiency lagged_sleep lagged_efficiency
+##    &lt;date&gt;      &lt;dbl&gt; &lt;dbl&gt;       &lt;dbl&gt;      &lt;dbl&gt;        &lt;dbl&gt;             &lt;dbl&gt;
+##  1 2011-01-25   2011 13900         481         96          504                99
+##  2 2011-01-26   2011 19229         478         96          481                96
+##  3 2011-01-27   2011 13103         474         96          478                96
+##  4 2011-01-28   2011  7374         491         96          474                96
+##  5 2011-01-29   2011 19132         436         96          491                96
+##  6 2011-01-30   2011 17157         447         98          436                96
+##  7 2011-01-31   2011 19759         456         99          447                98
+##  8 2011-02-01   2011 18157         455         98          456                99
+##  9 2011-02-02   2011  8768         465         97          455                98
+## 10 2011-02-03   2011  9150         411         98          465                97
+## # … with 4,551 more rows</code></pre>
+</div>
+<div id="reflection-questions-2" class="section level4 unnumbered">
+<h4>Reflection questions</h4>
+<ol style="list-style-type: decimal">
+<li>When do you use regression versus correlation?<br />
+</li>
+<li>How could you incorporate time into your plots or statistical models?<br />
+</li>
+<li>Did the visualization highlight some of the criteria associated with critical thinking statistically more than others?</li>
+</ol>
 
+</div>
 </div>
             </section>
 

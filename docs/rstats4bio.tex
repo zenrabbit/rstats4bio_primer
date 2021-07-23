@@ -334,7 +334,7 @@ Literate coding \citep{RN4414} should capture a workflow that includes the wrang
 \subsubsection*{Adventure time}\label{adventure-time-1}}
 \addcontentsline{toc}{subsubsection}{Adventure time}
 
-Many years ago in a galaxy far, far away, a student sowed seeds in the desert at different densities for their PhD research. Here are the \href{https://figshare.com/articles/dataset/Density_experiment_in_Negev_Desert_Israel/669703}{data}, and here is the \href{https://besjournals.onlinelibrary.wiley.com/doi/10.1046/j.1365-2745.2002.00686.x}{publication} too \citep{RN3094}. This student was not strong in the force, but it was a good adventure in beginning to understand the relative importance of significance biologically and statistically by exploring critical thinking.
+Many years ago in a galaxy far, far away, a student sowed seeds in the desert at different densities for their PhD research. Here are the \href{https://figshare.com/articles/dataset/Density_experiment_in_Negev_Desert_Israel/669703}{data}, and here is the \href{https://besjournals.onlinelibrary.wiley.com/doi/10.1046/j.1365-2745.2002.00686.x}{publication} too \citep{RN3094}. This student was not strong in the force, but it was a good adventure in beginning to understand the relative importance of significance biologically and statistically by exploring critical thinking. For your adventure, test whether a set of groups differ from one another. For instance, test whether transects, or years, or even the density of seeds planted differs in an outcome measure such as mean plant size.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -365,8 +365,94 @@ Many years ago in a galaxy far, far away, a student sowed seeds in the desert at
 \subsubsection*{Reflection questions}\label{reflection-questions-1}}
 \addcontentsline{toc}{subsubsection}{Reflection questions}
 
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  What is the difference between a t-test and an ANOVA?\\
+\item
+  What is the difference between an ANOVA and GLM?\\
+\item
+  What are some of the ways that these simple data can be further analyzed?\\
+\item
+  When you explored annotation and describing your decisions and workflow for these data adventure, was it logical and clear to you if you ignored the R code?
+\end{enumerate}
+
 \hypertarget{eebI}{%
 \chapter{Stats used in eeb I}\label{eebI}}
+
+\includegraphics[width=3in,height=\textheight]{./eebI.png}
+
+Many approaches and critical thinking heuristics in ecology \& evolutionary biology (eeb) are relevant to other disciplines.
+
+\hypertarget{learning-outcomes-3}{%
+\subsubsection*{Learning outcomes}\label{learning-outcomes-3}}
+\addcontentsline{toc}{subsubsection}{Learning outcomes}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Develop your data viz skills.\\
+\item
+  Hone your critical thinking statistically by iterative plotting-modeling a dataset.\\
+\item
+  Do a regression analysis.
+\end{enumerate}
+
+\hypertarget{critical-thinking-2}{%
+\subsubsection*{Critical thinking}\label{critical-thinking-2}}
+\addcontentsline{toc}{subsubsection}{Critical thinking}
+
+Clean simple graphics are powerful tools in statistics (and in scientific communication). \href{https://www.edwardtufte.com/tufte/}{Tufte} \citep{RN2096} and others have shaped data scientists and statisticians in developing more libraries, new standards, and assumptions associated with graphical representations of data. Data viz must highlight the differences, show underlying data structures, and provide insights into the specific research project. R is infinitely customizable in all these respects. There are at least two major current paradigms (there are more these are the two dominant idea sets). Base R plots are simple, relatively flexible, and very easy. However, their grammar, i.e their rules of coding are not modern. Ggplot and related libraries invoke a new, formal grammar of graphics \citep{RN7256} that is more logical, more flexible, but divergent from base R code. It is worth the time to understand the differences and know when to use each.
+
+Evolution of plotting in statistics using R in particular went from base-R then onto lattice then to the ggvis universe with the most recent library being ggplot \citep{RN4413}. Base-R is certainly useful in some contexts as is the lattice and lattice extra library. However, ggplot now encompasses all these capacities with a much simpler set of grammar (i.e.~rules and order). Nonetheless, you should be able to read base-R code for plots and be able to do some as well. The philosophy or grammar of modern graphics is well articulated and includes the following key principles. The grammar of graphics layers primacy of ideas (simple first, then more complex) i.e.~you build up your plots data are mapped to aesthetic attributes and geometric objects data first then statistics even in plots \citep{RN7255}. This directly supports critical thinking statistically because it promotes depth (literally), precision, and also accuracy in the decisions you make to show your evidence.
+
+\hypertarget{adventure-time-2}{%
+\subsubsection*{Adventure time}\label{adventure-time-2}}
+\addcontentsline{toc}{subsubsection}{Adventure time}
+
+Here are a deeper set of quanitified life \href{https://figshare.com/articles/dataset/Quantified_life/12803105}{data}. Explore whether movement predicts total sleep or its efficiency. Plot out some patterns first, then, do a regression.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\NormalTok{life }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\FunctionTok{url}\NormalTok{(}\StringTok{"https://ndownloader.figshare.com/files/28920729"}\NormalTok{))}
+\NormalTok{life}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 4,561 x 7
+##    simple_date  year steps mins_asleep efficiency lagged_sleep lagged_efficiency
+##    <date>      <dbl> <dbl>       <dbl>      <dbl>        <dbl>             <dbl>
+##  1 2011-01-25   2011 13900         481         96          504                99
+##  2 2011-01-26   2011 19229         478         96          481                96
+##  3 2011-01-27   2011 13103         474         96          478                96
+##  4 2011-01-28   2011  7374         491         96          474                96
+##  5 2011-01-29   2011 19132         436         96          491                96
+##  6 2011-01-30   2011 17157         447         98          436                96
+##  7 2011-01-31   2011 19759         456         99          447                98
+##  8 2011-02-01   2011 18157         455         98          456                99
+##  9 2011-02-02   2011  8768         465         97          455                98
+## 10 2011-02-03   2011  9150         411         98          465                97
+## # ... with 4,551 more rows
+\end{verbatim}
+
+\hypertarget{reflection-questions-2}{%
+\subsubsection*{Reflection questions}\label{reflection-questions-2}}
+\addcontentsline{toc}{subsubsection}{Reflection questions}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  When do you use regression versus correlation?\\
+\item
+  How could you incorporate time into your plots or statistical models?\\
+\item
+  Did the visualization highlight some of the criteria associated with critical thinking statistically more than others?
+\end{enumerate}
 
 \hypertarget{eebII}{%
 \chapter{Stats used in eeb II}\label{eebII}}

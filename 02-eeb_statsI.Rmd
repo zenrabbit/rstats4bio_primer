@@ -1,1 +1,30 @@
-# Stats used in eeb I {#eebI}
+# Stats used in eeb I {#eebI}  
+
+![](./eebI.png){width=3in}   
+
+Many approaches and critical thinking heuristics in ecology & evolutionary biology (eeb) are relevant to other disciplines.  
+
+#### Learning outcomes {-}  
+1. Develop your data viz skills.  
+2. Hone your critical thinking statistically by iterative plotting-modeling a dataset.   
+3. Do a regression analysis.  
+
+#### Critical thinking {-}  
+Clean simple graphics are powerful tools in statistics (and in scientific communication). [Tufte](https://www.edwardtufte.com/tufte/) [@RN2096] and others have shaped data scientists and statisticians in developing more libraries, new standards, and assumptions associated with graphical representations of data. Data viz must highlight the differences, show underlying data structures, and provide insights into the specific research project. R is infinitely customizable in all these respects. There are at least two major current paradigms (there are more these are the two dominant idea sets). Base R plots are simple, relatively flexible, and very easy. However, their grammar, i.e their rules of coding are not modern. Ggplot and related libraries invoke a new, formal grammar of graphics [@RN7256] that is more logical, more flexible, but divergent from base R code. It is worth the time to understand the differences and know when to use each.
+
+Evolution of plotting in statistics using R in particular went from base-R then onto lattice then to the ggvis universe with the most recent library being ggplot [@RN4413]. Base-R is certainly useful in some contexts as is the lattice and lattice extra library. However, ggplot now encompasses all these capacities with a much simpler set of grammar (i.e. rules and order). Nonetheless, you should be able to read base-R code for plots and be able to do some as well. The philosophy or grammar of modern graphics is well articulated and includes the following key principles. The grammar of graphics layers primacy of ideas (simple first, then more complex) i.e. you build up your plots data are mapped to aesthetic attributes and geometric objects data first then statistics even in plots [@RN7255]. This directly supports critical thinking statistically because it promotes depth (literally), precision, and also accuracy in the decisions you make to show your evidence.   
+
+#### Adventure time {-}  
+Here are a deeper set of quanitified life [data](https://figshare.com/articles/dataset/Quantified_life/12803105). Explore whether movement predicts total sleep or its efficiency. Plot out some patterns first, then, do a regression.      
+
+```{r include=TRUE, warning=FALSE, message=FALSE}
+library(tidyverse)
+life <- read_csv(url("https://ndownloader.figshare.com/files/28920729"))
+life
+
+```
+
+#### Reflection questions {-}  
+1. When do you use regression versus correlation?  
+2. How could you incorporate time into your plots or statistical models?  
+3. Did the visualization highlight some of the criteria associated with critical thinking statistically more than others?  
