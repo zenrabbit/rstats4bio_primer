@@ -133,7 +133,7 @@
 
 Welcome to a primer for biostatistics in R.
 
-Mathematical! Adventure time! Well, the mathematical part is up to you, but this is an adventure. This set of learning materials is a guide developed to support you in better developing critical thinking using statistics. \href{https://www.criticalthinking.org/pages/defining-critical-thinking/766}{Critical thinking} very generally is a mode of thinking that is self-directed and evidence based. Statistical thinking is thus an ideal opportunity and partner in honing literacy adventure skills in this domain. Enhancing clarity, accuracy, precision, relevance, depth, breadth, significance, logic and fairness - all key criteria of critical thinking - with data or evidence both quantitative and qualitative is a profound tool as a scientist and citizen. It should be fundamental to statistics. Hence, the primary goal of this set of materials is to engender statistical thinking that embodies these principles and explores these criteria using data.
+Mathematical! Adventure time! Well, the mathematical part is up to you, but this is an adventure. This set of learning materials is a guide developed to support you in better developing critical thinking using statistics. \href{https://www.criticalthinking.org/pages/defining-critical-thinking/766}{Critical thinking} very generally is a mode of thinking that is self-directed and evidence based \citep{RN6081}. Statistical thinking is thus an ideal opportunity and partner in honing literacy adventure skills in this domain. Enhancing clarity, accuracy, precision, relevance, depth, breadth, significance, logic and fairness - all key criteria of critical thinking - with data or evidence both quantitative and qualitative is a profound tool as a scientist and citizen. It should be fundamental to statistics. Hence, the primary goal of this set of materials is to engender statistical thinking that embodies these principles and explores these criteria using data.
 
 The open and free resources associated with learning statistics is nearly infinite online particularly in R. The programming language \href{https://www.r-project.org}{R} is a free, open source programming environment ideal for statistics. There are other similar alternatives, but here R is used to support and scaffold critical thinking and statistical literacy because a significant component of many biologists \href{https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.2567}{use R including ecologists} \citep{RN6098}. Importantly, it provides a simple and clear mechanism to document, annotate, tidy up, write down, and literally show your work - like in math class. This benefits you. You see your ideas written down and can explore logic, fairness, and all the criteria listed above. It also enables you to repeat, replicate, and share your work.
 
@@ -192,17 +192,19 @@ Two summative (i.e.~graded outcomes) include the book review and the test.
 \subsection*{Schedule}\label{schedule}}
 \addcontentsline{toc}{subsection}{Schedule}
 
-\begin{tabular}{rl}
+Slide decks are optional. The decks simply highlight some of the connections between the criteria for critical thinking and statistical heuristics.
+
+\begin{tabular}{rll}
 \toprule
-week & grand challenges\\
+week & adventure & slide deck\\
 \midrule
-1 & {}[Tidy data in R](https://www.jstatsoft.org/article/view/v059i10)\\
-2 & {}[Literate statistical coding](https://ojs.library.queensu.ca/index.php/IEE/article/view/6559) and [Data science](https://www.jstatsoft.org/article/view/v077b01)\\
-3 & Statistics for ecology and evolution I [(CH4 in text)](https://oxford.universitypressscholarship.com/view/10.1093/acprof:oso/9780198729051.001.0001/acprof-9780198729051)\\
-4 & Statistics for ecology and evolution II [(CH10 and 11 in text)](https://oxford.universitypressscholarship.com/view/10.1093/acprof:oso/9780198729051.001.0001/acprof-9780198729051)\\
-5 & Book review due and hackathon\\
+1 & {}[Tidy data in R](https://www.jstatsoft.org/article/view/v059i10) & {}[whyR](https://figshare.com/articles/presentation/whyR\_why\_consider\_using\_R\_for\_your\_stats/15044448)\\
+2 & {}[Literate statistical coding](https://ojs.library.queensu.ca/index.php/IEE/article/view/6559) and [Data science](https://www.jstatsoft.org/article/view/v077b01) & {}[wrangleR](https://figshare.com/articles/presentation/wrangleR\_data\_wrangling\_in\_R/15044457)\\
+3 & Statistics for ecology and evolution I [(CH4 in text)](https://oxford.universitypressscholarship.com/view/10.1093/acprof:oso/9780198729051.001.0001/acprof-9780198729051) & {}[contemporary viz](https://figshare.com/articles/presentation/Contemporary\_data\_viz\_in\_R/15044445)\\
+4 & Statistics for ecology and evolution II [(CH10 and 11 in text)](https://oxford.universitypressscholarship.com/view/10.1093/acprof:oso/9780198729051.001.0001/acprof-9780198729051) & {}[EDAR](https://figshare.com/articles/presentation/Exploratory\_data\_analysis\_models\_in\_R/15044436)\\
+5 & Book review due and hackathon & {}[efficient stats](https://figshare.com/articles/presentation/Efficient\_statistics/15044442)\\
 \addlinespace
-6 & Test\\
+6 & Test & {}[when to publish data \& code](https://figshare.com/articles/presentation/The\_early\_bird\_gets\_the\_return\_when\_to\_publish\_your\_data/14681124)\\
 \bottomrule
 \end{tabular}
 
@@ -300,6 +302,67 @@ Very simple life data to explore some ideas about meditation, steps, resting hea
 
 \hypertarget{coding}{%
 \chapter{Literate coding}\label{coding}}
+
+\includegraphics[width=3in,height=\textheight]{./coding.png}
+
+Your code is a story too. Use your code and annotation of decisions (en)coded in your data manipulations, calculations, models, and plots to communicate clarity, logic, relevance, and depth. This story is not just for your collaborators - it is for you. Writing down your ideas and work down makes it more clear. It also reminds you later, even a week later, why you elected to make a particular decision in your workflow. Tidy data and tidy thinking make for better science.
+
+\hypertarget{learning-outcomes-2}{%
+\subsubsection*{Learning outcomes}\label{learning-outcomes-2}}
+\addcontentsline{toc}{subsubsection}{Learning outcomes}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Practice writing code and using annotation.\\
+\item
+  Consolidate your understanding of tidy data and critical thinking statistically.\\
+\item
+  Do an ANOVA.
+\end{enumerate}
+
+\hypertarget{critical-thinking-1}{%
+\subsubsection*{Critical thinking}\label{critical-thinking-1}}
+\addcontentsline{toc}{subsubsection}{Critical thinking}
+
+Tidy data make your life easier. Data structures should match intuition and common sense. Data should have logical structure. Rows are are observations, columns are variables. Tidy data also increase the viability that others can use your data, do better science, reuse science, and help you and your ideas survive and thrive.
+
+Literate coding \citep{RN4414} should capture a workflow that includes the wrangling you did to get your data ready. Literate code should be able to read by a human AND a machine. If data are already very clean in a spreadsheet, they can easily become a literate, logical dataframe. Nonetheless, you should still use annotation within the introductory code to explain the meta-data of your data to some extent and what you did pre-R to get it tidy. The philosophy here is very similar to the data viz lesson forthcoming that promotes critical thinking statistically through documented and described steps that are replicable and clear.
+
+\hypertarget{adventure-time-1}{%
+\subsubsection*{Adventure time}\label{adventure-time-1}}
+\addcontentsline{toc}{subsubsection}{Adventure time}
+
+Describe..
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\NormalTok{simple\_life }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\FunctionTok{url}\NormalTok{(}\StringTok{"https://ndownloader.figshare.com/files/28920855"}\NormalTok{))}
+\NormalTok{simple\_life}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 9 x 7
+##   simple_date steps_fitbit sleep_fitbit    hr steps_watch sleep_watch
+##   <date>             <dbl>        <dbl> <dbl>       <dbl>       <dbl>
+## 1 2021-06-02         20913          429    54       25197         314
+## 2 2021-06-03          6904          447    53       13042         302
+## 3 2021-06-04         19548          449    56       23285         413
+## 4 2021-06-05         19311          423    56       25832         355
+## 5 2021-06-06         26159          435    58       29533         385
+## 6 2021-06-07         21618          358    56       27796         240
+## 7 2021-06-08         20890          492    53       24360         434
+## 8 2021-06-09         12008          541    53       14517         399
+## 9 2021-06-10         18058          436    57       22392         403
+## # ... with 1 more variable: meditation_mins <dbl>
+\end{verbatim}
+
+\hypertarget{reflection-questions-1}{%
+\subsubsection*{Reflection questions}\label{reflection-questions-1}}
+\addcontentsline{toc}{subsubsection}{Reflection questions}
 
 \hypertarget{eebI}{%
 \chapter{Stats used in eeb I}\label{eebI}}

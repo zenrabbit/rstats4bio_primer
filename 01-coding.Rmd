@@ -1,2 +1,28 @@
-# Literate coding {#coding}
+# Literate coding {#coding}  
+
+![](./coding.png){width=3in}    
+
+Your code is a story too. Use your code and annotation of decisions (en)coded in your data manipulations, calculations, models, and plots to communicate clarity, logic, relevance, and depth. This story is not just for your collaborators - it is for you. Writing down your ideas and work down makes it more clear. It also reminds you later, even a week later, why you elected to make a particular decision in your workflow. Tidy data and tidy thinking make for better science.   
+
+#### Learning outcomes {-}  
+1. Practice writing code and using annotation.  
+2. Consolidate your understanding of tidy data and critical thinking statistically.   
+3. Do an ANOVA.  
+
+#### Critical thinking {-}  
+Tidy data make your life easier. Data structures should match intuition and common sense. Data should have logical structure. Rows are are observations, columns are variables. Tidy data also increase the viability that others can use your data, do better science, reuse science, and help you and your ideas survive and thrive. 
+
+Literate coding [@RN4414] should capture a workflow that includes the wrangling you did to get your data ready. Literate code should be able to read by a human AND a machine. If data are already very clean in a spreadsheet, they can easily become a literate, logical dataframe. Nonetheless, you should still use annotation within the introductory code to explain the meta-data of your data to some extent and what you did pre-R to get it tidy. The philosophy here is very similar to the data viz lesson forthcoming that promotes critical thinking statistically through documented and described steps that are replicable and clear.  
+
+#### Adventure time {-}  
+Describe..
+
+```{r include=TRUE, warning=FALSE, message=FALSE}
+library(tidyverse)
+simple_life <- read_csv(url("https://ndownloader.figshare.com/files/28920855"))
+simple_life
+
+```
+
+#### Reflection questions {-}  
 

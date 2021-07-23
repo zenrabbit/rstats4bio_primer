@@ -197,7 +197,47 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="coding" class="section level1" number="2">
 <h1><span class="header-section-number">Chapter 2</span> Literate coding</h1>
+<p><img src="coding.png" style="width:3in" /></p>
+<p>Your code is a story too. Use your code and annotation of decisions (en)coded in your data manipulations, calculations, models, and plots to communicate clarity, logic, relevance, and depth. This story is not just for your collaborators - it is for you. Writing down your ideas and work down makes it more clear. It also reminds you later, even a week later, why you elected to make a particular decision in your workflow. Tidy data and tidy thinking make for better science.</p>
+<div id="learning-outcomes-2" class="section level4 unnumbered">
+<h4>Learning outcomes</h4>
+<ol style="list-style-type: decimal">
+<li>Practice writing code and using annotation.<br />
+</li>
+<li>Consolidate your understanding of tidy data and critical thinking statistically.<br />
+</li>
+<li>Do an ANOVA.</li>
+</ol>
+</div>
+<div id="critical-thinking-1" class="section level4 unnumbered">
+<h4>Critical thinking</h4>
+<p>Tidy data make your life easier. Data structures should match intuition and common sense. Data should have logical structure. Rows are are observations, columns are variables. Tidy data also increase the viability that others can use your data, do better science, reuse science, and help you and your ideas survive and thrive.</p>
+<p>Literate coding <span class="citation">(<a href="references.html#ref-RN4414" role="doc-biblioref">Knuth 1992</a>)</span> should capture a workflow that includes the wrangling you did to get your data ready. Literate code should be able to read by a human AND a machine. If data are already very clean in a spreadsheet, they can easily become a literate, logical dataframe. Nonetheless, you should still use annotation within the introductory code to explain the meta-data of your data to some extent and what you did pre-R to get it tidy. The philosophy here is very similar to the data viz lesson forthcoming that promotes critical thinking statistically through documented and described steps that are replicable and clear.</p>
+</div>
+<div id="adventure-time-1" class="section level4 unnumbered">
+<h4>Adventure time</h4>
+<p>Describe..</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="coding.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb3-2"><a href="coding.html#cb3-2" aria-hidden="true" tabindex="-1"></a>simple_life <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">url</span>(<span class="st">&quot;https://ndownloader.figshare.com/files/28920855&quot;</span>))</span>
+<span id="cb3-3"><a href="coding.html#cb3-3" aria-hidden="true" tabindex="-1"></a>simple_life</span></code></pre></div>
+<pre><code>## # A tibble: 9 x 7
+##   simple_date steps_fitbit sleep_fitbit    hr steps_watch sleep_watch
+##   &lt;date&gt;             &lt;dbl&gt;        &lt;dbl&gt; &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;
+## 1 2021-06-02         20913          429    54       25197         314
+## 2 2021-06-03          6904          447    53       13042         302
+## 3 2021-06-04         19548          449    56       23285         413
+## 4 2021-06-05         19311          423    56       25832         355
+## 5 2021-06-06         26159          435    58       29533         385
+## 6 2021-06-07         21618          358    56       27796         240
+## 7 2021-06-08         20890          492    53       24360         434
+## 8 2021-06-09         12008          541    53       14517         399
+## 9 2021-06-10         18058          436    57       22392         403
+## # … with 1 more variable: meditation_mins &lt;dbl&gt;</code></pre>
+</div>
+<div id="reflection-questions-1" class="section level4 unnumbered">
+<h4>Reflection questions</h4>
 
+</div>
 </div>
             </section>
 
