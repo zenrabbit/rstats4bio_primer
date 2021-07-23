@@ -41,6 +41,46 @@
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -202,7 +242,7 @@ Tidiness is next to naturalness. We are wired up to see patterns and organize. P
 \item
   Consider data structures such as long versus wide.\\
 \item
-  Read in a dataset to the R enviroment.\\
+  Read in a dataset to the R environment.\\
 \item
   Do a t-test.
 \end{enumerate}
@@ -211,15 +251,52 @@ Tidiness is next to naturalness. We are wired up to see patterns and organize. P
 \subsubsection*{Critical thinking}\label{critical-thinking}}
 \addcontentsline{toc}{subsubsection}{Critical thinking}
 
-\href{https://www.jstatsoft.org/article/view/v059i10}{Tidy data} thinking was pioneered in the R world \citep{RN4416}. This philosophy to first considering the basic format of your data is transformational and profound. It beautifully connects to logic. Better yet, it sets you up for easier stats and plots in many environments including R.
+\href{https://www.jstatsoft.org/article/view/v059i10}{Tidy data} thinking was pioneered in the R world \citep{RN4416}. This philosophy to first considering the basic format of your data is transformational and profound. It beautifully connects to logic. Better yet, it sets you up for easier stats and plots in many environments including R. There is an excellent \href{https://r4ds.had.co.nz/tidy-data.html}{chapter} on this topic in the free, open text R for Data Science.
 
 \hypertarget{adventure-time}{%
 \subsubsection*{Adventure time}\label{adventure-time}}
 \addcontentsline{toc}{subsubsection}{Adventure time}
 
+Very simple life data to explore some ideas about meditation, steps, resting heart rate and the importance of instrument variation. Data are \href{https://figshare.com/articles/dataset/Simple_health_data/15040515}{here}. Explore the t-test in R for this adventure. Is the number of steps or sleep different from 0? Do the means estimated from a watch versus simple Fitbit tracker vary for simple measures? Did 0 versus 12 mins of meditation per day influence a relevant measure?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\NormalTok{simple\_life }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\FunctionTok{url}\NormalTok{(}\StringTok{"https://ndownloader.figshare.com/files/28920855"}\NormalTok{))}
+\NormalTok{simple\_life}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 9 x 7
+##   simple_date steps_fitbit sleep_fitbit    hr steps_watch sleep_watch
+##   <date>             <dbl>        <dbl> <dbl>       <dbl>       <dbl>
+## 1 2021-06-02         20913          429    54       25197         314
+## 2 2021-06-03          6904          447    53       13042         302
+## 3 2021-06-04         19548          449    56       23285         413
+## 4 2021-06-05         19311          423    56       25832         355
+## 5 2021-06-06         26159          435    58       29533         385
+## 6 2021-06-07         21618          358    56       27796         240
+## 7 2021-06-08         20890          492    53       24360         434
+## 8 2021-06-09         12008          541    53       14517         399
+## 9 2021-06-10         18058          436    57       22392         403
+## # ... with 1 more variable: meditation_mins <dbl>
+\end{verbatim}
+
 \hypertarget{reflection-questions}{%
 \subsubsection*{Reflection questions}\label{reflection-questions}}
 \addcontentsline{toc}{subsubsection}{Reflection questions}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  What can a t-test do? Can you imagine other functions for a t-test in the context of your work and life?
+\item
+  What are the limitations of a t-test?
+\item
+  Is the data structure wide, long, and how can you consider tidying this evidence? Are there variables that represent the same concept?
+\end{enumerate}
 
 \hypertarget{coding}{%
 \chapter{Literate coding}\label{coding}}

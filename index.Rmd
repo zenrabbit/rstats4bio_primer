@@ -80,14 +80,23 @@ Tidiness is next to naturalness. We are wired up to see patterns and organize. P
 3. Do a t-test.  
 
 #### Critical thinking {-}  
-[Tidy data](https://www.jstatsoft.org/article/view/v059i10) thinking was pioneered in the R world [@RN4416].  This philosophy to first considering the basic format of your data is transformational and profound. It beautifully connects to logic. Better yet, it sets you up for easier stats and plots in many environments including R.  
+[Tidy data](https://www.jstatsoft.org/article/view/v059i10) thinking was pioneered in the R world [@RN4416].  This philosophy to first considering the basic format of your data is transformational and profound. It beautifully connects to logic. Better yet, it sets you up for easier stats and plots in many environments including R. There is an excellent [chapter](https://r4ds.had.co.nz/tidy-data.html) on this topic in the free, open text R for Data Science.   
 
 #### Adventure time {-}  
+Very simple life data to explore some ideas about meditation, steps, resting heart rate and the importance of instrument variation.  Data are [here](https://figshare.com/articles/dataset/Simple_health_data/15040515). Explore the t-test in R for this adventure. Is the number of steps or sleep different from 0? Do the means estimated from a watch versus simple Fitbit tracker vary for simple measures? Did 0 versus 12 mins of meditation per day influence a relevant measure?    
 
+
+```{r include=TRUE, warning=FALSE, message=FALSE}
+library(tidyverse)
+simple_life <- read_csv(url("https://ndownloader.figshare.com/files/28920855"))
+simple_life
+
+```
 
 #### Reflection questions {-}  
-
-
+1. What can a t-test do? Can you imagine other functions for a t-test in the context of your work and life?
+2. What are the limitations of a t-test?
+3. Is the data structure wide, long, and how can you consider tidying this evidence? Are there variables that represent the same concept?  
 
 
 
