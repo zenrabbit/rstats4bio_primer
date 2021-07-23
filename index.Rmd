@@ -49,6 +49,7 @@ Some learn best by reading. Some learn best by doing. We can all benefit from bo
 Two summative (i.e. graded outcomes) include the book review and the test.  
 
 ### Schedule {-} 
+Slide decks are optional. The decks simply highlight some of the connections between the criteria for critical thinking and statistical heuristics.  
 
 ```{r, warning=FALSE, message=FALSE, echo=FALSE}
 library(tidyverse)
