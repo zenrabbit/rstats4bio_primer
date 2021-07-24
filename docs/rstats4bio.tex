@@ -459,7 +459,7 @@ Here are a deeper set of quantified life \href{https://figshare.com/articles/dat
 
 \includegraphics[width=3in,height=\textheight]{./eebII.png}
 
-There is much counting in ecology \& evolutionary biology (eeb). We count individuals, species, populations, interactions, and then map out diversity and distributions to infer process. Many disciplines use similar logic in the structure of their evidence and experimental design with statistics.
+There is much counting in ecology \& evolutionary biology (eeb) \citep{RN7219}. We count individuals, species, populations, interactions, and then map out diversity and distributions to infer process. Many disciplines use similar logic in the structure of their evidence and experimental design with statistics.
 
 \hypertarget{learning-outcomes-4}{%
 \subsubsection*{Learning outcomes}\label{learning-outcomes-4}}
@@ -555,7 +555,7 @@ Here is an impressive \href{https://knb.ecoinformatics.org/view/doi\%3A10.5063\%
 
 \includegraphics[width=3in,height=\textheight]{./hackathon.png}
 
-All models are wrong but some are useful \citep{RN6467, RN7258}. Critical thinking with statistics is thus critical to ensure that we best support evidence informed decision making in society \citep{RN6861, RN7180}.
+All models are wrong but some are useful \citep{RN6467, RN7258}. Critical thinking with statistics is thus critical to ensure that we effectively support evidence informed decision making in society \citep{RN6861, RN7180}.
 
 \hypertarget{learning-outcomes-5}{%
 \subsubsection*{Learning outcomes}\label{learning-outcomes-5}}
@@ -565,9 +565,9 @@ All models are wrong but some are useful \citep{RN6467, RN7258}. Critical thinki
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Appreciate the challenge of working with data to apply a critical design mindset to statistical solutions.\\
+  Appreciate the challenge of working with data to apply a critical thinking \& creative design mindset to statistical solutions.\\
 \item
-  Practice your workflow and literate coding.\\
+  Practice your workflow and literate coding before a summative test.\\
 \item
   Refine your thinking and coding for efficiency.
 \end{enumerate}
@@ -576,36 +576,90 @@ All models are wrong but some are useful \citep{RN6467, RN7258}. Critical thinki
 \subsubsection*{Critical thinking}\label{critical-thinking-4}}
 \addcontentsline{toc}{subsubsection}{Critical thinking}
 
-\href{https://en.wikipedia.org/wiki/Efficiency_(statistics)}{Efficiency} is a fascinating topic in statistics \citep{RN7261, RN7260, RN7259}. Here, we can simplify this using critical thinking criteria. Efficiency = sufficiency. Provided it is logical, fair, and accurate. Your plots and statistical model should representative a reasonable and likely description of the data at hand.
+\href{https://en.wikipedia.org/wiki/Efficiency_(statistics)}{Efficiency} is a fascinating topic in statistics \citep{RN7261, RN7260, RN7259}. Here, we can simplify this using the critical thinking criteria we have extensively refined and applied to numerous, tidy challenges. Efficiency = sufficiency (provided it is logical, fair, and accurate). Your plots and statistical models should represent a reasonable and likely description of the data at hand. This section is a formative opportunity for you to evaluate your skills and strengths in logic, efficiency, fair adventuring, workflows, and literate coding prior to the final section - a test. You are provided with a general dataset(s). The adventure is solve a very generalized challenge that is embodied in the evidence.
 
 \hypertarget{adventure-time-4}{%
 \subsubsection*{Adventure time}\label{adventure-time-4}}
 \addcontentsline{toc}{subsubsection}{Adventure time}
 
+Candy. Candy. Candy. Take a peek at these sweet data. Contrast Canada and USA candy sales at Halloween. Considering including population density in your model for each country for each year so as not to introduce variation and to be more accurate in estimating meaningful differences.
+
+\href{https://figshare.com/articles/dataset/Canadian_Candy_Sales/9876386}{Canadian Candy}\\
+\href{https://figshare.com/articles/dataset/USA_Halloween_spending_data/9876380}{USA Candy \& Halloween spending}\\
+\href{https://figshare.com/articles/dataset/Human_population_density_data/15047379}{Human population densities}
+
 \begin{Shaded}
 \begin{Highlighting}[]
 \FunctionTok{library}\NormalTok{(tidyverse)}
-\NormalTok{birds }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\FunctionTok{url}\NormalTok{(}\StringTok{"https://knb.ecoinformatics.org/knb/d1/mn/v2/object/urn\%3Auuid\%3Aa84a9673{-}878a{-}4c43{-}ba08{-}570b2d38bdc9"}\NormalTok{))}
-\NormalTok{birds}
+\NormalTok{Canada }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\FunctionTok{url}\NormalTok{(}\StringTok{"https://ndownloader.figshare.com/files/28935657"}\NormalTok{))}
+\NormalTok{Canada}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 826 x 11
-##     year experiment   source   rep date   location  species  frequency behaviour
-##    <dbl> <chr>        <chr>  <dbl> <chr>  <chr>     <chr>        <dbl> <chr>    
-##  1  2020 balcony bir~ full       1 10/13~ Holditch~ Agelaiu~         3 flying   
-##  2  2020 balcony bir~ full       1 10/13~ Holditch~ Agelaiu~         4 flying   
-##  3  2020 balcony bir~ full       1 10/13~ Holditch~ Agelaiu~         1 perching 
-##  4  2020 balcony bir~ full       1 10/16~ High Park Aix spi~         4 swimming 
-##  5  2020 balcony bir~ full       1 10/9/~ Vaughan   Anas pl~         4 flying   
-##  6  2020 balcony bir~ full       1 10/9/~ Vaughan   Anas pl~         6 flying   
-##  7  2020 balcony bir~ full       1 10/9/~ Vaughan   Anas pl~         9 flying   
-##  8  2020 balcony bir~ full       1 10/9/~ Vaughan   Anas pl~        10 flying   
-##  9  2020 balcony bir~ full       1 10/9/~ Vaughan   Anas pl~         2 inactive 
-## 10  2020 balcony bir~ full       1 10/9/~ Vaughan   Anas pl~         2 inactive 
-## # ... with 816 more rows, and 2 more variables: inititals <chr>,
-## #   citation_DOI <chr>
+## # A tibble: 228 x 3
+##    month  year  candy
+##    <dbl> <dbl>  <dbl>
+##  1     1  1997 101014
+##  2     2  1997 101938
+##  3     3  1997 136057
+##  4     4  1997 105601
+##  5     5  1997 119123
+##  6     6  1997 107689
+##  7     7  1997 113399
+##  8     8  1997 113934
+##  9     9  1997 109441
+## 10    10  1997 146876
+## # ... with 218 more rows
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{USA }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\FunctionTok{url}\NormalTok{(}\StringTok{"https://ndownloader.figshare.com/files/28935660"}\NormalTok{))}
+\NormalTok{USA}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 10 x 6
+##     year halloween_total_b~ costumes_childr~ costumes_adult costumes_pets  candy
+##    <dbl>              <dbl>            <dbl>          <dbl>         <dbl>  <dbl>
+##  1  2006               4.96            NA             NA            NA    NA    
+##  2  2007               5.07            NA             NA            NA    NA    
+##  3  2008               5.77            NA             NA            NA    NA    
+##  4  2009               4.75            NA             NA            NA     0.35 
+##  5  2010               5.8              0.84           0.99          0.22  0.509
+##  6  2011               6.86             1              1.21          0.31  0.419
+##  7  2012               8                1.1            1.4           0.37  0.606
+##  8  2013               6.99             1.04           1.22          0.33  0.634
+##  9  2014               7.4              1.06           1.38          0.35  0.408
+## 10  2015               6.89             0.95           1.22          0.35  2.5
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{humans }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\FunctionTok{url}\NormalTok{(}\StringTok{"https://ndownloader.figshare.com/files/28935663"}\NormalTok{))}
+\NormalTok{humans}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 264 x 21
+##    `Country Name`       `Country Code` `1997` `1998` `1999` `2000` `2001` `2002`
+##    <chr>                <chr>           <dbl>  <dbl>  <dbl>  <dbl>  <dbl>  <dbl>
+##  1 Aruba                ABW             475.   485.   494.   505.   516.   528. 
+##  2 Andorra              AND             136.   136.   137.   139.   144.   151. 
+##  3 Afghanistan          AFG              27.6   28.4   29.2   30.2   31.4   32.9
+##  4 Angola               AGO              11.1   11.4   11.7   12.1   12.5   12.9
+##  5 Albania              ALB             115.   114.   113.   113.   112.   111. 
+##  6 Arab World           ARB              19.4   19.8   20.2   20.6   21.1   21.5
+##  7 United Arab Emirates ARE              31.0   32.7   34.5   36.5   38.5   40.6
+##  8 Argentina            ARG              13.1   13.2   13.4   13.5   13.7   13.8
+##  9 Armenia              ARM             110.   109.   109.   108.   107.   107. 
+## 10 American Samoa       ASM             275.   279.   284.   288.   291.   294. 
+## # ... with 254 more rows, and 13 more variables: 2003 <dbl>, 2004 <dbl>,
+## #   2005 <dbl>, 2006 <dbl>, 2007 <dbl>, 2008 <dbl>, 2009 <dbl>, 2010 <dbl>,
+## #   2011 <dbl>, 2012 <dbl>, 2013 <dbl>, 2014 <dbl>, 2015 <dbl>
 \end{verbatim}
 
 \hypertarget{reflection-questions-4}{%
@@ -616,12 +670,43 @@ All models are wrong but some are useful \citep{RN6467, RN7258}. Critical thinki
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  When do you move from EDA to model fitting?\\
+  How does veracity of data from different resources potentially influence your critical thinking?\\
 \item
-  Are there ways to mitigate bias and \href{https://www.wired.com/story/were-all-p-hacking-now/}{p-hacking} through formal workflows?\\
+  Can joining data introduce errors?
 \item
-  Did building a model such as GLM align with critical thinking and intuition, i.e from critical thinking was it accurate and fair? Did the EDA-to-model process legitimately represent the patterns in the observations recorded.
+  How does the available data bias the inference and interpretation of relative variables on key outcomes?
 \end{enumerate}
+
+\hypertarget{book-review}{%
+\subsection*{Book review}\label{book-review}}
+\addcontentsline{toc}{subsection}{Book review}
+
+Throughout these sections, you should have now also completed a read of key chapters to support your learning from the text suggested `The New Statistics with R' \citep{RN6087}. Use the \href{https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006562}{ten simple rules for reviews} suggested \citep{RN6148}, and write and submit a short, less than 2000 word review of this text and submit to \href{https://www.turnitin.com}{turnitin.com}.
+
+\hypertarget{rubric}{%
+\subsection*{Rubric}\label{rubric}}
+\addcontentsline{toc}{subsection}{Rubric}
+
+\begin{tabular}{rllr}
+\toprule
+item & concept & description & value\\
+\midrule
+1 & rule 1 the topic & introduce topic, explain necessity, explain scope & 2\\
+2 & rule 2 audience & explain audience-level of book and to what extent blend of expertise is needed & 2\\
+3 & rule 3 editions & mention different editions or versions and what is changed & 0\\
+4 & rule 4 pedagogy & describe pedagogy and structure of chapters & 4\\
+5 & rule 5 content & provide a clear overview of what the text covers & 2\\
+\addlinespace
+6 & rule 6 readability & critique the style and clarity of writing & 2\\
+7 & rule 7 links & list and explain linkages to concepts and packages & 2\\
+8 & rule 8 compare & briefly list what other resources are out there and compare & 2\\
+9 & rule 9 commitment & comment on the commitment and effort need to master text & 2\\
+10 & rule 10 benefits & list the main benefits of using this text to learn or solve & 2\\
+\addlinespace
+11 & your writing & your writing and coherence are graded for clarity, balance, directness, and convincingness & 5\\
+12 & total & sum of above concepts & 25\\
+\bottomrule
+\end{tabular}
 
 \hypertarget{test}{%
 \chapter{Test}\label{test}}

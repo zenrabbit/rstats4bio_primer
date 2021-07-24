@@ -2,7 +2,7 @@
 
 ![](./eebII.png){width=3in}   
 
-There is much counting in ecology & evolutionary biology (eeb). We count individuals, species, populations, interactions, and then map out diversity and distributions to infer process. Many disciplines use similar logic in the structure of their evidence and experimental design with statistics.    
+There is much counting in ecology & evolutionary biology (eeb) [@RN7219]. We count individuals, species, populations, interactions, and then map out diversity and distributions to infer process. Many disciplines use similar logic in the structure of their evidence and experimental design with statistics.    
 
 #### Learning outcomes {-}  
 1. Practice your critical workflow for data and statistics that is replicable and literate.  

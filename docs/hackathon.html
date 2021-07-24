@@ -172,7 +172,11 @@ div.csl-indent {
 <li class="chapter" data-level="2" data-path="coding.html"><a href="coding.html"><i class="fa fa-check"></i><b>2</b> Literate coding</a></li>
 <li class="chapter" data-level="3" data-path="eebI.html"><a href="eebI.html"><i class="fa fa-check"></i><b>3</b> Stats used in eeb I</a></li>
 <li class="chapter" data-level="4" data-path="eebII.html"><a href="eebII.html"><i class="fa fa-check"></i><b>4</b> Stats used in eeb II</a></li>
-<li class="chapter" data-level="5" data-path="hackathon.html"><a href="hackathon.html"><i class="fa fa-check"></i><b>5</b> Hackathon</a></li>
+<li class="chapter" data-level="5" data-path="hackathon.html"><a href="hackathon.html"><i class="fa fa-check"></i><b>5</b> Hackathon</a>
+<ul>
+<li class="chapter" data-level="" data-path="hackathon.html"><a href="hackathon.html#book-review"><i class="fa fa-check"></i>Book review</a></li>
+<li class="chapter" data-level="" data-path="hackathon.html"><a href="hackathon.html#rubric"><i class="fa fa-check"></i>Rubric</a></li>
+</ul></li>
 <li class="chapter" data-level="6" data-path="test.html"><a href="test.html"><i class="fa fa-check"></i><b>6</b> Test</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -198,13 +202,13 @@ div.csl-indent {
 <div id="hackathon" class="section level1" number="5">
 <h1><span class="header-section-number">Chapter 5</span> Hackathon</h1>
 <p><img src="hackathon.png" style="width:3in" /></p>
-<p>All models are wrong but some are useful <span class="citation">(<a href="references.html#ref-RN6467" role="doc-biblioref">Stouffer 2019</a>; <a href="references.html#ref-RN7258" role="doc-biblioref">Box 1976</a>)</span>. Critical thinking with statistics is thus critical to ensure that we best support evidence informed decision making in society <span class="citation">(<a href="references.html#ref-RN6861" role="doc-biblioref">Lortie and Owen 2020</a>; <a href="references.html#ref-RN7180" role="doc-biblioref">Neelen and Kirschner 2020</a>)</span>.</p>
+<p>All models are wrong but some are useful <span class="citation">(<a href="references.html#ref-RN6467" role="doc-biblioref">Stouffer 2019</a>; <a href="references.html#ref-RN7258" role="doc-biblioref">Box 1976</a>)</span>. Critical thinking with statistics is thus critical to ensure that we effectively support evidence informed decision making in society <span class="citation">(<a href="references.html#ref-RN6861" role="doc-biblioref">Christopher J. Lortie and Owen 2020</a>; <a href="references.html#ref-RN7180" role="doc-biblioref">Neelen and Kirschner 2020</a>)</span>.</p>
 <div id="learning-outcomes-5" class="section level4 unnumbered">
 <h4>Learning outcomes</h4>
 <ol style="list-style-type: decimal">
-<li>Appreciate the challenge of working with data to apply a critical design mindset to statistical solutions.<br />
+<li>Appreciate the challenge of working with data to apply a critical thinking &amp; creative design mindset to statistical solutions.<br />
 </li>
-<li>Practice your workflow and literate coding.<br />
+<li>Practice your workflow and literate coding before a summative test.<br />
 </li>
 <li>Refine your thinking and coding for efficiency.</li>
 </ol>
@@ -215,34 +219,166 @@ div.csl-indent {
 </div>
 <div id="adventure-time-4" class="section level4 unnumbered">
 <h4>Adventure time</h4>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="hackathon.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="hackathon.html#cb1-2" aria-hidden="true" tabindex="-1"></a>birds <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">url</span>(<span class="st">&quot;https://knb.ecoinformatics.org/knb/d1/mn/v2/object/urn%3Auuid%3Aa84a9673-878a-4c43-ba08-570b2d38bdc9&quot;</span>))</span>
-<span id="cb1-3"><a href="hackathon.html#cb1-3" aria-hidden="true" tabindex="-1"></a>birds</span></code></pre></div>
-<pre><code>## # A tibble: 826 x 11
-##     year experiment   source   rep date   location  species  frequency behaviour
-##    &lt;dbl&gt; &lt;chr&gt;        &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;        &lt;dbl&gt; &lt;chr&gt;    
-##  1  2020 balcony bir… full       1 10/13… Holditch… Agelaiu…         3 flying   
-##  2  2020 balcony bir… full       1 10/13… Holditch… Agelaiu…         4 flying   
-##  3  2020 balcony bir… full       1 10/13… Holditch… Agelaiu…         1 perching 
-##  4  2020 balcony bir… full       1 10/16… High Park Aix spi…         4 swimming 
-##  5  2020 balcony bir… full       1 10/9/… Vaughan   Anas pl…         4 flying   
-##  6  2020 balcony bir… full       1 10/9/… Vaughan   Anas pl…         6 flying   
-##  7  2020 balcony bir… full       1 10/9/… Vaughan   Anas pl…         9 flying   
-##  8  2020 balcony bir… full       1 10/9/… Vaughan   Anas pl…        10 flying   
-##  9  2020 balcony bir… full       1 10/9/… Vaughan   Anas pl…         2 inactive 
-## 10  2020 balcony bir… full       1 10/9/… Vaughan   Anas pl…         2 inactive 
-## # … with 816 more rows, and 2 more variables: inititals &lt;chr&gt;,
-## #   citation_DOI &lt;chr&gt;</code></pre>
+<p>Candy. Candy. Candy. Take a peek at these sweet data. Contrast Canada and USA candy sales at Halloween. Considering including population density in your model for each country for each year so as not to introduce variation and to be more accurate in estimating meaningful differences.</p>
+<p><a href="https://figshare.com/articles/dataset/Canadian_Candy_Sales/9876386">Canadian Candy</a><br />
+<a href="https://figshare.com/articles/dataset/USA_Halloween_spending_data/9876380">USA Candy &amp; Halloween spending</a><br />
+<a href="https://figshare.com/articles/dataset/Human_population_density_data/15047379">Human population densities</a></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="hackathon.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb9-2"><a href="hackathon.html#cb9-2" aria-hidden="true" tabindex="-1"></a>Canada <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">url</span>(<span class="st">&quot;https://ndownloader.figshare.com/files/28935657&quot;</span>))</span>
+<span id="cb9-3"><a href="hackathon.html#cb9-3" aria-hidden="true" tabindex="-1"></a>Canada</span></code></pre></div>
+<pre><code>## # A tibble: 228 x 3
+##    month  year  candy
+##    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;
+##  1     1  1997 101014
+##  2     2  1997 101938
+##  3     3  1997 136057
+##  4     4  1997 105601
+##  5     5  1997 119123
+##  6     6  1997 107689
+##  7     7  1997 113399
+##  8     8  1997 113934
+##  9     9  1997 109441
+## 10    10  1997 146876
+## # … with 218 more rows</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="hackathon.html#cb11-1" aria-hidden="true" tabindex="-1"></a>USA <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">url</span>(<span class="st">&quot;https://ndownloader.figshare.com/files/28935660&quot;</span>))</span>
+<span id="cb11-2"><a href="hackathon.html#cb11-2" aria-hidden="true" tabindex="-1"></a>USA</span></code></pre></div>
+<pre><code>## # A tibble: 10 x 6
+##     year halloween_total_b… costumes_childr… costumes_adult costumes_pets  candy
+##    &lt;dbl&gt;              &lt;dbl&gt;            &lt;dbl&gt;          &lt;dbl&gt;         &lt;dbl&gt;  &lt;dbl&gt;
+##  1  2006               4.96            NA             NA            NA    NA    
+##  2  2007               5.07            NA             NA            NA    NA    
+##  3  2008               5.77            NA             NA            NA    NA    
+##  4  2009               4.75            NA             NA            NA     0.35 
+##  5  2010               5.8              0.84           0.99          0.22  0.509
+##  6  2011               6.86             1              1.21          0.31  0.419
+##  7  2012               8                1.1            1.4           0.37  0.606
+##  8  2013               6.99             1.04           1.22          0.33  0.634
+##  9  2014               7.4              1.06           1.38          0.35  0.408
+## 10  2015               6.89             0.95           1.22          0.35  2.5</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="hackathon.html#cb13-1" aria-hidden="true" tabindex="-1"></a>humans <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">url</span>(<span class="st">&quot;https://ndownloader.figshare.com/files/28935663&quot;</span>))</span>
+<span id="cb13-2"><a href="hackathon.html#cb13-2" aria-hidden="true" tabindex="-1"></a>humans</span></code></pre></div>
+<pre><code>## # A tibble: 264 x 21
+##    `Country Name`       `Country Code` `1997` `1998` `1999` `2000` `2001` `2002`
+##    &lt;chr&gt;                &lt;chr&gt;           &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+##  1 Aruba                ABW             475.   485.   494.   505.   516.   528. 
+##  2 Andorra              AND             136.   136.   137.   139.   144.   151. 
+##  3 Afghanistan          AFG              27.6   28.4   29.2   30.2   31.4   32.9
+##  4 Angola               AGO              11.1   11.4   11.7   12.1   12.5   12.9
+##  5 Albania              ALB             115.   114.   113.   113.   112.   111. 
+##  6 Arab World           ARB              19.4   19.8   20.2   20.6   21.1   21.5
+##  7 United Arab Emirates ARE              31.0   32.7   34.5   36.5   38.5   40.6
+##  8 Argentina            ARG              13.1   13.2   13.4   13.5   13.7   13.8
+##  9 Armenia              ARM             110.   109.   109.   108.   107.   107. 
+## 10 American Samoa       ASM             275.   279.   284.   288.   291.   294. 
+## # … with 254 more rows, and 13 more variables: 2003 &lt;dbl&gt;, 2004 &lt;dbl&gt;,
+## #   2005 &lt;dbl&gt;, 2006 &lt;dbl&gt;, 2007 &lt;dbl&gt;, 2008 &lt;dbl&gt;, 2009 &lt;dbl&gt;, 2010 &lt;dbl&gt;,
+## #   2011 &lt;dbl&gt;, 2012 &lt;dbl&gt;, 2013 &lt;dbl&gt;, 2014 &lt;dbl&gt;, 2015 &lt;dbl&gt;</code></pre>
 </div>
 <div id="reflection-questions-4" class="section level4 unnumbered">
 <h4>Reflection questions</h4>
 <ol style="list-style-type: decimal">
-<li>When do you move from EDA to model fitting?<br />
+<li>How does veracity of data from different resources potentially influence your critical thinking?<br />
 </li>
-<li>Are there ways to mitigate bias and <a href="https://www.wired.com/story/were-all-p-hacking-now/">p-hacking</a> through formal workflows?<br />
-</li>
-<li>Did building a model such as GLM align with critical thinking and intuition, i.e from critical thinking was it accurate and fair? Did the EDA-to-model process legitimately represent the patterns in the observations recorded.</li>
+<li>Can joining data introduce errors?</li>
+<li>How does the available data bias the inference and interpretation of relative variables on key outcomes?</li>
 </ol>
+</div>
+<div id="book-review" class="section level3 unnumbered">
+<h3>Book review</h3>
+<p>Throughout these sections, you should have now also completed a read of key chapters to support your learning from the text suggested ‘The New Statistics with R’ <span class="citation">(<a href="references.html#ref-RN6087" role="doc-biblioref">Hector 2017</a>)</span>. Use the <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006562">ten simple rules for reviews</a> suggested <span class="citation">(<a href="references.html#ref-RN6148" role="doc-biblioref">Christopher J. Lortie 2019</a>)</span>, and write and submit a short, less than 2000 word review of this text and submit to <a href="https://www.turnitin.com">turnitin.com</a>.</p>
+</div>
+<div id="rubric" class="section level3 unnumbered">
+<h3>Rubric</h3>
+<table>
+<colgroup>
+<col width="4%" />
+<col width="15%" />
+<col width="75%" />
+<col width="4%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="right">item</th>
+<th align="left">concept</th>
+<th align="left">description</th>
+<th align="right">value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">rule 1 the topic</td>
+<td align="left">introduce topic, explain necessity, explain scope</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">rule 2 audience</td>
+<td align="left">explain audience-level of book and to what extent blend of expertise is needed</td>
+<td align="right">2</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left">rule 3 editions</td>
+<td align="left">mention different editions or versions and what is changed</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="left">rule 4 pedagogy</td>
+<td align="left">describe pedagogy and structure of chapters</td>
+<td align="right">4</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="left">rule 5 content</td>
+<td align="left">provide a clear overview of what the text covers</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="left">rule 6 readability</td>
+<td align="left">critique the style and clarity of writing</td>
+<td align="right">2</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="left">rule 7 links</td>
+<td align="left">list and explain linkages to concepts and packages</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td align="right">8</td>
+<td align="left">rule 8 compare</td>
+<td align="left">briefly list what other resources are out there and compare</td>
+<td align="right">2</td>
+</tr>
+<tr class="odd">
+<td align="right">9</td>
+<td align="left">rule 9 commitment</td>
+<td align="left">comment on the commitment and effort need to master text</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td align="right">10</td>
+<td align="left">rule 10 benefits</td>
+<td align="left">list the main benefits of using this text to learn or solve</td>
+<td align="right">2</td>
+</tr>
+<tr class="odd">
+<td align="right">11</td>
+<td align="left">your writing</td>
+<td align="left">your writing and coherence are graded for clarity, balance, directness, and convincingness</td>
+<td align="right">5</td>
+</tr>
+<tr class="even">
+<td align="right">12</td>
+<td align="left">total</td>
+<td align="left">sum of above concepts</td>
+<td align="right">25</td>
+</tr>
+</tbody>
+</table>
 
 </div>
 </div>

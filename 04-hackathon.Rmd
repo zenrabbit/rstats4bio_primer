@@ -2,27 +2,52 @@
 
 ![](./hackathon.png){width=3in}   
 
-All models are wrong but some are useful [@RN6467; @RN7258]. Critical thinking with statistics is thus critical to ensure that we best support evidence informed decision making in society [@RN6861; @RN7180].    
+All models are wrong but some are useful [@RN6467; @RN7258]. Critical thinking with statistics is thus critical to ensure that we effectively support evidence informed decision making in society [@RN6861; @RN7180].    
 
 #### Learning outcomes {-}  
-1. Appreciate the challenge of working with data to apply a critical design mindset to statistical solutions.  
-2. Practice your workflow and literate coding.   
+1. Appreciate the challenge of working with data to apply a critical thinking & creative design mindset to statistical solutions.  
+2. Practice your workflow and literate coding before a summative test.   
 3. Refine your thinking and coding for efficiency.    
 
 #### Critical thinking {-}  
 [Efficiency](https://en.wikipedia.org/wiki/Efficiency_(statistics)) is a fascinating topic in statistics [@RN7261; @RN7260; @RN7259]. Here, we can simplify this using the critical thinking criteria we have extensively refined and applied to numerous, tidy challenges. Efficiency = sufficiency (provided it is logical, fair, and accurate). Your plots and statistical models should represent a reasonable and likely description of the data at hand. This section is a formative opportunity for you to evaluate your skills and strengths in logic, efficiency, fair adventuring, workflows, and literate coding prior to the final section - a test. You are provided with a general dataset(s). The adventure is solve a very generalized challenge that is embodied in the evidence.    
 
 #### Adventure time {-}  
+Candy. Candy. Candy. Take a peek at these sweet data. Contrast Canada and USA candy sales at Halloween. Considering including population density in your model for each country for each year so as not to introduce variation and to be more accurate in estimating meaningful differences.
+
+[Canadian Candy](https://figshare.com/articles/dataset/Canadian_Candy_Sales/9876386)  
+[USA Candy & Halloween spending](https://figshare.com/articles/dataset/USA_Halloween_spending_data/9876380)  
+[Human population densities](https://figshare.com/articles/dataset/Human_population_density_data/15047379)  
+
 
 
 ```{r include=TRUE, warning=FALSE, message=FALSE}
 library(tidyverse)
-birds <- read_csv(url("https://knb.ecoinformatics.org/knb/d1/mn/v2/object/urn%3Auuid%3Aa84a9673-878a-4c43-ba08-570b2d38bdc9"))
-birds
+Canada <- read_csv(url("https://ndownloader.figshare.com/files/28935657"))
+Canada
+
+USA <- read_csv(url("https://ndownloader.figshare.com/files/28935660"))
+USA
+
+humans <- read_csv(url("https://ndownloader.figshare.com/files/28935663"))
+humans
 
 ```
 
 #### Reflection questions {-}  
-1. When do you move from EDA to model fitting?  
-2. Are there ways to mitigate bias and [p-hacking](https://www.wired.com/story/were-all-p-hacking-now/) through formal workflows?  
-3. Did building a model such as GLM align with critical thinking and intuition, i.e from critical thinking was it accurate and fair? Did the EDA-to-model process legitimately represent the patterns in the observations recorded. 
+1. How does veracity of data from different resources potentially influence your critical thinking?  
+2. Can joining data introduce errors?
+3. How does the available data bias the inference and interpretation of relative variables on key outcomes?  
+
+### Book review {-}  
+Throughout these sections, you should have now also completed a read of key chapters to support your learning from the text suggested 'The New Statistics with R' [@RN6087]. Use the [ten simple rules for reviews](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006562) suggested [@RN6148], and write and submit a short, less than 2000 word review of this text and submit to [turnitin.com](https://www.turnitin.com).  
+
+
+### Rubric {-}  
+```{r, warning=FALSE, message=FALSE, echo=FALSE}
+library(tidyverse)
+review <- read_csv("./key_review.csv")
+knitr::kable(review, booktabs = TRUE)
+
+```
+
