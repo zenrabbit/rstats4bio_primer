@@ -19,7 +19,7 @@ Candy. Candy. Candy. Take a peek at these sweet data. Contrast Canada and USA ca
 [USA Candy & Halloween spending](https://figshare.com/articles/dataset/USA_Halloween_spending_data/9876380)  
 [Human population densities](https://figshare.com/articles/dataset/Human_population_density_data/15047379)  
 
-
+Deeper dive: contrast GLMM model performance, examine temporal effects, or explore GAMs.
 
 ```{r include=TRUE, warning=FALSE, message=FALSE}
 library(tidyverse)

@@ -177,7 +177,11 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="hackathon.html"><a href="hackathon.html#book-review"><i class="fa fa-check"></i>Book review</a></li>
 <li class="chapter" data-level="" data-path="hackathon.html"><a href="hackathon.html#rubric"><i class="fa fa-check"></i>Rubric</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="test.html"><a href="test.html"><i class="fa fa-check"></i><b>6</b> Test</a></li>
+<li class="chapter" data-level="6" data-path="test.html"><a href="test.html"><i class="fa fa-check"></i><b>6</b> Test</a>
+<ul>
+<li class="chapter" data-level="" data-path="test.html"><a href="test.html#test-adventure-time"><i class="fa fa-check"></i>Test adventure time</a></li>
+<li class="chapter" data-level="" data-path="test.html"><a href="test.html#rubric-1"><i class="fa fa-check"></i>Rubric</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -232,7 +236,8 @@ div.csl-indent {
 </div>
 <div id="adventure-time-3" class="section level4 unnumbered">
 <h4>Adventure time</h4>
-<p>Here is an impressive <a href="https://knb.ecoinformatics.org/view/doi%3A10.5063%2F6M357V">dataset</a> describing bird counts in Toronto. These data were collected by York University undergraduates in an experimental design course. Explore whether there is a bias in detection by behaviour and identify the most common species by location in Toronto - at least as estimated using these data. For your curiosity, here are data collected in another larger citizen science endeavour - The <a href="https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1RF5SDJ">Christmas Bird Count for Southern Ontario region centered around the Greater Toronto Area</a>. If you wish to adventure further afield, contrast the two datasets.</p>
+<p>Here is an impressive <a href="https://knb.ecoinformatics.org/view/doi%3A10.5063%2F6M357V">dataset</a> describing bird counts in Toronto. These data were collected by York University undergraduates in an experimental design course. Explore whether there is a bias in detection by behaviour and identify the most common species by location in Toronto - at least as estimated using these data. For your curiosity, here are data collected in another larger citizen science endeavour - The <a href="https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1RF5SDJ">Christmas Bird Count for Southern Ontario region centered around the Greater Toronto Area</a>.</p>
+<p>Deeper dive: If you wish to adventure further afield, contrast the two datasets. Explore fitting a different family to the data or explore offset argument versus covariates.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="eebII.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb7-2"><a href="eebII.html#cb7-2" aria-hidden="true" tabindex="-1"></a>birds <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">url</span>(<span class="st">&quot;https://knb.ecoinformatics.org/knb/d1/mn/v2/object/urn%3Auuid%3Aa84a9673-878a-4c43-ba08-570b2d38bdc9&quot;</span>))</span>
 <span id="cb7-3"><a href="eebII.html#cb7-3" aria-hidden="true" tabindex="-1"></a>birds</span></code></pre></div>

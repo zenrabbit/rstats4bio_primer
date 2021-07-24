@@ -177,7 +177,11 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="hackathon.html"><a href="hackathon.html#book-review"><i class="fa fa-check"></i>Book review</a></li>
 <li class="chapter" data-level="" data-path="hackathon.html"><a href="hackathon.html#rubric"><i class="fa fa-check"></i>Rubric</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="test.html"><a href="test.html"><i class="fa fa-check"></i><b>6</b> Test</a></li>
+<li class="chapter" data-level="6" data-path="test.html"><a href="test.html"><i class="fa fa-check"></i><b>6</b> Test</a>
+<ul>
+<li class="chapter" data-level="" data-path="test.html"><a href="test.html#test-adventure-time"><i class="fa fa-check"></i>Test adventure time</a></li>
+<li class="chapter" data-level="" data-path="test.html"><a href="test.html#rubric-1"><i class="fa fa-check"></i>Rubric</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -221,6 +225,7 @@ div.csl-indent {
 <div id="adventure-time-1" class="section level4 unnumbered">
 <h4>Adventure time</h4>
 <p>Many years ago in a galaxy far, far away, a student sowed seeds in the desert at different densities for their PhD research. Here are the <a href="https://figshare.com/articles/dataset/Density_experiment_in_Negev_Desert_Israel/669703">data</a>, and here is the <a href="https://besjournals.onlinelibrary.wiley.com/doi/10.1046/j.1365-2745.2002.00686.x">publication</a> too <span class="citation">(<a href="references.html#ref-RN3094" role="doc-biblioref">Christopher J. Lortie and Turkington 2002</a>)</span>. This student was not strong in the force, but it was a good adventure in beginning to understand the relative importance of significance biologically and statistically by exploring critical thinking. For your adventure, test whether a set of groups differ from one another. For instance, test whether transects, or years, or even the density of seeds planted differs in an outcome measure such as mean plant size.</p>
+<p>Deeper dive: Check for homoscedasticity or do a post-hoc test.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="coding.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb3-2"><a href="coding.html#cb3-2" aria-hidden="true" tabindex="-1"></a>density <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">url</span>(<span class="st">&quot;https://ndownloader.figshare.com/files/28934310&quot;</span>))</span>
 <span id="cb3-3"><a href="coding.html#cb3-3" aria-hidden="true" tabindex="-1"></a>density</span></code></pre></div>

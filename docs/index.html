@@ -177,7 +177,11 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="hackathon.html"><a href="hackathon.html#book-review"><i class="fa fa-check"></i>Book review</a></li>
 <li class="chapter" data-level="" data-path="hackathon.html"><a href="hackathon.html#rubric"><i class="fa fa-check"></i>Rubric</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="test.html"><a href="test.html"><i class="fa fa-check"></i><b>6</b> Test</a></li>
+<li class="chapter" data-level="6" data-path="test.html"><a href="test.html"><i class="fa fa-check"></i><b>6</b> Test</a>
+<ul>
+<li class="chapter" data-level="" data-path="test.html"><a href="test.html#test-adventure-time"><i class="fa fa-check"></i>Test adventure time</a></li>
+<li class="chapter" data-level="" data-path="test.html"><a href="test.html#rubric-1"><i class="fa fa-check"></i>Rubric</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -297,6 +301,7 @@ div.csl-indent {
 </div>
 <div id="citation" class="section level3 unnumbered">
 <h3>Citation</h3>
+<p>Lortie, CJ (2021): A primer for biostatistics in R. figshare. Book. <a href="https://doi.org/10.6084/m9.figshare.15048597.v2" class="uri">https://doi.org/10.6084/m9.figshare.15048597.v2</a></p>
 </div>
 <div id="license" class="section level3 unnumbered">
 <h3>License</h3>
@@ -322,6 +327,7 @@ div.csl-indent {
 <div id="adventure-time" class="section level4 unnumbered">
 <h4>Adventure time</h4>
 <p>Very simple life data to explore some ideas about meditation, steps, resting heart rate and the importance of instrument variation. Data are <a href="https://figshare.com/articles/dataset/Simple_health_data/15040515">here</a>. Explore the t-test in R for this adventure. Is the number of steps or sleep different from 0? Do the means estimated from a watch versus simple Fitbit tracker vary for simple measures? Did 0 versus 12 mins of meditation per day influence a relevant measure?</p>
+<p>Deeper dive: explore the var.equal or alternative argument. Test nonparametric analog to this test.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="index.html#cb1-2" aria-hidden="true" tabindex="-1"></a>simple_life <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">url</span>(<span class="st">&quot;https://ndownloader.figshare.com/files/28920855&quot;</span>))</span>
 <span id="cb1-3"><a href="index.html#cb1-3" aria-hidden="true" tabindex="-1"></a>simple_life</span></code></pre></div>

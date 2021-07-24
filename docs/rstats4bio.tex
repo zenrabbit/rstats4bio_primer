@@ -222,6 +222,8 @@ The final two weeks, that hackathon is a warm up to the test. Grab the dataset, 
 \subsection*{Citation}\label{citation}}
 \addcontentsline{toc}{subsection}{Citation}
 
+Lortie, CJ (2021): A primer for biostatistics in R. figshare. Book. \url{https://doi.org/10.6084/m9.figshare.15048597.v2}
+
 \hypertarget{license}{%
 \subsection*{License}\label{license}}
 \addcontentsline{toc}{subsection}{License}
@@ -260,6 +262,8 @@ Tidiness is next to naturalness. We are wired up to see patterns and organize. P
 \addcontentsline{toc}{subsubsection}{Adventure time}
 
 Very simple life data to explore some ideas about meditation, steps, resting heart rate and the importance of instrument variation. Data are \href{https://figshare.com/articles/dataset/Simple_health_data/15040515}{here}. Explore the t-test in R for this adventure. Is the number of steps or sleep different from 0? Do the means estimated from a watch versus simple Fitbit tracker vary for simple measures? Did 0 versus 12 mins of meditation per day influence a relevant measure?
+
+Deeper dive: explore the var.equal or alternative argument. Test nonparametric analog to this test.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -335,6 +339,8 @@ Literate coding \citep{RN4414} should capture a workflow that includes the wrang
 \addcontentsline{toc}{subsubsection}{Adventure time}
 
 Many years ago in a galaxy far, far away, a student sowed seeds in the desert at different densities for their PhD research. Here are the \href{https://figshare.com/articles/dataset/Density_experiment_in_Negev_Desert_Israel/669703}{data}, and here is the \href{https://besjournals.onlinelibrary.wiley.com/doi/10.1046/j.1365-2745.2002.00686.x}{publication} too \citep{RN3094}. This student was not strong in the force, but it was a good adventure in beginning to understand the relative importance of significance biologically and statistically by exploring critical thinking. For your adventure, test whether a set of groups differ from one another. For instance, test whether transects, or years, or even the density of seeds planted differs in an outcome measure such as mean plant size.
+
+Deeper dive: Check for homoscedasticity or do a post-hoc test.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -413,6 +419,8 @@ Evolution of plotting in statistics using R in particular went from base-R then 
 \addcontentsline{toc}{subsubsection}{Adventure time}
 
 Here are a deeper set of quantified life \href{https://figshare.com/articles/dataset/Quantified_life/12803105}{data}. Explore whether movement predicts total sleep or its efficiency. Plot out some patterns first, then, do a regression.
+
+Deeper dive: explore residuals and try the cooks.distance function for outliers.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -507,7 +515,9 @@ Conceptually, there are two kind of models. Those that look back and those that 
 \subsubsection*{Adventure time}\label{adventure-time-3}}
 \addcontentsline{toc}{subsubsection}{Adventure time}
 
-Here is an impressive \href{https://knb.ecoinformatics.org/view/doi\%3A10.5063\%2F6M357V}{dataset} describing bird counts in Toronto. These data were collected by York University undergraduates in an experimental design course. Explore whether there is a bias in detection by behaviour and identify the most common species by location in Toronto - at least as estimated using these data. For your curiosity, here are data collected in another larger citizen science endeavour - The \href{https://knb.ecoinformatics.org/view/doi\%3A10.5063\%2FF1RF5SDJ}{Christmas Bird Count for Southern Ontario region centered around the Greater Toronto Area}. If you wish to adventure further afield, contrast the two datasets.
+Here is an impressive \href{https://knb.ecoinformatics.org/view/doi\%3A10.5063\%2F6M357V}{dataset} describing bird counts in Toronto. These data were collected by York University undergraduates in an experimental design course. Explore whether there is a bias in detection by behaviour and identify the most common species by location in Toronto - at least as estimated using these data. For your curiosity, here are data collected in another larger citizen science endeavour - The \href{https://knb.ecoinformatics.org/view/doi\%3A10.5063\%2FF1RF5SDJ}{Christmas Bird Count for Southern Ontario region centered around the Greater Toronto Area}.
+
+Deeper dive: If you wish to adventure further afield, contrast the two datasets. Explore fitting a different family to the data or explore offset argument versus covariates.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -587,6 +597,8 @@ Candy. Candy. Candy. Take a peek at these sweet data. Contrast Canada and USA ca
 \href{https://figshare.com/articles/dataset/Canadian_Candy_Sales/9876386}{Canadian Candy}\\
 \href{https://figshare.com/articles/dataset/USA_Halloween_spending_data/9876380}{USA Candy \& Halloween spending}\\
 \href{https://figshare.com/articles/dataset/Human_population_density_data/15047379}{Human population densities}
+
+Deeper dive: contrast GLMM model performance, examine temporal effects, or explore GAMs.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -710,6 +722,83 @@ item & concept & description & value\\
 
 \hypertarget{test}{%
 \chapter{Test}\label{test}}
+
+\includegraphics[width=3in,height=\textheight]{./test.png}
+
+Put your practice to the test. Here are some excellent \href{https://www.rstudio.com/resources/cheatsheets/}{cheatsheets} to consider for biostats in R, and this is a useful read on \href{https://arxiv.org/abs/1609.00037}{good enough practices in scientific computing} \citep{RN5002}. The goal here was not to become data scientists nor biostatisticians but to encourage you to consider developing and refining your critical thinking skills in the context of evidence, data, and statistical reasoning.
+
+\hypertarget{learning-outcomes-6}{%
+\subsubsection*{Learning outcomes}\label{learning-outcomes-6}}
+\addcontentsline{toc}{subsubsection}{Learning outcomes}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Complete fundamental exploratory data analysis on a representative dataset culminating with a fair and reasonable statistical model.\\
+\item
+  Interpret a statistical analyses that you completed with a focus on relevance, significance, and logic.\\
+\item
+  Communicate biostatistical work clearly and effectively to others.
+\end{enumerate}
+
+\hypertarget{critical-thinking-5}{%
+\subsubsection*{Critical thinking}\label{critical-thinking-5}}
+\addcontentsline{toc}{subsubsection}{Critical thinking}
+
+At times in many disciplines of biological research, we need to be open to experimentation that is fair, transparent, and replicable but that is implemented based on available data. This experimentatation can also happen after we have data. It can be an exercise in fitting the most appropriate or parsimonous models \citep{RN1873}, applying experimental design principles \citep{RN6381}, and of course invoking critical thinking. This is not to say we are going on fishing expeditions, but that that at times, we have only certain data to describe a system and are tasked or obligated to use the best possible evidence we have to infer relevant processes. For instance, we might compile field data, data from online resources or data products for climate or landscapes, or reuse data on traits on genetics and link these different evidence streams together to explore a question. Critical thinking in statistics can be an important framework that we leverage to not only do the statistics and fit models but also ensure that we are able to ask the questions we need to. In summary, we have data and need an answer but have to use open and transparent thinking with statistics to find the best question.
+
+\hypertarget{test-adventure-time}{%
+\subsection*{Test adventure time}\label{test-adventure-time}}
+\addcontentsline{toc}{subsection}{Test adventure time}
+
+York University, \href{https://en.wikipedia.org/wiki/Keele_Campus_(York_University)}{Keele Campus} is a small urban forest mixed with grasslands and open space. The master gardeners measured nearly 7000 trees over the course of two years. The data were recently compiled and \href{https://knb.ecoinformatics.org/view/doi\%3A10.5063\%2FF13F4MZC}{published for reuse}. There are many fascinating and compelling questions to explore that can support evidence-informed decisions and valuation estimates for this place ecologically, environmentally, and from a trait or species-level perspective. This challenge as a summative test is thus relatively more open ended. Given these data, collected and now published, what can we do to enhance our biological and social understanding and appreciation for a university campus that support people, other animals, and plants. Explore the data, define a relevant challenge or set of questions that would benefit the stakeholders or local community or inform our understanding of a biological theory, and demonstrate your mastery of critical thinking in statistics. Submit your work to \href{https://www.turnitin.com}{turnitin.com} as PDF including the code, annotation, rationale, interpretation, and outputs from the viz, EDA, and model(s) that supported your thinking.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\NormalTok{trees }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\FunctionTok{url}\NormalTok{(}\StringTok{"https://knb.ecoinformatics.org/knb/d1/mn/v2/object/urn\%3Auuid\%3A1e738f4d{-}f491{-}4b40{-}b55a{-}e8395c5349ce"}\NormalTok{))  }
+\NormalTok{trees}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6,951 x 27
+##      FID OBJECTID Date   Block Street_or_       Building_C Tree_Tag_N Species_Co
+##    <dbl>    <dbl> <chr>  <chr> <chr>                 <dbl>      <dbl> <chr>     
+##  1     0        1 9/7/12 A     Stedman Lecture~         22          1 lochon    
+##  2     1        2 9/7/12 A     Stedman Lecture~         22          2 lochon    
+##  3     2        3 9/7/12 A     Stedman Lecture~         22          3 lochon    
+##  4     3        4 9/7/12 A     Stedman Lecture~         22          4 lochon    
+##  5     4        5 9/7/12 A     Stedman Lecture~         22          5 lochon    
+##  6     5        6 9/7/12 A     Stedman Lecture~         22          6 lochon    
+##  7     6        7 9/7/12 A     Stedman Lecture~         22          7 lochon    
+##  8     7        8 9/7/12 A     Stedman Lecture~         22          8 lochon    
+##  9     8        9 9/7/12 A     Stedman Lecture~         22          9 lochon    
+## 10     9       10 9/7/12 A     Stedman Lecture~         22         10 lochon    
+## # ... with 6,941 more rows, and 19 more variables: Common_Nam <chr>,
+## #   Genus <chr>, Species <chr>, DBH <dbl>, Number_of_ <dbl>, Percentage <dbl>,
+## #   Crown_Widt <dbl>, Total_Heig <dbl>, Latitude <dbl>, Longitude <dbl>,
+## #   Height_to_ <dbl>, Unbalanced <dbl>, Reduced_Cr <dbl>, Weak_Yello <dbl>,
+## #   Defoliatio <dbl>, Dead_Broke <dbl>, Poor_Branc <dbl>, Lean <dbl>,
+## #   Trunk_Scar <dbl>
+\end{verbatim}
+
+\hypertarget{rubric-1}{%
+\subsection*{Rubric}\label{rubric-1}}
+\addcontentsline{toc}{subsection}{Rubric}
+
+\begin{tabular}{rllr}
+\toprule
+item & concept & description & value\\
+\midrule
+1 & effective data viz & are there figures exploring the data and is the final main figure publishable in terms of legends, labels, axes, appropriateness & 10\\
+2 & effective EDA & is the distribution of and relationship between variables explored & 5\\
+3 & final data model(s) & does the final model(s) address the purpose of study, appropriate, and assumptions including  fit of model explored & 5\\
+4 & annotation and reporting & is there annotation in the r-code chunks, reporting in the markdown, and an interpretation even briefly of what you found and why & 5\\
+5 & total & sum of above & 25\\
+\bottomrule
+\end{tabular}
 
   \bibliography{book.bib,packages.bib}
 

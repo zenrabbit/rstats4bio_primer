@@ -66,6 +66,7 @@ Each week, read, discuss if you elect to work synchronously, and try the challen
 The final two weeks, that hackathon is a warm up to the test. Grab the dataset, apply your critical thinking skills, code and show your work, and capture code and outputs as PDF. The hackathon is a stepping stone, formative process for to check if you are ready to think on your feet, write code, and apply biostatistical thinking to a challenge. The test is the exact same approach but summative, i.e. you submit for review and grading to a peer or instructor like me.  
 
 ### Citation {-}  
+Lortie, CJ (2021): A primer for biostatistics in R. figshare. Book. https://doi.org/10.6084/m9.figshare.15048597.v2 
 
 
 ### License {-}  
@@ -86,6 +87,7 @@ Tidiness is next to naturalness. We are wired up to see patterns and organize. P
 #### Adventure time {-}  
 Very simple life data to explore some ideas about meditation, steps, resting heart rate and the importance of instrument variation.  Data are [here](https://figshare.com/articles/dataset/Simple_health_data/15040515). Explore the t-test in R for this adventure. Is the number of steps or sleep different from 0? Do the means estimated from a watch versus simple Fitbit tracker vary for simple measures? Did 0 versus 12 mins of meditation per day influence a relevant measure?    
 
+Deeper dive: explore the var.equal or alternative argument. Test nonparametric analog to this test.   
 
 ```{r include=TRUE, warning=FALSE, message=FALSE}
 library(tidyverse)
