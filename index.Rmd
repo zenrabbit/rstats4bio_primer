@@ -33,7 +33,7 @@ If you are electing to engage with this learning opportunity formally for BIOL50
 7. Appreciate the strengths and limitations of open science, data science, and evidence-based collaboration models.  
 
 ### Structure {-}  
-Read a book. [The new statistics with R. An introduction for biologists](https://oxford.universitypressscholarship.com/view/10.1093/acprof:oso/9780198729051.001.0001/acprof-9780198729051) [@RN6087].  
+Read a book. [The new statistics with R.](https://global.oup.com/academic/product/the-new-statistics-with-r-9780198798187?cc=us&lang=en&) [@RN7358].  
 
 Write a book review. [Ten simple rules for writing statistical book reviews](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006562) [@RN6148] suggests a critical thinking framework to adopt for this process.  
 

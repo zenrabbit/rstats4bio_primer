@@ -1,7 +1,7 @@
 week,adventure,slide deck
-1,[Tidy data in R](https://www.jstatsoft.org/article/view/v059i10),[whyR](https://figshare.com/articles/presentation/whyR_why_consider_using_R_for_your_stats/15044448)
-2,[Literate statistical coding](https://ojs.library.queensu.ca/index.php/IEE/article/view/6559) and [Data science](https://www.jstatsoft.org/article/view/v077b01),[wrangleR](https://figshare.com/articles/presentation/wrangleR_data_wrangling_in_R/15044457)
-3,Statistics for ecology and evolution I [(CH4 in text)](https://oxford.universitypressscholarship.com/view/10.1093/acprof:oso/9780198729051.001.0001/acprof-9780198729051),[contemporary viz](https://figshare.com/articles/presentation/Contemporary_data_viz_in_R/15044445)
-4,Statistics for ecology and evolution II [(CH10 and 11 in text)](https://oxford.universitypressscholarship.com/view/10.1093/acprof:oso/9780198729051.001.0001/acprof-9780198729051),[EDAR](https://figshare.com/articles/presentation/Exploratory_data_analysis_models_in_R/15044436)
+1,[Tidy data in R](https://www.jstatsoft.org/article/view/v059i10) and CH9 in textbook,[whyR](https://figshare.com/articles/presentation/whyR_why_consider_using_R_for_your_stats/15044448)
+2,[Literate statistical coding](https://ojs.library.queensu.ca/index.php/IEE/article/view/6559) and [Data science](https://www.jstatsoft.org/article/view/v077b01) and CH11 in texbook,[wrangleR](https://figshare.com/articles/presentation/wrangleR_data_wrangling_in_R/15044457)
+3,Statistics for ecology and evolution I and CH7 in textbook,[contemporary viz](https://figshare.com/articles/presentation/Contemporary_data_viz_in_R/15044445)
+4,Statistics for ecology and evolution II and CH15 in textbook,[EDAR](https://figshare.com/articles/presentation/Exploratory_data_analysis_models_in_R/15044436)
 5,Book review due and hackathon,[efficient stats](https://figshare.com/articles/presentation/Efficient_statistics/15044442)
 6,Test ,[when to publish data & code](https://figshare.com/articles/presentation/The_early_bird_gets_the_return_when_to_publish_your_data/14681124)

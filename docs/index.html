@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>A primer for biostatistics in R</title>
   <meta name="description" content="A brief introduction to statistical thinking in biostatistics supported by the R programming language." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="A primer for biostatistics in R" />
   <meta property="og:type" content="book" />
@@ -32,8 +32,9 @@
   
 
 <link rel="next" href="coding.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -41,7 +42,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -237,7 +237,7 @@ div.csl-indent {
 </div>
 <div id="structure" class="section level3 unnumbered">
 <h3>Structure</h3>
-<p>Read a book. <a href="https://oxford.universitypressscholarship.com/view/10.1093/acprof:oso/9780198729051.001.0001/acprof-9780198729051">The new statistics with R. An introduction for biologists</a> <span class="citation">(<a href="references.html#ref-RN6087" role="doc-biblioref">Hector 2017</a>)</span>.</p>
+<p>Read a book. <a href="https://global.oup.com/academic/product/the-new-statistics-with-r-9780198798187?cc=us&amp;lang=en&amp;">The new statistics with R.</a> <span class="citation">(<a href="references.html#ref-RN7358" role="doc-biblioref">Hector 2021</a>)</span>.</p>
 <p>Write a book review. <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006562">Ten simple rules for writing statistical book reviews</a> <span class="citation">(<a href="references.html#ref-RN6148" role="doc-biblioref">Christopher J. Lortie 2019</a>)</span> suggests a critical thinking framework to adopt for this process.</p>
 <p>Learn-by-doing here.</p>
 <p>Do a hackathon.</p>
@@ -252,6 +252,11 @@ div.csl-indent {
 <h3>Schedule</h3>
 <p>Slide decks are optional. The decks simply highlight some of the connections between the criteria for critical thinking and statistical heuristics.</p>
 <table>
+<colgroup>
+<col width="1%" />
+<col width="55%" />
+<col width="42%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="right">week</th>
@@ -262,22 +267,22 @@ div.csl-indent {
 <tbody>
 <tr class="odd">
 <td align="right">1</td>
-<td align="left"><a href="https://www.jstatsoft.org/article/view/v059i10">Tidy data in R</a></td>
+<td align="left"><a href="https://www.jstatsoft.org/article/view/v059i10">Tidy data in R</a> and CH9 in textbook</td>
 <td align="left"><a href="https://figshare.com/articles/presentation/whyR_why_consider_using_R_for_your_stats/15044448">whyR</a></td>
 </tr>
 <tr class="even">
 <td align="right">2</td>
-<td align="left"><a href="https://ojs.library.queensu.ca/index.php/IEE/article/view/6559">Literate statistical coding</a> and <a href="https://www.jstatsoft.org/article/view/v077b01">Data science</a></td>
+<td align="left"><a href="https://ojs.library.queensu.ca/index.php/IEE/article/view/6559">Literate statistical coding</a> and <a href="https://www.jstatsoft.org/article/view/v077b01">Data science</a> and CH11 in texbook</td>
 <td align="left"><a href="https://figshare.com/articles/presentation/wrangleR_data_wrangling_in_R/15044457">wrangleR</a></td>
 </tr>
 <tr class="odd">
 <td align="right">3</td>
-<td align="left">Statistics for ecology and evolution I <a href="https://oxford.universitypressscholarship.com/view/10.1093/acprof:oso/9780198729051.001.0001/acprof-9780198729051">(CH4 in text)</a></td>
+<td align="left">Statistics for ecology and evolution I and CH7 in textbook</td>
 <td align="left"><a href="https://figshare.com/articles/presentation/Contemporary_data_viz_in_R/15044445">contemporary viz</a></td>
 </tr>
 <tr class="even">
 <td align="right">4</td>
-<td align="left">Statistics for ecology and evolution II <a href="https://oxford.universitypressscholarship.com/view/10.1093/acprof:oso/9780198729051.001.0001/acprof-9780198729051">(CH10 and 11 in text)</a></td>
+<td align="left">Statistics for ecology and evolution II and CH15 in textbook</td>
 <td align="left"><a href="https://figshare.com/articles/presentation/Exploratory_data_analysis_models_in_R/15044436">EDAR</a></td>
 </tr>
 <tr class="odd">
@@ -331,7 +336,7 @@ div.csl-indent {
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="index.html#cb1-2" aria-hidden="true" tabindex="-1"></a>simple_life <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">url</span>(<span class="st">&quot;https://ndownloader.figshare.com/files/28920855&quot;</span>))</span>
 <span id="cb1-3"><a href="index.html#cb1-3" aria-hidden="true" tabindex="-1"></a>simple_life</span></code></pre></div>
-<pre><code>## # A tibble: 9 x 7
+<pre><code>## # A tibble: 9 × 7
 ##   simple_date steps_fitbit sleep_fitbit    hr steps_watch sleep_watch
 ##   &lt;date&gt;             &lt;dbl&gt;        &lt;dbl&gt; &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;
 ## 1 2021-06-02         20913          429    54       25197         314
@@ -366,7 +371,6 @@ div.csl-indent {
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -406,6 +410,10 @@ gitbook.start({
 "text": null
 },
 "download": ["rstats4bio.pdf", "rstats4bio.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 5 Hackathon | A primer for biostatistics in R</title>
   <meta name="description" content="A brief introduction to statistical thinking in biostatistics supported by the R programming language." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 5 Hackathon | A primer for biostatistics in R" />
   <meta property="og:type" content="book" />
@@ -32,8 +32,9 @@
   
 <link rel="prev" href="eebII.html"/>
 <link rel="next" href="test.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -41,7 +42,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -231,7 +231,7 @@ div.csl-indent {
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="hackathon.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb9-2"><a href="hackathon.html#cb9-2" aria-hidden="true" tabindex="-1"></a>Canada <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">url</span>(<span class="st">&quot;https://ndownloader.figshare.com/files/28935657&quot;</span>))</span>
 <span id="cb9-3"><a href="hackathon.html#cb9-3" aria-hidden="true" tabindex="-1"></a>Canada</span></code></pre></div>
-<pre><code>## # A tibble: 228 x 3
+<pre><code>## # A tibble: 228 × 3
 ##    month  year  candy
 ##    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;
 ##  1     1  1997 101014
@@ -247,7 +247,7 @@ div.csl-indent {
 ## # … with 218 more rows</code></pre>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="hackathon.html#cb11-1" aria-hidden="true" tabindex="-1"></a>USA <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">url</span>(<span class="st">&quot;https://ndownloader.figshare.com/files/28935660&quot;</span>))</span>
 <span id="cb11-2"><a href="hackathon.html#cb11-2" aria-hidden="true" tabindex="-1"></a>USA</span></code></pre></div>
-<pre><code>## # A tibble: 10 x 6
+<pre><code>## # A tibble: 10 × 6
 ##     year halloween_total_b… costumes_childr… costumes_adult costumes_pets  candy
 ##    &lt;dbl&gt;              &lt;dbl&gt;            &lt;dbl&gt;          &lt;dbl&gt;         &lt;dbl&gt;  &lt;dbl&gt;
 ##  1  2006               4.96            NA             NA            NA    NA    
@@ -262,7 +262,7 @@ div.csl-indent {
 ## 10  2015               6.89             0.95           1.22          0.35  2.5</code></pre>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="hackathon.html#cb13-1" aria-hidden="true" tabindex="-1"></a>humans <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">url</span>(<span class="st">&quot;https://ndownloader.figshare.com/files/28935663&quot;</span>))</span>
 <span id="cb13-2"><a href="hackathon.html#cb13-2" aria-hidden="true" tabindex="-1"></a>humans</span></code></pre></div>
-<pre><code>## # A tibble: 264 x 21
+<pre><code>## # A tibble: 264 × 21
 ##    `Country Name`       `Country Code` `1997` `1998` `1999` `2000` `2001` `2002`
 ##    &lt;chr&gt;                &lt;chr&gt;           &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
 ##  1 Aruba                ABW             475.   485.   494.   505.   516.   528. 
@@ -397,7 +397,6 @@ div.csl-indent {
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -437,6 +436,10 @@ gitbook.start({
 "text": null
 },
 "download": ["rstats4bio.pdf", "rstats4bio.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
