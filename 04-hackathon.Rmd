@@ -16,20 +16,20 @@ All models are wrong but some are useful [@RN6467; @RN7258]. Critical thinking w
 Candy. Candy. Candy. Take a peek at these sweet data. Contrast Canada and USA candy sales at Halloween. Considering including population density in your model for each country for each year so as not to introduce variation and to be more accurate in estimating meaningful differences.
 
 [Canadian Candy](https://figshare.com/articles/dataset/Canadian_Candy_Sales/9876386)  
-[USA Candy & Halloween spending](https://figshare.com/articles/dataset/USA_Halloween_spending_data/9876380)  
-[Human population densities](https://figshare.com/articles/dataset/Human_population_density_data/15047379)  
+[USA Candy & Halloween spending](https://figshare.com/articles/dataset/USA_Halloween_spending/13125572)  
+[Human populations](https://figshare.com/articles/dataset/World_human_populations/16746652)  
 
 Deeper dive: contrast GLMM model performance, examine temporal effects, or explore GAMs.
 
 ```{r include=TRUE, warning=FALSE, message=FALSE}
 library(tidyverse)
-Canada <- read_csv(url("https://ndownloader.figshare.com/files/28935657"))
+Canada <- read_csv(url("https://figshare.com/ndownloader/files/30990820"))
 Canada
 
-USA <- read_csv(url("https://ndownloader.figshare.com/files/28935660"))
+USA <- read_csv(url("https://figshare.com/ndownloader/files/25190510"))
 USA
 
-humans <- read_csv(url("https://ndownloader.figshare.com/files/28935663"))
+humans <- read_csv(url("https://figshare.com/ndownloader/files/30993373"))
 humans
 
 ```

@@ -4,10 +4,14 @@
 %
 \documentclass[
 ]{book}
+\title{A primer for biostatistics in R}
+\author{cjlortie}
+\date{}
+
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
-\usepackage{ifxetex,ifluatex}
-\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+\usepackage{iftex}
+\ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
@@ -109,15 +113,11 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
 \usepackage{booktabs}
-\ifluatex
+\ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
-
-\title{A primer for biostatistics in R}
-\author{cjlortie}
-\date{}
 
 \begin{document}
 \maketitle
@@ -595,21 +595,21 @@ All models are wrong but some are useful \citep{RN6467, RN7258}. Critical thinki
 Candy. Candy. Candy. Take a peek at these sweet data. Contrast Canada and USA candy sales at Halloween. Considering including population density in your model for each country for each year so as not to introduce variation and to be more accurate in estimating meaningful differences.
 
 \href{https://figshare.com/articles/dataset/Canadian_Candy_Sales/9876386}{Canadian Candy}\\
-\href{https://figshare.com/articles/dataset/USA_Halloween_spending_data/9876380}{USA Candy \& Halloween spending}\\
-\href{https://figshare.com/articles/dataset/Human_population_density_data/15047379}{Human population densities}
+\href{https://figshare.com/articles/dataset/USA_Halloween_spending/13125572}{USA Candy \& Halloween spending}\\
+\href{https://figshare.com/articles/dataset/World_human_populations/16746652}{Human populations}
 
 Deeper dive: contrast GLMM model performance, examine temporal effects, or explore GAMs.
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \FunctionTok{library}\NormalTok{(tidyverse)}
-\NormalTok{Canada }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\FunctionTok{url}\NormalTok{(}\StringTok{"https://ndownloader.figshare.com/files/28935657"}\NormalTok{))}
+\NormalTok{Canada }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\FunctionTok{url}\NormalTok{(}\StringTok{"https://figshare.com/ndownloader/files/30990820"}\NormalTok{))}
 \NormalTok{Canada}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 228 x 3
+## # A tibble: 233 x 3
 ##    month  year  candy
 ##    <dbl> <dbl>  <dbl>
 ##  1     1  1997 101014
@@ -622,56 +622,66 @@ Deeper dive: contrast GLMM model performance, examine temporal effects, or explo
 ##  8     8  1997 113934
 ##  9     9  1997 109441
 ## 10    10  1997 146876
-## # ... with 218 more rows
+## # ... with 223 more rows
 \end{verbatim}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{USA }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\FunctionTok{url}\NormalTok{(}\StringTok{"https://ndownloader.figshare.com/files/28935660"}\NormalTok{))}
+\NormalTok{USA }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\FunctionTok{url}\NormalTok{(}\StringTok{"https://figshare.com/ndownloader/files/25190510"}\NormalTok{))}
 \NormalTok{USA}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 10 x 6
-##     year halloween_total_b~ costumes_childr~ costumes_adult costumes_pets  candy
-##    <dbl>              <dbl>            <dbl>          <dbl>         <dbl>  <dbl>
-##  1  2006               4.96            NA             NA            NA    NA    
-##  2  2007               5.07            NA             NA            NA    NA    
-##  3  2008               5.77            NA             NA            NA    NA    
-##  4  2009               4.75            NA             NA            NA     0.35 
-##  5  2010               5.8              0.84           0.99          0.22  0.509
-##  6  2011               6.86             1              1.21          0.31  0.419
-##  7  2012               8                1.1            1.4           0.37  0.606
-##  8  2013               6.99             1.04           1.22          0.33  0.634
-##  9  2014               7.4              1.06           1.38          0.35  0.408
-## 10  2015               6.89             0.95           1.22          0.35  2.5
+## # A tibble: 16 x 6
+##     year total costumes candy decorations cards
+##    <dbl> <dbl>    <dbl> <dbl>       <dbl> <dbl>
+##  1  2005   3.3      1.2   1.2         0.8   0.1
+##  2  2006   5        1.8   1.6         1.3   0.3
+##  3  2007   5.1      1.8   1.6         1.4   0.3
+##  4  2008   5.8      2.1   1.8         1.6   0.3
+##  5  2009   4.7      1.7   1.5         1.2   0.3
+##  6  2010   5.8      2     1.8         1.6   0.3
+##  7  2011   6.9      2.5   2           1.9   0.5
+##  8  2012   8        2.9   2.3         2.4   0.6
+##  9  2013   7        2.6   2.1         2     0.4
+## 10  2014   7.4      2.8   2.2         2     0.4
+## 11  2015   6.9      2.5   2.1         1.9   0.3
+## 12  2016   8.4      3.1   2.5         2.4   0.4
+## 13  2017   9.1      3.3   2.7         2.7   0.4
+## 14  2018   9        3.2   2.6         2.7   0.4
+## 15  2019   8.8      3.2   2.6         2.6   0.4
+## 16  2020   8        2.6   2.4         2.6   0.4
 \end{verbatim}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{humans }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\FunctionTok{url}\NormalTok{(}\StringTok{"https://ndownloader.figshare.com/files/28935663"}\NormalTok{))}
+\NormalTok{humans }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\FunctionTok{url}\NormalTok{(}\StringTok{"https://figshare.com/ndownloader/files/30993373"}\NormalTok{))}
 \NormalTok{humans}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 264 x 21
-##    `Country Name`       `Country Code` `1997` `1998` `1999` `2000` `2001` `2002`
-##    <chr>                <chr>           <dbl>  <dbl>  <dbl>  <dbl>  <dbl>  <dbl>
-##  1 Aruba                ABW             475.   485.   494.   505.   516.   528. 
-##  2 Andorra              AND             136.   136.   137.   139.   144.   151. 
-##  3 Afghanistan          AFG              27.6   28.4   29.2   30.2   31.4   32.9
-##  4 Angola               AGO              11.1   11.4   11.7   12.1   12.5   12.9
-##  5 Albania              ALB             115.   114.   113.   113.   112.   111. 
-##  6 Arab World           ARB              19.4   19.8   20.2   20.6   21.1   21.5
-##  7 United Arab Emirates ARE              31.0   32.7   34.5   36.5   38.5   40.6
-##  8 Argentina            ARG              13.1   13.2   13.4   13.5   13.7   13.8
-##  9 Armenia              ARM             110.   109.   109.   108.   107.   107. 
-## 10 American Samoa       ASM             275.   279.   284.   288.   291.   294. 
-## # ... with 254 more rows, and 13 more variables: 2003 <dbl>, 2004 <dbl>,
-## #   2005 <dbl>, 2006 <dbl>, 2007 <dbl>, 2008 <dbl>, 2009 <dbl>, 2010 <dbl>,
-## #   2011 <dbl>, 2012 <dbl>, 2013 <dbl>, 2014 <dbl>, 2015 <dbl>
+## # A tibble: 249 x 72
+##    country `1950` `1951` `1952` `1953` `1954` `1955` `1956` `1957` `1958` `1959`
+##    <chr>   <chr>  <chr>  <chr>  <chr>  <chr>  <chr>  <chr>  <chr>  <chr>  <chr> 
+##  1 Burundi 2 309  2 360  2 406  2 449  2 492  2 537  2 585  2 636  2 689  2 743 
+##  2 Comoros 159    163    167    170    173    176    179    182    185    188   
+##  3 Djibou~ 62     63     65     66     68     70     71     74     76     80    
+##  4 Eritrea 822    835    849    865    882    900    919    939    961    983   
+##  5 Ethiop~ 18 128 18 467 18 820 19 184 19 560 19 947 20 348 20 764 21 201 21 662
+##  6 Kenya   6 077  6 242  6 416  6 598  6 789  6 988  7 195  7 412  7 638  7 874 
+##  7 Madaga~ 4 084  4 168  4 257  4 349  4 444  4 544  4 647  4 754  4 865  4 980 
+##  8 Malawi  2 954  3 012  3 072  3 136  3 202  3 271  3 342  3 417  3 495  3 576 
+##  9 Maurit~ 493    506    521    537    554    571    588    605    623    641   
+## 10 Mayotte 15     16     16     17     18     19     20     21     22     23    
+## # ... with 239 more rows, and 61 more variables: 1960 <chr>, 1961 <chr>,
+## #   1962 <chr>, 1963 <chr>, 1964 <chr>, 1965 <chr>, 1966 <chr>, 1967 <chr>,
+## #   1968 <chr>, 1969 <chr>, 1970 <chr>, 1971 <chr>, 1972 <chr>, 1973 <chr>,
+## #   1974 <chr>, 1975 <chr>, 1976 <chr>, 1977 <chr>, 1978 <chr>, 1979 <chr>,
+## #   1980 <chr>, 1981 <chr>, 1982 <chr>, 1983 <chr>, 1984 <chr>, 1985 <chr>,
+## #   1986 <chr>, 1987 <chr>, 1988 <chr>, 1989 <chr>, 1990 <chr>, 1991 <chr>,
+## #   1992 <chr>, 1993 <chr>, 1994 <chr>, 1995 <chr>, 1996 <chr>, 1997 <chr>, ...
 \end{verbatim}
 
 \hypertarget{reflection-questions-4}{%
@@ -752,7 +762,7 @@ At times in many disciplines of biological research, we need to be open to exper
 \subsection*{Test adventure time}\label{test-adventure-time}}
 \addcontentsline{toc}{subsection}{Test adventure time}
 
-York University, \href{https://en.wikipedia.org/wiki/Keele_Campus_(York_University)}{Keele Campus} is a small urban forest mixed with grasslands and open space. The master gardeners measured nearly 7000 trees over the course of two years. The data were recently compiled and \href{https://knb.ecoinformatics.org/view/doi\%3A10.5063\%2FF13F4MZC}{published for reuse}. There are many fascinating and compelling questions to explore that can support evidence-informed decisions and valuation estimates for this place ecologically, environmentally, and from a trait or species-level perspective. This challenge as a summative test is thus relatively more open ended. Given these data, collected and now published, what can we do to enhance our biological and social understanding and appreciation for a university campus that support people, other animals, and plants. Explore the data, define a relevant challenge or set of questions that would benefit the stakeholders or local community or inform our understanding of a biological theory, and demonstrate your mastery of critical thinking in statistics. Submit your work to \href{https://www.turnitin.com}{turnitin.com} as PDF including the code, annotation, rationale, interpretation, and outputs from the viz, EDA, and model(s) that supported your thinking.
+York University, \href{https://en.wikipedia.org/wiki/Keele_Campus_(York_University)}{Keele Campus} is a small urban forest mixed with grasslands and open space. The master gardeners measured nearly 7000 trees over the course of two years. These data were recently compiled and \href{https://knb.ecoinformatics.org/view/doi\%3A10.5063\%2FQ81BGH}{published}. There are many fascinating and compelling questions to explore that can support evidence-informed decisions and valuation estimates for this place ecologically, environmentally, and from a trait or species-level perspective. This challenge as a summative test is thus relatively more open ended. Given these data, collected and now published, what can we do to enhance our biological and social understanding and appreciation for a university campus that support people, other animals, and plants. Explore the data, define a relevant challenge or set of questions that would benefit the stakeholders or local community or inform our understanding of a biological theory, and demonstrate your mastery of critical thinking in statistics. Submit your work to \href{https://www.turnitin.com}{turnitin.com} as PDF including the code, annotation, rationale, interpretation, and outputs from the viz, EDA, and model(s) that supported your thinking.
 
 \begin{Shaded}
 \begin{Highlighting}[]
