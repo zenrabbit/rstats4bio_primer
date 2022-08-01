@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>A primer for biostatistics in R</title>
   <meta name="description" content="A brief introduction to statistical thinking in biostatistics supported by the R programming language." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
   <meta property="og:title" content="A primer for biostatistics in R" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="A brief introduction to statistical thinking in biostatistics supported by the R programming language." />
   
@@ -32,7 +31,6 @@
   
 
 <link rel="next" href="coding.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,8 +48,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -207,18 +206,23 @@ div.csl-indent {
 <h1 class="title">A primer for biostatistics in R</h1>
 <p class="author"><em>cjlortie</em></p>
 </div>
-<div id="introduction" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
+<div id="introduction" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Chapter 1</span> Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><img src="adventure.png" style="width:4in" /></p>
 <p>Welcome to a primer for biostatistics in R.</p>
 <p>Mathematical! Adventure time! Well, the mathematical part is up to you, but this is an adventure. This set of learning materials is a guide developed to support you in better developing critical thinking using statistics. <a href="https://www.criticalthinking.org/pages/defining-critical-thinking/766">Critical thinking</a> very generally is a mode of thinking that is self-directed and evidence based <span class="citation">(<a href="references.html#ref-RN6081" role="doc-biblioref">Facionie 2017</a>)</span>. Statistical thinking is thus an ideal opportunity and partner in honing literacy adventure skills in this domain. Enhancing clarity, accuracy, precision, relevance, depth, breadth, significance, logic and fairness - all key criteria of critical thinking - with data or evidence both quantitative and qualitative is a profound tool as a scientist and citizen. It should be fundamental to statistics. Hence, the primary goal of this set of materials is to engender statistical thinking that embodies these principles and explores these criteria using data.</p>
 <p>The open and free resources associated with learning statistics is nearly infinite online particularly in R. The programming language <a href="https://www.r-project.org">R</a> is a free, open source programming environment ideal for statistics. There are other similar alternatives, but here R is used to support and scaffold critical thinking and statistical literacy because a significant component of many biologists <a href="https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.2567">use R including ecologists</a> <span class="citation">(<a href="references.html#ref-RN6098" role="doc-biblioref">Lai et al. 2019</a>)</span>. Importantly, it provides a simple and clear mechanism to document, annotate, tidy up, write down, and literally show your work - like in math class. This benefits you. You see your ideas written down and can explore logic, fairness, and all the criteria listed above. It also enables you to repeat, replicate, and share your work.</p>
-<div id="course-outline" class="section level3 unnumbered">
-<h3>Course outline</h3>
-<p>If you are electing to engage with this learning opportunity formally for BIOL5081 at York University, here is the <a href="https://figshare.com/articles/online_resource/BIOL_5081_Course_Outline_2021/14901087">official course outline</a>.</p>
+<div id="course-outline" class="section level3 unnumbered hasAnchor">
+<h3>Course outline<a href="index.html#course-outline" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If you are electing to engage with this learning opportunity formally, there are two summative assessments.</p>
+<ol style="list-style-type: decimal">
+<li>Write a book review for The new statistics with R.<br />
+</li>
+<li>Complete a take-home statistical test with a provided dataset.</li>
+</ol>
 </div>
-<div id="learning-outcomes" class="section level3 unnumbered">
-<h3>Learning outcomes</h3>
+<div id="learning-outcomes" class="section level3 unnumbered hasAnchor">
+<h3>Learning outcomes<a href="index.html#learning-outcomes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li>Build a tidy, logical data model for a graduate-level dataset.<br />
 </li>
@@ -235,21 +239,21 @@ div.csl-indent {
 <li>Appreciate the strengths and limitations of open science, data science, and evidence-based collaboration models.</li>
 </ol>
 </div>
-<div id="structure" class="section level3 unnumbered">
-<h3>Structure</h3>
+<div id="structure" class="section level3 unnumbered hasAnchor">
+<h3>Structure<a href="index.html#structure" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Read a book. <a href="https://global.oup.com/academic/product/the-new-statistics-with-r-9780198798187?cc=us&amp;lang=en&amp;">The new statistics with R.</a> <span class="citation">(<a href="references.html#ref-RN7358" role="doc-biblioref">Hector 2021</a>)</span>.</p>
 <p>Write a book review. <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006562">Ten simple rules for writing statistical book reviews</a> <span class="citation">(<a href="references.html#ref-RN6148" role="doc-biblioref">Christopher J. Lortie 2019</a>)</span> suggests a critical thinking framework to adopt for this process.</p>
 <p>Learn-by-doing here.</p>
 <p>Do a hackathon.</p>
 <p>Do a hackathon as a test and submit for grading &amp; review.</p>
-<div id="rationale" class="section level4 unnumbered">
-<h4>Rationale</h4>
+<div id="rationale" class="section level4 unnumbered hasAnchor">
+<h4>Rationale<a href="index.html#rationale" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Some learn best by reading. Some learn best by doing. We can all benefit from both approaches to refining our critical thinking through statistics.</p>
 <p>Two summative (i.e. graded outcomes) include the book review and the test.</p>
 </div>
 </div>
-<div id="schedule" class="section level3 unnumbered">
-<h3>Schedule</h3>
+<div id="schedule" class="section level3 unnumbered hasAnchor">
+<h3>Schedule<a href="index.html#schedule" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Slide decks are optional. The decks simply highlight some of the connections between the criteria for critical thinking and statistical heuristics.</p>
 <table>
 <colgroup>
@@ -298,25 +302,25 @@ div.csl-indent {
 </tbody>
 </table>
 </div>
-<div id="instructions" class="section level3 unnumbered">
-<h3>Instructions</h3>
+<div id="instructions" class="section level3 unnumbered hasAnchor">
+<h3>Instructions<a href="index.html#instructions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Read the text at your own pace. At least hit the key chapters CH4, 10 &amp; 11 to write the review and submit your insights by the fifth week of work (if you choose to do 1-2 tasks per week as suggested in the schedule). If you are taking BIOL5081, please see official course outline and submit all work to <a href="https://www.turnitin.com">turnitin.com</a> as PDF only (even for the R work - knit to pdf).</p>
 <p>Each week, read, discuss if you elect to work synchronously, and try the challenge provided.</p>
 <p>The final two weeks, that hackathon is a warm up to the test. Grab the dataset, apply your critical thinking skills, code and show your work, and capture code and outputs as PDF. The hackathon is a stepping stone, formative process for to check if you are ready to think on your feet, write code, and apply biostatistical thinking to a challenge. The test is the exact same approach but summative, i.e. you submit for review and grading to a peer or instructor like me.</p>
 </div>
-<div id="citation" class="section level3 unnumbered">
-<h3>Citation</h3>
+<div id="citation" class="section level3 unnumbered hasAnchor">
+<h3>Citation<a href="index.html#citation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Lortie, CJ (2021): A primer for biostatistics in R. figshare. Book. <a href="https://doi.org/10.6084/m9.figshare.15048597.v2" class="uri">https://doi.org/10.6084/m9.figshare.15048597.v2</a></p>
 </div>
-<div id="license" class="section level3 unnumbered">
-<h3>License</h3>
+<div id="license" class="section level3 unnumbered hasAnchor">
+<h3>License<a href="index.html#license" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
 </div>
-<div id="tidy-data-in-r" class="section level3 unnumbered">
-<h3>Tidy data in R</h3>
+<div id="tidy-data-in-r" class="section level3 unnumbered hasAnchor">
+<h3>Tidy data in R<a href="index.html#tidy-data-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Tidiness is next to naturalness. We are wired up to see patterns and organize. Put that tendency to good work in data and statistical critical thinking.</p>
-<div id="learning-outcomes-1" class="section level4 unnumbered">
-<h4>Learning outcomes</h4>
+<div id="learning-outcomes-1" class="section level4 unnumbered hasAnchor">
+<h4>Learning outcomes<a href="index.html#learning-outcomes-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ol style="list-style-type: decimal">
 <li>Consider data structures such as long versus wide.<br />
 </li>
@@ -325,12 +329,12 @@ div.csl-indent {
 <li>Do a t-test.</li>
 </ol>
 </div>
-<div id="critical-thinking" class="section level4 unnumbered">
-<h4>Critical thinking</h4>
+<div id="critical-thinking" class="section level4 unnumbered hasAnchor">
+<h4>Critical thinking<a href="index.html#critical-thinking" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><a href="https://www.jstatsoft.org/article/view/v059i10">Tidy data</a> thinking was pioneered in the R world <span class="citation">(<a href="references.html#ref-RN4416" role="doc-biblioref">Wickham 2014</a>)</span>. This philosophy to first considering the basic format of your data is transformational and profound. It beautifully connects to logic. Better yet, it sets you up for easier stats and plots in many environments including R. There is an excellent <a href="https://r4ds.had.co.nz/tidy-data.html">chapter</a> on this topic in the free, open text R for Data Science.</p>
 </div>
-<div id="adventure-time" class="section level4 unnumbered">
-<h4>Adventure time</h4>
+<div id="adventure-time" class="section level4 unnumbered hasAnchor">
+<h4>Adventure time<a href="index.html#adventure-time" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Very simple life data to explore some ideas about meditation, steps, resting heart rate and the importance of instrument variation. Data are <a href="https://figshare.com/articles/dataset/Simple_health_data/15040515">here</a>. Explore the t-test in R for this adventure. Is the number of steps or sleep different from 0? Do the means estimated from a watch versus simple Fitbit tracker vary for simple measures? Did 0 versus 12 mins of meditation per day influence a relevant measure?</p>
 <p>Deeper dive: explore the var.equal or alternative argument. Test nonparametric analog to this test.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
@@ -350,8 +354,8 @@ div.csl-indent {
 ## 9 2021-06-10         18058          436    57       22392         403
 ## # … with 1 more variable: meditation_mins &lt;dbl&gt;</code></pre>
 </div>
-<div id="reflection-questions" class="section level4 unnumbered">
-<h4>Reflection questions</h4>
+<div id="reflection-questions" class="section level4 unnumbered hasAnchor">
+<h4>Reflection questions<a href="index.html#reflection-questions" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ol style="list-style-type: decimal">
 <li>What can a t-test do? Can you imagine other functions for a t-test in the context of your work and life?</li>
 <li>What are the limitations of a t-test?</li>

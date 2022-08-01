@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 3 Stats used in eeb I | A primer for biostatistics in R</title>
   <meta name="description" content="A brief introduction to statistical thinking in biostatistics supported by the R programming language." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 3 Stats used in eeb I | A primer for biostatistics in R" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="A brief introduction to statistical thinking in biostatistics supported by the R programming language." />
   
@@ -32,7 +31,6 @@
   
 <link rel="prev" href="coding.html"/>
 <link rel="next" href="eebII.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,8 +48,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -203,12 +202,12 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="eebI" class="section level1" number="3">
-<h1><span class="header-section-number">Chapter 3</span> Stats used in eeb I</h1>
+<div id="eebI" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Stats used in eeb I<a href="eebI.html#eebI" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><img src="eebI.png" style="width:3in" /></p>
 <p>Many approaches and critical thinking heuristics in ecology &amp; evolutionary biology (eeb) are relevant to other disciplines.</p>
-<div id="learning-outcomes-3" class="section level4 unnumbered">
-<h4>Learning outcomes</h4>
+<div id="learning-outcomes-3" class="section level4 unnumbered hasAnchor">
+<h4>Learning outcomes<a href="eebI.html#learning-outcomes-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ol style="list-style-type: decimal">
 <li>Develop your data viz skills.<br />
 </li>
@@ -217,13 +216,13 @@ div.csl-indent {
 <li>Do a regression analysis.</li>
 </ol>
 </div>
-<div id="critical-thinking-2" class="section level4 unnumbered">
-<h4>Critical thinking</h4>
+<div id="critical-thinking-2" class="section level4 unnumbered hasAnchor">
+<h4>Critical thinking<a href="eebI.html#critical-thinking-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Clean simple graphics are powerful tools in statistics (and in scientific communication). <a href="https://www.edwardtufte.com/tufte/">Tufte</a> <span class="citation">(<a href="references.html#ref-RN2096" role="doc-biblioref">Tufte 2006</a>)</span> and others have shaped data scientists and statisticians in developing more libraries, new standards, and assumptions associated with graphical representations of data. Data viz must highlight the differences, show underlying data structures, and provide insights into the specific research project. R is infinitely customizable in all these respects. There are at least two major current paradigms (there are more these are the two dominant idea sets). Base R plots are simple, relatively flexible, and very easy. However, their grammar, i.e their rules of coding are not modern. Ggplot and related libraries invoke a new, formal grammar of graphics <span class="citation">(<a href="references.html#ref-RN7256" role="doc-biblioref">Leland 2005</a>)</span> that is more logical, more flexible, but divergent from base R code. It is worth the time to understand the differences and know when to use each.</p>
 <p>Evolution of plotting in statistics using R in particular went from base-R then onto lattice then to the ggvis universe with the most recent library being ggplot <span class="citation">(<a href="references.html#ref-RN4413" role="doc-biblioref">Wickham 2016</a>)</span>. Base-R is certainly useful in some contexts as is the lattice and lattice extra library. However, ggplot now encompasses all these capacities with a much simpler set of grammar (i.e. rules and order). Nonetheless, you should be able to read base-R code for plots and be able to do some as well. The philosophy or grammar of modern graphics is well articulated and includes the following key principles. The grammar of graphics layers primacy of ideas (simple first, then more complex) i.e. you build up your plots data are mapped to aesthetic attributes and geometric objects data first then statistics even in plots <span class="citation">(<a href="references.html#ref-RN7255" role="doc-biblioref">Wickham 2010</a>)</span>. This directly supports critical thinking statistically because it promotes depth (literally), precision, and also accuracy in the decisions you make to show your evidence.</p>
 </div>
-<div id="adventure-time-2" class="section level4 unnumbered">
-<h4>Adventure time</h4>
+<div id="adventure-time-2" class="section level4 unnumbered hasAnchor">
+<h4>Adventure time<a href="eebI.html#adventure-time-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Here are a deeper set of quantified life <a href="https://figshare.com/articles/dataset/Quantified_life/12803105">data</a>. Explore whether movement predicts total sleep or its efficiency. Plot out some patterns first, then, do a regression.</p>
 <p>Deeper dive: explore residuals and try the cooks.distance function for outliers.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="eebI.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
@@ -244,8 +243,8 @@ div.csl-indent {
 ## 10 2011-02-03   2011  9150         411         98          465                97
 ## # … with 4,551 more rows</code></pre>
 </div>
-<div id="reflection-questions-2" class="section level4 unnumbered">
-<h4>Reflection questions</h4>
+<div id="reflection-questions-2" class="section level4 unnumbered hasAnchor">
+<h4>Reflection questions<a href="eebI.html#reflection-questions-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ol style="list-style-type: decimal">
 <li>When do you use regression versus correlation?<br />
 </li>

@@ -4,10 +4,6 @@
 %
 \documentclass[
 ]{book}
-\title{A primer for biostatistics in R}
-\author{cjlortie}
-\date{}
-
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
 \usepackage{iftex}
@@ -119,6 +115,10 @@
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
 
+\title{A primer for biostatistics in R}
+\author{cjlortie}
+\date{}
+
 \begin{document}
 \maketitle
 
@@ -141,7 +141,16 @@ The open and free resources associated with learning statistics is nearly infini
 \subsection*{Course outline}\label{course-outline}}
 \addcontentsline{toc}{subsection}{Course outline}
 
-If you are electing to engage with this learning opportunity formally for BIOL5081 at York University, here is the \href{https://figshare.com/articles/online_resource/BIOL_5081_Course_Outline_2021/14901087}{official course outline}.
+If you are electing to engage with this learning opportunity formally, there are two summative assessments.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Write a book review for The new statistics with R.\\
+\item
+  Complete a take-home statistical test with a provided dataset.
+\end{enumerate}
 
 \hypertarget{learning-outcomes}{%
 \subsection*{Learning outcomes}\label{learning-outcomes}}
@@ -529,18 +538,18 @@ Deeper dive: If you wish to adventure further afield, contrast the two datasets.
 
 \begin{verbatim}
 ## # A tibble: 826 x 11
-##     year experiment   source   rep date   location  species  frequency behaviour
-##    <dbl> <chr>        <chr>  <dbl> <chr>  <chr>     <chr>        <dbl> <chr>    
-##  1  2020 balcony bir~ full       1 10/13~ Holditch~ Agelaiu~         3 flying   
-##  2  2020 balcony bir~ full       1 10/13~ Holditch~ Agelaiu~         4 flying   
-##  3  2020 balcony bir~ full       1 10/13~ Holditch~ Agelaiu~         1 perching 
-##  4  2020 balcony bir~ full       1 10/16~ High Park Aix spi~         4 swimming 
-##  5  2020 balcony bir~ full       1 10/9/~ Vaughan   Anas pl~         4 flying   
-##  6  2020 balcony bir~ full       1 10/9/~ Vaughan   Anas pl~         6 flying   
-##  7  2020 balcony bir~ full       1 10/9/~ Vaughan   Anas pl~         9 flying   
-##  8  2020 balcony bir~ full       1 10/9/~ Vaughan   Anas pl~        10 flying   
-##  9  2020 balcony bir~ full       1 10/9/~ Vaughan   Anas pl~         2 inactive 
-## 10  2020 balcony bir~ full       1 10/9/~ Vaughan   Anas pl~         2 inactive 
+##     year experiment      source   rep date  location species frequency behaviour
+##    <dbl> <chr>           <chr>  <dbl> <chr> <chr>    <chr>       <dbl> <chr>    
+##  1  2020 balcony birdwa~ full       1 10/1~ Holditc~ Agelai~         3 flying   
+##  2  2020 balcony birdwa~ full       1 10/1~ Holditc~ Agelai~         4 flying   
+##  3  2020 balcony birdwa~ full       1 10/1~ Holditc~ Agelai~         1 perching 
+##  4  2020 balcony birdwa~ full       1 10/1~ High Pa~ Aix sp~         4 swimming 
+##  5  2020 balcony birdwa~ full       1 10/9~ Vaughan  Anas p~         4 flying   
+##  6  2020 balcony birdwa~ full       1 10/9~ Vaughan  Anas p~         6 flying   
+##  7  2020 balcony birdwa~ full       1 10/9~ Vaughan  Anas p~         9 flying   
+##  8  2020 balcony birdwa~ full       1 10/9~ Vaughan  Anas p~        10 flying   
+##  9  2020 balcony birdwa~ full       1 10/9~ Vaughan  Anas p~         2 inactive 
+## 10  2020 balcony birdwa~ full       1 10/9~ Vaughan  Anas p~         2 inactive 
 ## # ... with 816 more rows, and 2 more variables: inititals <chr>,
 ## #   citation_DOI <chr>
 \end{verbatim}
@@ -675,13 +684,13 @@ Deeper dive: contrast GLMM model performance, examine temporal effects, or explo
 ##  8 Malawi  2 954  3 012  3 072  3 136  3 202  3 271  3 342  3 417  3 495  3 576 
 ##  9 Maurit~ 493    506    521    537    554    571    588    605    623    641   
 ## 10 Mayotte 15     16     16     17     18     19     20     21     22     23    
-## # ... with 239 more rows, and 61 more variables: 1960 <chr>, 1961 <chr>,
-## #   1962 <chr>, 1963 <chr>, 1964 <chr>, 1965 <chr>, 1966 <chr>, 1967 <chr>,
-## #   1968 <chr>, 1969 <chr>, 1970 <chr>, 1971 <chr>, 1972 <chr>, 1973 <chr>,
-## #   1974 <chr>, 1975 <chr>, 1976 <chr>, 1977 <chr>, 1978 <chr>, 1979 <chr>,
-## #   1980 <chr>, 1981 <chr>, 1982 <chr>, 1983 <chr>, 1984 <chr>, 1985 <chr>,
-## #   1986 <chr>, 1987 <chr>, 1988 <chr>, 1989 <chr>, 1990 <chr>, 1991 <chr>,
-## #   1992 <chr>, 1993 <chr>, 1994 <chr>, 1995 <chr>, 1996 <chr>, 1997 <chr>, ...
+## # ... with 239 more rows, and 61 more variables: `1960` <chr>, `1961` <chr>,
+## #   `1962` <chr>, `1963` <chr>, `1964` <chr>, `1965` <chr>, `1966` <chr>,
+## #   `1967` <chr>, `1968` <chr>, `1969` <chr>, `1970` <chr>, `1971` <chr>,
+## #   `1972` <chr>, `1973` <chr>, `1974` <chr>, `1975` <chr>, `1976` <chr>,
+## #   `1977` <chr>, `1978` <chr>, `1979` <chr>, `1980` <chr>, `1981` <chr>,
+## #   `1982` <chr>, `1983` <chr>, `1984` <chr>, `1985` <chr>, `1986` <chr>,
+## #   `1987` <chr>, `1988` <chr>, `1989` <chr>, `1990` <chr>, `1991` <chr>, ...
 \end{verbatim}
 
 \hypertarget{reflection-questions-4}{%

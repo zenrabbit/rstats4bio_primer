@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Literate coding | A primer for biostatistics in R</title>
   <meta name="description" content="A brief introduction to statistical thinking in biostatistics supported by the R programming language." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Literate coding | A primer for biostatistics in R" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="A brief introduction to statistical thinking in biostatistics supported by the R programming language." />
   
@@ -32,7 +31,6 @@
   
 <link rel="prev" href="index.html"/>
 <link rel="next" href="eebI.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,8 +48,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -203,12 +202,12 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="coding" class="section level1" number="2">
-<h1><span class="header-section-number">Chapter 2</span> Literate coding</h1>
+<div id="coding" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Literate coding<a href="coding.html#coding" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><img src="coding.png" style="width:3in" /></p>
 <p>Your code is a story too. Use your code and annotation of decisions (en)coded in your data manipulations, calculations, models, and plots to communicate clarity, logic, relevance, and depth. This story is not just for your collaborators - it is for you. Writing down your ideas and work down makes it more clear. It also reminds you later, even a week later, why you elected to make a particular decision in your workflow. Tidy data and tidy thinking make for better science.</p>
-<div id="learning-outcomes-2" class="section level4 unnumbered">
-<h4>Learning outcomes</h4>
+<div id="learning-outcomes-2" class="section level4 unnumbered hasAnchor">
+<h4>Learning outcomes<a href="coding.html#learning-outcomes-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ol style="list-style-type: decimal">
 <li>Practice writing code and using annotation.<br />
 </li>
@@ -217,13 +216,13 @@ div.csl-indent {
 <li>Do an ANOVA.</li>
 </ol>
 </div>
-<div id="critical-thinking-1" class="section level4 unnumbered">
-<h4>Critical thinking</h4>
+<div id="critical-thinking-1" class="section level4 unnumbered hasAnchor">
+<h4>Critical thinking<a href="coding.html#critical-thinking-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Tidy data make your life easier. Data structures should match intuition and common sense. Data should have logical structure. Rows are are observations, columns are variables. Tidy data also increase the viability that others can use your data, do better science, reuse science, and help you and your ideas survive and thrive.</p>
 <p>Literate coding <span class="citation">(<a href="references.html#ref-RN4414" role="doc-biblioref">Knuth 1992</a>)</span> should capture a workflow that includes the wrangling you did to get your data ready. Literate code should be able to read by a human AND a machine. If data are already very clean in a spreadsheet, they can easily become a literate, logical dataframe. Nonetheless, you should still use annotation within the introductory code to explain the meta-data of your data to some extent and what you did pre-R to get it tidy. The philosophy here is very similar to the data viz lesson forthcoming that promotes critical thinking statistically through documented and described steps that are replicable and clear.</p>
 </div>
-<div id="adventure-time-1" class="section level4 unnumbered">
-<h4>Adventure time</h4>
+<div id="adventure-time-1" class="section level4 unnumbered hasAnchor">
+<h4>Adventure time<a href="coding.html#adventure-time-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Many years ago in a galaxy far, far away, a student sowed seeds in the desert at different densities for their PhD research. Here are the <a href="https://figshare.com/articles/dataset/Density_experiment_in_Negev_Desert_Israel/669703">data</a>, and here is the <a href="https://besjournals.onlinelibrary.wiley.com/doi/10.1046/j.1365-2745.2002.00686.x">publication</a> too <span class="citation">(<a href="references.html#ref-RN3094" role="doc-biblioref">Christopher J. Lortie and Turkington 2002</a>)</span>. This student was not strong in the force, but it was a good adventure in beginning to understand the relative importance of significance biologically and statistically by exploring critical thinking. For your adventure, test whether a set of groups differ from one another. For instance, test whether transects, or years, or even the density of seeds planted differs in an outcome measure such as mean plant size.</p>
 <p>Deeper dive: Check for homoscedasticity or do a post-hoc test.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="coding.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
@@ -244,8 +243,8 @@ div.csl-indent {
 ## 10  1998        1           2                    46        0.263           0.652
 ## # … with 142 more rows</code></pre>
 </div>
-<div id="reflection-questions-1" class="section level4 unnumbered">
-<h4>Reflection questions</h4>
+<div id="reflection-questions-1" class="section level4 unnumbered hasAnchor">
+<h4>Reflection questions<a href="coding.html#reflection-questions-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ol style="list-style-type: decimal">
 <li>What is the difference between a t-test and an ANOVA?<br />
 </li>
