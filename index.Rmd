@@ -21,10 +21,12 @@ Mathematical! Adventure time! Well, the mathematical part is up to you, but this
 The open and free resources associated with learning statistics is nearly infinite online particularly in R. The programming language [R](https://www.r-project.org) is a free, open source programming environment ideal for statistics. There are other similar alternatives, but here R is used to support and scaffold critical thinking and statistical literacy because a significant component of many biologists [use R including ecologists](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.2567) [@RN6098]. Importantly, it provides a simple and clear mechanism to document, annotate, tidy up, write down, and literally show your work - like in math class. This benefits you. You see your ideas written down and can explore logic, fairness, and all the criteria listed above. It also enables you to repeat, replicate, and share your work.  
 
 ### Course outline {-}  
-If you are electing to engage with this learning opportunity formally, there are two summative assessments.  
+If you are electing to engage with this learning opportunity formally, please see the official course outline for specific details.  
 
-1. Write a book review for The new statistics with R.  
-2. Complete a take-home statistical test with a provided dataset.  
+There are two summative assessments.  
+
+1. Write a [book review](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006562) for  [The new Statistics with R.](https://global.oup.com/academic/product/the-new-statistics-with-r-9780198798187?cc=us&lang=en&)  
+2. Complete a take-home statistical test (with the dataset provided in chapter 6 herein).    
 
 ### Learning outcomes {-} 
 1. Build a tidy, logical data model for a graduate-level dataset.  
@@ -36,7 +38,7 @@ If you are electing to engage with this learning opportunity formally, there are
 7. Appreciate the strengths and limitations of open science, data science, and evidence-based collaboration models.  
 
 ### Structure {-}  
-Read a book. [The new statistics with R.](https://global.oup.com/academic/product/the-new-statistics-with-r-9780198798187?cc=us&lang=en&) [@RN7358].  
+Read a book. [The New Statistics with R.](https://global.oup.com/academic/product/the-new-statistics-with-r-9780198798187?cc=us&lang=en&) [@RN7358].  
 
 Write a book review. [Ten simple rules for writing statistical book reviews](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006562) [@RN6148] suggests a critical thinking framework to adopt for this process.  
 
