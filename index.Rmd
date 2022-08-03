@@ -37,7 +37,7 @@ There are two summative assessments.
 6.  Complete fundamental exploratory data analysis on a representative dataset.  
 7. Appreciate the strengths and limitations of open science, data science, and evidence-based collaboration models.  
 
-### Structure {-}  
+### Steps {-}  
 Read a book. [The New Statistics with R.](https://global.oup.com/academic/product/the-new-statistics-with-r-9780198798187?cc=us&lang=en&) [@RN7358].  
 
 Write a book review. [Ten simple rules for writing statistical book reviews](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006562) [@RN6148] suggests a critical thinking framework to adopt for this process.  
@@ -71,7 +71,7 @@ Each week, read, discuss if you elect to work synchronously, and try the challen
 The final two weeks, that hackathon is a warm up to the test. Grab the dataset, apply your critical thinking skills, code and show your work, and capture code and outputs as PDF. The hackathon is a stepping stone, formative process for to check if you are ready to think on your feet, write code, and apply biostatistical thinking to a challenge. The test is the exact same approach but summative, i.e. you submit for review and grading to a peer or instructor like me.  
 
 ### Citation {-}  
-Lortie, CJ (2021): A primer for biostatistics in R. figshare. Book. https://doi.org/10.6084/m9.figshare.15048597.v2 
+Lortie, CJ (2021): A primer for biostatistics in R. figshare. Book. https://doi.org/10.6084/m9.figshare.15048597.v3 
 
 
 ### License {-}  
