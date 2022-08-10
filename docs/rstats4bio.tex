@@ -33,14 +33,6 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\hypersetup{
-  pdftitle={A primer for biostatistics in R},
-  pdfauthor={cjlortie},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
-\urlstyle{same} % disable monospaced font for URLs
 \usepackage{color}
 \usepackage{fancyvrb}
 \newcommand{\VerbBar}{|}
@@ -114,6 +106,14 @@
 \fi
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={A primer for biostatistics in R},
+  pdfauthor={cjlortie},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
 
 \title{A primer for biostatistics in R}
 \author{cjlortie}
@@ -286,18 +286,18 @@ Deeper dive: explore the var.equal or alternative argument. Test nonparametric a
 
 \begin{verbatim}
 ## # A tibble: 9 x 7
-##   simple_date steps_fitbit sleep_fitbit    hr steps_watch sleep_watch
-##   <date>             <dbl>        <dbl> <dbl>       <dbl>       <dbl>
-## 1 2021-06-02         20913          429    54       25197         314
-## 2 2021-06-03          6904          447    53       13042         302
-## 3 2021-06-04         19548          449    56       23285         413
-## 4 2021-06-05         19311          423    56       25832         355
-## 5 2021-06-06         26159          435    58       29533         385
-## 6 2021-06-07         21618          358    56       27796         240
-## 7 2021-06-08         20890          492    53       24360         434
-## 8 2021-06-09         12008          541    53       14517         399
-## 9 2021-06-10         18058          436    57       22392         403
-## # ... with 1 more variable: meditation_mins <dbl>
+##   simple_date steps_fitbit sleep_fitbit    hr steps_watch sleep_watch meditati~1
+##   <date>             <dbl>        <dbl> <dbl>       <dbl>       <dbl>      <dbl>
+## 1 2021-06-02         20913          429    54       25197         314          0
+## 2 2021-06-03          6904          447    53       13042         302          0
+## 3 2021-06-04         19548          449    56       23285         413         12
+## 4 2021-06-05         19311          423    56       25832         355         12
+## 5 2021-06-06         26159          435    58       29533         385         12
+## 6 2021-06-07         21618          358    56       27796         240          0
+## 7 2021-06-08         20890          492    53       24360         434         12
+## 8 2021-06-09         12008          541    53       14517         399         12
+## 9 2021-06-10         18058          436    57       22392         403         12
+## # ... with abbreviated variable name 1: meditation_mins
 \end{verbatim}
 
 \hypertarget{reflection-questions}{%
@@ -363,19 +363,20 @@ Deeper dive: Check for homoscedasticity or do a post-hoc test.
 
 \begin{verbatim}
 ## # A tibble: 152 x 6
-##     year transect seed_density_pe~ final_plant_den~ survivorship mean_plant_size
-##    <dbl>    <dbl>            <dbl>            <dbl>        <dbl>           <dbl>
-##  1  1998        1           0.0625               41        0.461           0.554
-##  2  1998        1           0.0625               47        0.712           0.356
-##  3  1998        1           0.0625               60        0.698           0.301
-##  4  1998        1           0.25                 31        0.525           0.808
-##  5  1998        1           0.25                 50        0.505           0.212
-##  6  1998        1           0.25                 58        0.563           0.148
-##  7  1998        1           1                    30        0.273           0.578
-##  8  1998        1           1                    42        0.243           1.28 
-##  9  1998        1           1                    73        0.619           0.719
-## 10  1998        1           2                    46        0.263           0.652
-## # ... with 142 more rows
+##     year transect seed_density_per_cm final_plant_density survivorship mean_pl~1
+##    <dbl>    <dbl>               <dbl>               <dbl>        <dbl>     <dbl>
+##  1  1998        1              0.0625                  41        0.461     0.554
+##  2  1998        1              0.0625                  47        0.712     0.356
+##  3  1998        1              0.0625                  60        0.698     0.301
+##  4  1998        1              0.25                    31        0.525     0.808
+##  5  1998        1              0.25                    50        0.505     0.212
+##  6  1998        1              0.25                    58        0.563     0.148
+##  7  1998        1              1                       30        0.273     0.578
+##  8  1998        1              1                       42        0.243     1.28 
+##  9  1998        1              1                       73        0.619     0.719
+## 10  1998        1              2                       46        0.263     0.652
+## # ... with 142 more rows, and abbreviated variable name 1: mean_plant_size
+## # i Use `print(n = ...)` to see more rows
 \end{verbatim}
 
 \hypertarget{reflection-questions-1}{%
@@ -456,6 +457,7 @@ Deeper dive: explore residuals and try the cooks.distance function for outliers.
 ##  9 2011-02-02   2011  8768         465         97          455                98
 ## 10 2011-02-03   2011  9150         411         98          465                97
 ## # ... with 4,551 more rows
+## # i Use `print(n = ...)` to see more rows
 \end{verbatim}
 
 \hypertarget{reflection-questions-2}{%
@@ -540,20 +542,21 @@ Deeper dive: If you wish to adventure further afield, contrast the two datasets.
 
 \begin{verbatim}
 ## # A tibble: 826 x 11
-##     year experiment      source   rep date  location species frequency behaviour
-##    <dbl> <chr>           <chr>  <dbl> <chr> <chr>    <chr>       <dbl> <chr>    
-##  1  2020 balcony birdwa~ full       1 10/1~ Holditc~ Agelai~         3 flying   
-##  2  2020 balcony birdwa~ full       1 10/1~ Holditc~ Agelai~         4 flying   
-##  3  2020 balcony birdwa~ full       1 10/1~ Holditc~ Agelai~         1 perching 
-##  4  2020 balcony birdwa~ full       1 10/1~ High Pa~ Aix sp~         4 swimming 
-##  5  2020 balcony birdwa~ full       1 10/9~ Vaughan  Anas p~         4 flying   
-##  6  2020 balcony birdwa~ full       1 10/9~ Vaughan  Anas p~         6 flying   
-##  7  2020 balcony birdwa~ full       1 10/9~ Vaughan  Anas p~         9 flying   
-##  8  2020 balcony birdwa~ full       1 10/9~ Vaughan  Anas p~        10 flying   
-##  9  2020 balcony birdwa~ full       1 10/9~ Vaughan  Anas p~         2 inactive 
-## 10  2020 balcony birdwa~ full       1 10/9~ Vaughan  Anas p~         2 inactive 
-## # ... with 816 more rows, and 2 more variables: inititals <chr>,
-## #   citation_DOI <chr>
+##     year experiment   source   rep date  locat~1 species frequ~2 behav~3 initi~4
+##    <dbl> <chr>        <chr>  <dbl> <chr> <chr>   <chr>     <dbl> <chr>   <chr>  
+##  1  2020 balcony bir~ full       1 10/1~ Holdit~ Agelai~       3 flying  RD     
+##  2  2020 balcony bir~ full       1 10/1~ Holdit~ Agelai~       4 flying  RD     
+##  3  2020 balcony bir~ full       1 10/1~ Holdit~ Agelai~       1 perchi~ RD     
+##  4  2020 balcony bir~ full       1 10/1~ High P~ Aix sp~       4 swimmi~ AB     
+##  5  2020 balcony bir~ full       1 10/9~ Vaughan Anas p~       4 flying  TA     
+##  6  2020 balcony bir~ full       1 10/9~ Vaughan Anas p~       6 flying  TA     
+##  7  2020 balcony bir~ full       1 10/9~ Vaughan Anas p~       9 flying  TA     
+##  8  2020 balcony bir~ full       1 10/9~ Vaughan Anas p~      10 flying  TA     
+##  9  2020 balcony bir~ full       1 10/9~ Vaughan Anas p~       2 inacti~ TA     
+## 10  2020 balcony bir~ full       1 10/9~ Vaughan Anas p~       2 inacti~ TA     
+## # ... with 816 more rows, 1 more variable: citation_DOI <chr>, and abbreviated
+## #   variable names 1: location, 2: frequency, 3: behaviour, 4: inititals
+## # i Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 \end{verbatim}
 
 \hypertarget{reflection-questions-3}{%
@@ -634,6 +637,7 @@ Deeper dive: contrast GLMM model performance, examine temporal effects, or explo
 ##  9     9  1997 109441
 ## 10    10  1997 146876
 ## # ... with 223 more rows
+## # i Use `print(n = ...)` to see more rows
 \end{verbatim}
 
 \begin{Shaded}
@@ -693,6 +697,7 @@ Deeper dive: contrast GLMM model performance, examine temporal effects, or explo
 ## #   `1977` <chr>, `1978` <chr>, `1979` <chr>, `1980` <chr>, `1981` <chr>,
 ## #   `1982` <chr>, `1983` <chr>, `1984` <chr>, `1985` <chr>, `1986` <chr>,
 ## #   `1987` <chr>, `1988` <chr>, `1989` <chr>, `1990` <chr>, `1991` <chr>, ...
+## # i Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 \end{verbatim}
 
 \hypertarget{reflection-questions-4}{%
@@ -714,7 +719,37 @@ Deeper dive: contrast GLMM model performance, examine temporal effects, or explo
 \subsection*{Book review}\label{book-review}}
 \addcontentsline{toc}{subsection}{Book review}
 
-Throughout these sections, you should have now also completed a read of key chapters to support your learning from the text suggested `The New Statistics with R' \citep{RN6087}. Use the \href{https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006562}{ten simple rules for reviews} suggested \citep{RN6148}, and write and submit a short, less than 2000 word review of this text and submit to \href{https://www.turnitin.com}{turnitin.com}.
+\hypertarget{instructions-1}{%
+\subsubsection*{Instructions}\label{instructions-1}}
+\addcontentsline{toc}{subsubsection}{Instructions}
+
+\begin{itemize}
+\tightlist
+\item
+  Read the key chapters that best support your learning from the text `The New Statistics with R' \citep{RN6087}.\\
+\item
+  Please use the \href{https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006562}{ten simple rules for reviews} \citep{RN6148} as your instructions how to do a review.\\
+\item
+  Write and submit a short, less than 2000 word review of this text and submit to \href{https://www.turnitin.com}{turnitin.com}.
+\end{itemize}
+
+\hypertarget{examples}{%
+\subsubsection*{Examples}\label{examples}}
+\addcontentsline{toc}{subsubsection}{Examples}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \href{https://www.jstatsoft.org/article/view/v102b02}{Doing Meta-Analysis with R - A Hands-On Guide}
+\item
+  \href{https://www.jstatsoft.org/article/view/v103b02}{Python and R for the Modern Data Scientist}
+\item
+  \href{https://www.jstatsoft.org/article/view/v077b01}{R for Data Science}
+\item
+  \href{https://www.jstatsoft.org/article/view/v085b03}{Applied Time Series Analysis with R (2nd Edition)}
+\item
+  \href{https://ojs.library.queensu.ca/index.php/IEE/article/view/6559}{Open Sesame: R for Data Science is Open Science}
+\end{enumerate}
 
 \hypertarget{rubric}{%
 \subsection*{Rubric}\label{rubric}}
@@ -785,24 +820,25 @@ York University, \href{https://en.wikipedia.org/wiki/Keele_Campus_(York_Universi
 
 \begin{verbatim}
 ## # A tibble: 6,951 x 27
-##      FID OBJECTID Date   Block Street_or_       Building_C Tree_Tag_N Species_Co
-##    <dbl>    <dbl> <chr>  <chr> <chr>                 <dbl>      <dbl> <chr>     
-##  1     0        1 9/7/12 A     Stedman Lecture~         22          1 lochon    
-##  2     1        2 9/7/12 A     Stedman Lecture~         22          2 lochon    
-##  3     2        3 9/7/12 A     Stedman Lecture~         22          3 lochon    
-##  4     3        4 9/7/12 A     Stedman Lecture~         22          4 lochon    
-##  5     4        5 9/7/12 A     Stedman Lecture~         22          5 lochon    
-##  6     5        6 9/7/12 A     Stedman Lecture~         22          6 lochon    
-##  7     6        7 9/7/12 A     Stedman Lecture~         22          7 lochon    
-##  8     7        8 9/7/12 A     Stedman Lecture~         22          8 lochon    
-##  9     8        9 9/7/12 A     Stedman Lecture~         22          9 lochon    
-## 10     9       10 9/7/12 A     Stedman Lecture~         22         10 lochon    
-## # ... with 6,941 more rows, and 19 more variables: Common_Nam <chr>,
-## #   Genus <chr>, Species <chr>, DBH <dbl>, Number_of_ <dbl>, Percentage <dbl>,
-## #   Crown_Widt <dbl>, Total_Heig <dbl>, Latitude <dbl>, Longitude <dbl>,
-## #   Height_to_ <dbl>, Unbalanced <dbl>, Reduced_Cr <dbl>, Weak_Yello <dbl>,
-## #   Defoliatio <dbl>, Dead_Broke <dbl>, Poor_Branc <dbl>, Lean <dbl>,
-## #   Trunk_Scar <dbl>
+##      FID OBJECTID Date   Block Street_or_  Build~1 Tree_~2 Speci~3 Commo~4 Genus
+##    <dbl>    <dbl> <chr>  <chr> <chr>         <dbl>   <dbl> <chr>   <chr>   <chr>
+##  1     0        1 9/7/12 A     Stedman Le~      22       1 lochon  Honey ~ Gled~
+##  2     1        2 9/7/12 A     Stedman Le~      22       2 lochon  Honey ~ Gled~
+##  3     2        3 9/7/12 A     Stedman Le~      22       3 lochon  Honey ~ Gled~
+##  4     3        4 9/7/12 A     Stedman Le~      22       4 lochon  Honey ~ Gled~
+##  5     4        5 9/7/12 A     Stedman Le~      22       5 lochon  Honey ~ Gled~
+##  6     5        6 9/7/12 A     Stedman Le~      22       6 lochon  Honey ~ Gled~
+##  7     6        7 9/7/12 A     Stedman Le~      22       7 lochon  Honey ~ Gled~
+##  8     7        8 9/7/12 A     Stedman Le~      22       8 lochon  Honey ~ Gled~
+##  9     8        9 9/7/12 A     Stedman Le~      22       9 lochon  Honey ~ Gled~
+## 10     9       10 9/7/12 A     Stedman Le~      22      10 lochon  Honey ~ Gled~
+## # ... with 6,941 more rows, 17 more variables: Species <chr>, DBH <dbl>,
+## #   Number_of_ <dbl>, Percentage <dbl>, Crown_Widt <dbl>, Total_Heig <dbl>,
+## #   Latitude <dbl>, Longitude <dbl>, Height_to_ <dbl>, Unbalanced <dbl>,
+## #   Reduced_Cr <dbl>, Weak_Yello <dbl>, Defoliatio <dbl>, Dead_Broke <dbl>,
+## #   Poor_Branc <dbl>, Lean <dbl>, Trunk_Scar <dbl>, and abbreviated variable
+## #   names 1: Building_C, 2: Tree_Tag_N, 3: Species_Co, 4: Common_Nam
+## # i Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 \end{verbatim}
 
 \hypertarget{rubric-1}{%

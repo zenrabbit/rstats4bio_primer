@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Literate coding | A primer for biostatistics in R</title>
   <meta name="description" content="A brief introduction to statistical thinking in biostatistics supported by the R programming language." />
-  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Literate coding | A primer for biostatistics in R" />
   <meta property="og:type" content="book" />
@@ -229,19 +229,20 @@ div.csl-indent {
 <span id="cb3-2"><a href="coding.html#cb3-2" aria-hidden="true" tabindex="-1"></a>density <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">url</span>(<span class="st">&quot;https://ndownloader.figshare.com/files/28934310&quot;</span>))</span>
 <span id="cb3-3"><a href="coding.html#cb3-3" aria-hidden="true" tabindex="-1"></a>density</span></code></pre></div>
 <pre><code>## # A tibble: 152 × 6
-##     year transect seed_density_pe… final_plant_den… survivorship mean_plant_size
-##    &lt;dbl&gt;    &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt;        &lt;dbl&gt;           &lt;dbl&gt;
-##  1  1998        1           0.0625               41        0.461           0.554
-##  2  1998        1           0.0625               47        0.712           0.356
-##  3  1998        1           0.0625               60        0.698           0.301
-##  4  1998        1           0.25                 31        0.525           0.808
-##  5  1998        1           0.25                 50        0.505           0.212
-##  6  1998        1           0.25                 58        0.563           0.148
-##  7  1998        1           1                    30        0.273           0.578
-##  8  1998        1           1                    42        0.243           1.28 
-##  9  1998        1           1                    73        0.619           0.719
-## 10  1998        1           2                    46        0.263           0.652
-## # … with 142 more rows</code></pre>
+##     year transect seed_density_per_cm final_plant_density survivorship mean_pl…¹
+##    &lt;dbl&gt;    &lt;dbl&gt;               &lt;dbl&gt;               &lt;dbl&gt;        &lt;dbl&gt;     &lt;dbl&gt;
+##  1  1998        1              0.0625                  41        0.461     0.554
+##  2  1998        1              0.0625                  47        0.712     0.356
+##  3  1998        1              0.0625                  60        0.698     0.301
+##  4  1998        1              0.25                    31        0.525     0.808
+##  5  1998        1              0.25                    50        0.505     0.212
+##  6  1998        1              0.25                    58        0.563     0.148
+##  7  1998        1              1                       30        0.273     0.578
+##  8  1998        1              1                       42        0.243     1.28 
+##  9  1998        1              1                       73        0.619     0.719
+## 10  1998        1              2                       46        0.263     0.652
+## # … with 142 more rows, and abbreviated variable name ¹​mean_plant_size
+## # ℹ Use `print(n = ...)` to see more rows</code></pre>
 </div>
 <div id="reflection-questions-1" class="section level4 unnumbered hasAnchor">
 <h4>Reflection questions<a href="coding.html#reflection-questions-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>

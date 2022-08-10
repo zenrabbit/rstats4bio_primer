@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>A primer for biostatistics in R</title>
   <meta name="description" content="A brief introduction to statistical thinking in biostatistics supported by the R programming language." />
-  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="A primer for biostatistics in R" />
   <meta property="og:type" content="book" />
@@ -342,18 +342,18 @@ div.csl-indent {
 <span id="cb1-2"><a href="index.html#cb1-2" aria-hidden="true" tabindex="-1"></a>simple_life <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">url</span>(<span class="st">&quot;https://ndownloader.figshare.com/files/28920855&quot;</span>))</span>
 <span id="cb1-3"><a href="index.html#cb1-3" aria-hidden="true" tabindex="-1"></a>simple_life</span></code></pre></div>
 <pre><code>## # A tibble: 9 × 7
-##   simple_date steps_fitbit sleep_fitbit    hr steps_watch sleep_watch
-##   &lt;date&gt;             &lt;dbl&gt;        &lt;dbl&gt; &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;
-## 1 2021-06-02         20913          429    54       25197         314
-## 2 2021-06-03          6904          447    53       13042         302
-## 3 2021-06-04         19548          449    56       23285         413
-## 4 2021-06-05         19311          423    56       25832         355
-## 5 2021-06-06         26159          435    58       29533         385
-## 6 2021-06-07         21618          358    56       27796         240
-## 7 2021-06-08         20890          492    53       24360         434
-## 8 2021-06-09         12008          541    53       14517         399
-## 9 2021-06-10         18058          436    57       22392         403
-## # … with 1 more variable: meditation_mins &lt;dbl&gt;</code></pre>
+##   simple_date steps_fitbit sleep_fitbit    hr steps_watch sleep_watch meditati…¹
+##   &lt;date&gt;             &lt;dbl&gt;        &lt;dbl&gt; &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;      &lt;dbl&gt;
+## 1 2021-06-02         20913          429    54       25197         314          0
+## 2 2021-06-03          6904          447    53       13042         302          0
+## 3 2021-06-04         19548          449    56       23285         413         12
+## 4 2021-06-05         19311          423    56       25832         355         12
+## 5 2021-06-06         26159          435    58       29533         385         12
+## 6 2021-06-07         21618          358    56       27796         240          0
+## 7 2021-06-08         20890          492    53       24360         434         12
+## 8 2021-06-09         12008          541    53       14517         399         12
+## 9 2021-06-10         18058          436    57       22392         403         12
+## # … with abbreviated variable name ¹​meditation_mins</code></pre>
 </div>
 <div id="reflection-questions" class="section level4 unnumbered hasAnchor">
 <h4>Reflection questions<a href="index.html#reflection-questions" class="anchor-section" aria-label="Anchor link to header"></a></h4>

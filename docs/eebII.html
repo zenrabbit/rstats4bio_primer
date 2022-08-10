@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 4 Stats used in eeb II | A primer for biostatistics in R</title>
   <meta name="description" content="A brief introduction to statistical thinking in biostatistics supported by the R programming language." />
-  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 4 Stats used in eeb II | A primer for biostatistics in R" />
   <meta property="og:type" content="book" />
@@ -241,20 +241,21 @@ div.csl-indent {
 <span id="cb7-2"><a href="eebII.html#cb7-2" aria-hidden="true" tabindex="-1"></a>birds <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">url</span>(<span class="st">&quot;https://knb.ecoinformatics.org/knb/d1/mn/v2/object/urn%3Auuid%3Aa84a9673-878a-4c43-ba08-570b2d38bdc9&quot;</span>))</span>
 <span id="cb7-3"><a href="eebII.html#cb7-3" aria-hidden="true" tabindex="-1"></a>birds</span></code></pre></div>
 <pre><code>## # A tibble: 826 × 11
-##     year experiment      source   rep date  location species frequency behaviour
-##    &lt;dbl&gt; &lt;chr&gt;           &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;       &lt;dbl&gt; &lt;chr&gt;    
-##  1  2020 balcony birdwa… full       1 10/1… Holditc… Agelai…         3 flying   
-##  2  2020 balcony birdwa… full       1 10/1… Holditc… Agelai…         4 flying   
-##  3  2020 balcony birdwa… full       1 10/1… Holditc… Agelai…         1 perching 
-##  4  2020 balcony birdwa… full       1 10/1… High Pa… Aix sp…         4 swimming 
-##  5  2020 balcony birdwa… full       1 10/9… Vaughan  Anas p…         4 flying   
-##  6  2020 balcony birdwa… full       1 10/9… Vaughan  Anas p…         6 flying   
-##  7  2020 balcony birdwa… full       1 10/9… Vaughan  Anas p…         9 flying   
-##  8  2020 balcony birdwa… full       1 10/9… Vaughan  Anas p…        10 flying   
-##  9  2020 balcony birdwa… full       1 10/9… Vaughan  Anas p…         2 inactive 
-## 10  2020 balcony birdwa… full       1 10/9… Vaughan  Anas p…         2 inactive 
-## # … with 816 more rows, and 2 more variables: inititals &lt;chr&gt;,
-## #   citation_DOI &lt;chr&gt;</code></pre>
+##     year experiment   source   rep date  locat…¹ species frequ…² behav…³ initi…⁴
+##    &lt;dbl&gt; &lt;chr&gt;        &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  
+##  1  2020 balcony bir… full       1 10/1… Holdit… Agelai…       3 flying  RD     
+##  2  2020 balcony bir… full       1 10/1… Holdit… Agelai…       4 flying  RD     
+##  3  2020 balcony bir… full       1 10/1… Holdit… Agelai…       1 perchi… RD     
+##  4  2020 balcony bir… full       1 10/1… High P… Aix sp…       4 swimmi… AB     
+##  5  2020 balcony bir… full       1 10/9… Vaughan Anas p…       4 flying  TA     
+##  6  2020 balcony bir… full       1 10/9… Vaughan Anas p…       6 flying  TA     
+##  7  2020 balcony bir… full       1 10/9… Vaughan Anas p…       9 flying  TA     
+##  8  2020 balcony bir… full       1 10/9… Vaughan Anas p…      10 flying  TA     
+##  9  2020 balcony bir… full       1 10/9… Vaughan Anas p…       2 inacti… TA     
+## 10  2020 balcony bir… full       1 10/9… Vaughan Anas p…       2 inacti… TA     
+## # … with 816 more rows, 1 more variable: citation_DOI &lt;chr&gt;, and abbreviated
+## #   variable names ¹​location, ²​frequency, ³​behaviour, ⁴​inititals
+## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</code></pre>
 </div>
 <div id="reflection-questions-3" class="section level4 unnumbered hasAnchor">
 <h4>Reflection questions<a href="eebII.html#reflection-questions-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>

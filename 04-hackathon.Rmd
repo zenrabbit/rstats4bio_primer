@@ -40,7 +40,26 @@ humans
 3. How does the available data bias the inference and interpretation of relative variables on key outcomes?  
 
 ### Book review {-}  
-Throughout these sections, you should have now also completed a read of key chapters to support your learning from the text suggested 'The New Statistics with R' [@RN6087]. Use the [ten simple rules for reviews](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006562) suggested [@RN6148], and write and submit a short, less than 2000 word review of this text and submit to [turnitin.com](https://www.turnitin.com).  
+
+#### Instructions {-}  
+- Read the key chapters that best support your learning from the text 'The New Statistics with R' [@RN6087].  
+- Please use the [ten simple rules for reviews](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006562) [@RN6148] as your instructions how to do a review.  
+- Write and submit a short, less than 2000 word review of this text and submit to [turnitin.com](https://www.turnitin.com).
+
+#### Examples {-}  
+1. [Doing Meta-Analysis with R - A Hands-On Guide](https://www.jstatsoft.org/article/view/v102b02)  
+
+2. [Python and R for the Modern Data Scientist](https://www.jstatsoft.org/article/view/v103b02)  
+
+3. [R for Data Science](https://www.jstatsoft.org/article/view/v077b01)  
+
+4. [Applied Time Series Analysis with R (2nd Edition)](https://www.jstatsoft.org/article/view/v085b03)  
+
+5. [Open Sesame: R for Data Science is Open Science](https://ojs.library.queensu.ca/index.php/IEE/article/view/6559)  
+
+
+
+
 
 
 ### Rubric {-}  

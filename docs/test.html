@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 6 Test | A primer for biostatistics in R</title>
   <meta name="description" content="A brief introduction to statistical thinking in biostatistics supported by the R programming language." />
-  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 6 Test | A primer for biostatistics in R" />
   <meta property="og:type" content="book" />
@@ -227,24 +227,25 @@ div.csl-indent {
 <span id="cb15-2"><a href="test.html#cb15-2" aria-hidden="true" tabindex="-1"></a>trees <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">url</span>(<span class="st">&quot;https://knb.ecoinformatics.org/knb/d1/mn/v2/object/urn%3Auuid%3A1e738f4d-f491-4b40-b55a-e8395c5349ce&quot;</span>))  </span>
 <span id="cb15-3"><a href="test.html#cb15-3" aria-hidden="true" tabindex="-1"></a>trees</span></code></pre></div>
 <pre><code>## # A tibble: 6,951 × 27
-##      FID OBJECTID Date   Block Street_or_       Building_C Tree_Tag_N Species_Co
-##    &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;                 &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;     
-##  1     0        1 9/7/12 A     Stedman Lecture…         22          1 lochon    
-##  2     1        2 9/7/12 A     Stedman Lecture…         22          2 lochon    
-##  3     2        3 9/7/12 A     Stedman Lecture…         22          3 lochon    
-##  4     3        4 9/7/12 A     Stedman Lecture…         22          4 lochon    
-##  5     4        5 9/7/12 A     Stedman Lecture…         22          5 lochon    
-##  6     5        6 9/7/12 A     Stedman Lecture…         22          6 lochon    
-##  7     6        7 9/7/12 A     Stedman Lecture…         22          7 lochon    
-##  8     7        8 9/7/12 A     Stedman Lecture…         22          8 lochon    
-##  9     8        9 9/7/12 A     Stedman Lecture…         22          9 lochon    
-## 10     9       10 9/7/12 A     Stedman Lecture…         22         10 lochon    
-## # … with 6,941 more rows, and 19 more variables: Common_Nam &lt;chr&gt;, Genus &lt;chr&gt;,
-## #   Species &lt;chr&gt;, DBH &lt;dbl&gt;, Number_of_ &lt;dbl&gt;, Percentage &lt;dbl&gt;,
-## #   Crown_Widt &lt;dbl&gt;, Total_Heig &lt;dbl&gt;, Latitude &lt;dbl&gt;, Longitude &lt;dbl&gt;,
-## #   Height_to_ &lt;dbl&gt;, Unbalanced &lt;dbl&gt;, Reduced_Cr &lt;dbl&gt;, Weak_Yello &lt;dbl&gt;,
-## #   Defoliatio &lt;dbl&gt;, Dead_Broke &lt;dbl&gt;, Poor_Branc &lt;dbl&gt;, Lean &lt;dbl&gt;,
-## #   Trunk_Scar &lt;dbl&gt;</code></pre>
+##      FID OBJECTID Date   Block Street_or_  Build…¹ Tree_…² Speci…³ Commo…⁴ Genus
+##    &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;         &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;
+##  1     0        1 9/7/12 A     Stedman Le…      22       1 lochon  Honey … Gled…
+##  2     1        2 9/7/12 A     Stedman Le…      22       2 lochon  Honey … Gled…
+##  3     2        3 9/7/12 A     Stedman Le…      22       3 lochon  Honey … Gled…
+##  4     3        4 9/7/12 A     Stedman Le…      22       4 lochon  Honey … Gled…
+##  5     4        5 9/7/12 A     Stedman Le…      22       5 lochon  Honey … Gled…
+##  6     5        6 9/7/12 A     Stedman Le…      22       6 lochon  Honey … Gled…
+##  7     6        7 9/7/12 A     Stedman Le…      22       7 lochon  Honey … Gled…
+##  8     7        8 9/7/12 A     Stedman Le…      22       8 lochon  Honey … Gled…
+##  9     8        9 9/7/12 A     Stedman Le…      22       9 lochon  Honey … Gled…
+## 10     9       10 9/7/12 A     Stedman Le…      22      10 lochon  Honey … Gled…
+## # … with 6,941 more rows, 17 more variables: Species &lt;chr&gt;, DBH &lt;dbl&gt;,
+## #   Number_of_ &lt;dbl&gt;, Percentage &lt;dbl&gt;, Crown_Widt &lt;dbl&gt;, Total_Heig &lt;dbl&gt;,
+## #   Latitude &lt;dbl&gt;, Longitude &lt;dbl&gt;, Height_to_ &lt;dbl&gt;, Unbalanced &lt;dbl&gt;,
+## #   Reduced_Cr &lt;dbl&gt;, Weak_Yello &lt;dbl&gt;, Defoliatio &lt;dbl&gt;, Dead_Broke &lt;dbl&gt;,
+## #   Poor_Branc &lt;dbl&gt;, Lean &lt;dbl&gt;, Trunk_Scar &lt;dbl&gt;, and abbreviated variable
+## #   names ¹​Building_C, ²​Tree_Tag_N, ³​Species_Co, ⁴​Common_Nam
+## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</code></pre>
 </div>
 <div id="rubric-1" class="section level3 unnumbered hasAnchor">
 <h3>Rubric<a href="test.html#rubric-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
