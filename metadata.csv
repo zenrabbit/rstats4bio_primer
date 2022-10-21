@@ -1,0 +1,28 @@
+attribute,description,units
+FID,FID refer to an unique identifier of an object within a table in ArcGIS data,none
+OBJECTID,unique instance of measurement counting rows,none
+Date,"month, day, year format",none
+Block,block that York uses in some maps to organize campus into grid,none
+Street_or_,road names,none
+Building_C,building code,none
+Tree_Tag_N,number on the metal tag affixed to each tree on campus,none
+Species_Co,species code acronyms used to abbreviate species names,none
+Common_Nam,"not the Latin binomial name for a species, the common name used",none
+Genus,genus is a taxonomic unit that may contain one species (monotypic),none
+Species,most basic category in the system of taxonomy,none
+DBH,diameter at breast height measured at approximately 1.3 m (4.3 ft),cm
+Number_of_,number of main branches,count
+Percentage,percentage of canopy cover,total out of 100
+Crown_Widt,width of the crown,feet
+Total_Heig,"the total height of tree to the top of canopy, actual top of tree",feet
+Latitude,"degrees decimals, a notation for expressing latitude and longitude geographic coordinates as decimal fractions of a degree",decimal degree
+Longitude,"degrees decimals, a notation for expressing latitude and longitude geographic coordinates as decimal fractions of a degree",decimal degree
+Height_to_,height to first branch of the main trunk of the tree,feet
+Unbalanced,the number of times a tree splits or branches out from main trunk,number of splits
+Reduced_Cr,"a measure of reduced crown treatment by the foresters on campus, number of branches removed",count
+Weak_Yello,"an indirect of tree health, Likert Score from 0 to 3 with 0 being no yellow and three significant yellow and evidence of weak branches","ordinal data, score"
+Defoliatio,"an indirect of tree health, Likert Score from 0 to 3 with 0 being no evidence of leaf loss and 3 being significant loss","ordinal data, score"
+Dead_Broke,number of dead or broken branches,count
+Poor_Branc,"an indirect of tree health, Likert Score from 0 to 3 with 0 being no evidence of poor branches, and 3 being many","ordinal data, score"
+Lean,"A tree that leans because it has grown towards the sun often has a curving trunk, score from 0 being upright at 90 degrees to ground and 3 being significant lean at 45 degrees","ordinal data, score"
+Trunk_Scar,number of tree scars on main trunk of tree,count

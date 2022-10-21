@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 5 Hackathon | A primer for biostatistics in R</title>
   <meta name="description" content="A brief introduction to statistical thinking in biostatistics supported by the R programming language." />
-  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 5 Hackathon | A primer for biostatistics in R" />
   <meta property="og:type" content="book" />
@@ -91,7 +91,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -104,7 +104,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -179,6 +179,8 @@ div.csl-indent {
 <li class="chapter" data-level="6" data-path="test.html"><a href="test.html"><i class="fa fa-check"></i><b>6</b> Test</a>
 <ul>
 <li class="chapter" data-level="" data-path="test.html"><a href="test.html#test-adventure-time"><i class="fa fa-check"></i>Test adventure time</a></li>
+<li class="chapter" data-level="" data-path="test.html"><a href="test.html#metadata-for-test-data"><i class="fa fa-check"></i>Metadata for test data</a></li>
+<li class="chapter" data-level="" data-path="test.html"><a href="test.html#test-data"><i class="fa fa-check"></i>Test data</a></li>
 <li class="chapter" data-level="" data-path="test.html"><a href="test.html#clean-code"><i class="fa fa-check"></i>Clean code</a></li>
 <li class="chapter" data-level="" data-path="test.html"><a href="test.html#rubric-1"><i class="fa fa-check"></i>Rubric</a></li>
 </ul></li>
@@ -244,8 +246,7 @@ div.csl-indent {
 ##  8     8  1997 113934
 ##  9     9  1997 109441
 ## 10    10  1997 146876
-## # … with 223 more rows
-## # ℹ Use `print(n = ...)` to see more rows</code></pre>
+## # … with 223 more rows</code></pre>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="hackathon.html#cb11-1" aria-hidden="true" tabindex="-1"></a>USA <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">url</span>(<span class="st">&quot;https://figshare.com/ndownloader/files/25190510&quot;</span>))</span>
 <span id="cb11-2"><a href="hackathon.html#cb11-2" aria-hidden="true" tabindex="-1"></a>USA</span></code></pre></div>
 <pre><code>## # A tibble: 16 × 6
@@ -288,8 +289,7 @@ div.csl-indent {
 ## #   `1972` &lt;chr&gt;, `1973` &lt;chr&gt;, `1974` &lt;chr&gt;, `1975` &lt;chr&gt;, `1976` &lt;chr&gt;,
 ## #   `1977` &lt;chr&gt;, `1978` &lt;chr&gt;, `1979` &lt;chr&gt;, `1980` &lt;chr&gt;, `1981` &lt;chr&gt;,
 ## #   `1982` &lt;chr&gt;, `1983` &lt;chr&gt;, `1984` &lt;chr&gt;, `1985` &lt;chr&gt;, `1986` &lt;chr&gt;,
-## #   `1987` &lt;chr&gt;, `1988` &lt;chr&gt;, `1989` &lt;chr&gt;, `1990` &lt;chr&gt;, `1991` &lt;chr&gt;, …
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</code></pre>
+## #   `1987` &lt;chr&gt;, `1988` &lt;chr&gt;, `1989` &lt;chr&gt;, `1990` &lt;chr&gt;, `1991` &lt;chr&gt;, …</code></pre>
 </div>
 <div id="reflection-questions-4" class="section level4 unnumbered hasAnchor">
 <h4>Reflection questions<a href="hackathon.html#reflection-questions-4" class="anchor-section" aria-label="Anchor link to header"></a></h4>

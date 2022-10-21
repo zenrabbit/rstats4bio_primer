@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 6 Test | A primer for biostatistics in R</title>
   <meta name="description" content="A brief introduction to statistical thinking in biostatistics supported by the R programming language." />
-  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 6 Test | A primer for biostatistics in R" />
   <meta property="og:type" content="book" />
@@ -91,7 +91,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -104,7 +104,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -179,6 +179,8 @@ div.csl-indent {
 <li class="chapter" data-level="6" data-path="test.html"><a href="test.html"><i class="fa fa-check"></i><b>6</b> Test</a>
 <ul>
 <li class="chapter" data-level="" data-path="test.html"><a href="test.html#test-adventure-time"><i class="fa fa-check"></i>Test adventure time</a></li>
+<li class="chapter" data-level="" data-path="test.html"><a href="test.html#metadata-for-test-data"><i class="fa fa-check"></i>Metadata for test data</a></li>
+<li class="chapter" data-level="" data-path="test.html"><a href="test.html#test-data"><i class="fa fa-check"></i>Test data</a></li>
 <li class="chapter" data-level="" data-path="test.html"><a href="test.html#clean-code"><i class="fa fa-check"></i>Clean code</a></li>
 <li class="chapter" data-level="" data-path="test.html"><a href="test.html#rubric-1"><i class="fa fa-check"></i>Rubric</a></li>
 </ul></li>
@@ -224,6 +226,163 @@ div.csl-indent {
 <div id="test-adventure-time" class="section level3 unnumbered hasAnchor">
 <h3>Test adventure time<a href="test.html#test-adventure-time" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>York University, <a href="https://en.wikipedia.org/wiki/Keele_Campus_(York_University)">Keele Campus</a> is a small urban forest mixed with grasslands and open space. The master gardeners measured nearly 7000 trees over the course of two years. These data were recently compiled and <a href="https://knb.ecoinformatics.org/view/doi%3A10.5063%2FQ81BGH">published</a>. There are many fascinating and compelling questions to explore that can support evidence-informed decisions and valuation estimates for this place ecologically, environmentally, and from a trait or species-level perspective. This challenge as a summative test is thus relatively more open ended. Given these data, collected and now published, what can we do to enhance our biological and social understanding and appreciation for a university campus that support people, other animals, and plants. Explore the data, define a relevant challenge or set of questions that would benefit the stakeholders or local community or inform our understanding of a biological theory, and demonstrate your mastery of critical thinking in statistics. Submit your work to <a href="https://www.turnitin.com">turnitin.com</a> as PDF including the code, annotation, rationale, interpretation, and outputs from the viz, EDA, and model(s) that supported your thinking.</p>
+</div>
+<div id="metadata-for-test-data" class="section level3 unnumbered hasAnchor">
+<h3>Metadata for test data<a href="test.html#metadata-for-test-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table>
+<colgroup>
+<col width="5%" />
+<col width="85%" />
+<col width="9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">attribute</th>
+<th align="left">description</th>
+<th align="left">units</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">FID</td>
+<td align="left">FID refer to an unique identifier of an object within a table in ArcGIS data</td>
+<td align="left">none</td>
+</tr>
+<tr class="even">
+<td align="left">OBJECTID</td>
+<td align="left">unique instance of measurement counting rows</td>
+<td align="left">none</td>
+</tr>
+<tr class="odd">
+<td align="left">Date</td>
+<td align="left">month, day, year format</td>
+<td align="left">none</td>
+</tr>
+<tr class="even">
+<td align="left">Block</td>
+<td align="left">block that York uses in some maps to organize campus into grid</td>
+<td align="left">none</td>
+</tr>
+<tr class="odd">
+<td align="left">Street_or_</td>
+<td align="left">road names</td>
+<td align="left">none</td>
+</tr>
+<tr class="even">
+<td align="left">Building_C</td>
+<td align="left">building code</td>
+<td align="left">none</td>
+</tr>
+<tr class="odd">
+<td align="left">Tree_Tag_N</td>
+<td align="left">number on the metal tag affixed to each tree on campus</td>
+<td align="left">none</td>
+</tr>
+<tr class="even">
+<td align="left">Species_Co</td>
+<td align="left">species code acronyms used to abbreviate species names</td>
+<td align="left">none</td>
+</tr>
+<tr class="odd">
+<td align="left">Common_Nam</td>
+<td align="left">not the Latin binomial name for a species, the common name used</td>
+<td align="left">none</td>
+</tr>
+<tr class="even">
+<td align="left">Genus</td>
+<td align="left">genus is a taxonomic unit that may contain one species (monotypic)</td>
+<td align="left">none</td>
+</tr>
+<tr class="odd">
+<td align="left">Species</td>
+<td align="left">most basic category in the system of taxonomy</td>
+<td align="left">none</td>
+</tr>
+<tr class="even">
+<td align="left">DBH</td>
+<td align="left">diameter at breast height measured at approximately 1.3 m (4.3 ft)</td>
+<td align="left">cm</td>
+</tr>
+<tr class="odd">
+<td align="left">Number_of_</td>
+<td align="left">number of main branches</td>
+<td align="left">count</td>
+</tr>
+<tr class="even">
+<td align="left">Percentage</td>
+<td align="left">percentage of canopy cover</td>
+<td align="left">total out of 100</td>
+</tr>
+<tr class="odd">
+<td align="left">Crown_Widt</td>
+<td align="left">width of the crown</td>
+<td align="left">feet</td>
+</tr>
+<tr class="even">
+<td align="left">Total_Heig</td>
+<td align="left">the total height of tree to the top of canopy, actual top of tree</td>
+<td align="left">feet</td>
+</tr>
+<tr class="odd">
+<td align="left">Latitude</td>
+<td align="left">degrees decimals, a notation for expressing latitude and longitude geographic coordinates as decimal fractions of a degree</td>
+<td align="left">decimal degree</td>
+</tr>
+<tr class="even">
+<td align="left">Longitude</td>
+<td align="left">degrees decimals, a notation for expressing latitude and longitude geographic coordinates as decimal fractions of a degree</td>
+<td align="left">decimal degree</td>
+</tr>
+<tr class="odd">
+<td align="left">Height_to_</td>
+<td align="left">height to first branch of the main trunk of the tree</td>
+<td align="left">feet</td>
+</tr>
+<tr class="even">
+<td align="left">Unbalanced</td>
+<td align="left">the number of times a tree splits or branches out from main trunk</td>
+<td align="left">number of splits</td>
+</tr>
+<tr class="odd">
+<td align="left">Reduced_Cr</td>
+<td align="left">a measure of reduced crown treatment by the foresters on campus, number of branches removed</td>
+<td align="left">count</td>
+</tr>
+<tr class="even">
+<td align="left">Weak_Yello</td>
+<td align="left">an indirect of tree health, Likert Score from 0 to 3 with 0 being no yellow and three significant yellow and evidence of weak branches</td>
+<td align="left">ordinal data, score</td>
+</tr>
+<tr class="odd">
+<td align="left">Defoliatio</td>
+<td align="left">an indirect of tree health, Likert Score from 0 to 3 with 0 being no evidence of leaf loss and 3 being significant loss</td>
+<td align="left">ordinal data, score</td>
+</tr>
+<tr class="even">
+<td align="left">Dead_Broke</td>
+<td align="left">number of dead or broken branches</td>
+<td align="left">count</td>
+</tr>
+<tr class="odd">
+<td align="left">Poor_Branc</td>
+<td align="left">an indirect of tree health, Likert Score from 0 to 3 with 0 being no evidence of poor branches, and 3 being many</td>
+<td align="left">ordinal data, score</td>
+</tr>
+<tr class="even">
+<td align="left">Lean</td>
+<td align="left">A tree that leans because it has grown towards the sun often has a curving trunk, score from 0 being upright at 90 degrees to ground and 3 being significant lean at 45 degrees</td>
+<td align="left">ordinal data, score</td>
+</tr>
+<tr class="odd">
+<td align="left">Trunk_Scar</td>
+<td align="left">number of tree scars on main trunk of tree</td>
+<td align="left">count</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="test-data" class="section level3 unnumbered hasAnchor">
+<h3>Test data<a href="test.html#test-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="test.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb15-2"><a href="test.html#cb15-2" aria-hidden="true" tabindex="-1"></a>trees <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">url</span>(<span class="st">&quot;https://knb.ecoinformatics.org/knb/d1/mn/v2/object/urn%3Auuid%3A1e738f4d-f491-4b40-b55a-e8395c5349ce&quot;</span>))  </span>
 <span id="cb15-3"><a href="test.html#cb15-3" aria-hidden="true" tabindex="-1"></a>trees</span></code></pre></div>
@@ -245,8 +404,7 @@ div.csl-indent {
 ## #   Latitude &lt;dbl&gt;, Longitude &lt;dbl&gt;, Height_to_ &lt;dbl&gt;, Unbalanced &lt;dbl&gt;,
 ## #   Reduced_Cr &lt;dbl&gt;, Weak_Yello &lt;dbl&gt;, Defoliatio &lt;dbl&gt;, Dead_Broke &lt;dbl&gt;,
 ## #   Poor_Branc &lt;dbl&gt;, Lean &lt;dbl&gt;, Trunk_Scar &lt;dbl&gt;, and abbreviated variable
-## #   names ¹​Building_C, ²​Tree_Tag_N, ³​Species_Co, ⁴​Common_Nam
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names</code></pre>
+## #   names ¹​Building_C, ²​Tree_Tag_N, ³​Species_Co, ⁴​Common_Nam</code></pre>
 </div>
 <div id="clean-code" class="section level3 unnumbered hasAnchor">
 <h3>Clean code<a href="test.html#clean-code" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -254,6 +412,10 @@ div.csl-indent {
 </div>
 <div id="rubric-1" class="section level3 unnumbered hasAnchor">
 <h3>Rubric<a href="test.html#rubric-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Remember, we are working together to hone our statistical reasoning skills.</p>
+<p><strong>The goal is to tell a story with these data</strong>.</p>
+<p>It does not need to be super complex, but it does need to showcase your skills in understanding key principles such as a GLM with appropriate data visualizations - but any reasonable test that MATCHES the story you tell is great.</p>
+<p>Show your work of exploring the data in plots and basic stats, develop your idea, test it, and then have a final key plot showing the relationship you tested.</p>
 <table>
 <colgroup>
 <col width="3%" />
