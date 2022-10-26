@@ -799,6 +799,38 @@ Put your practice to the test. Here are some excellent \href{https://www.rstudio
 
 At times in many disciplines of biological research, we need to be open to experimentation that is fair, transparent, and replicable but that is implemented based on available data. This experimentatation can also happen after we have data. It can be an exercise in fitting the most appropriate or parsimonous models \citep{RN1873}, applying experimental design principles \citep{RN6381}, and of course invoking critical thinking. This is not to say we are going on fishing expeditions, but that that at times, we have only certain data to describe a system and are tasked or obligated to use the best possible evidence we have to infer relevant processes. For instance, we might compile field data, data from online resources or data products for climate or landscapes, or reuse data on traits on genetics and link these different evidence streams together to explore a question. Critical thinking in statistics can be an important framework that we leverage to not only do the statistics and fit models but also ensure that we are able to ask the questions we need to. In summary, we have data and need an answer but have to use open and transparent thinking with statistics to find the best question.
 
+\hypertarget{workflow-for-hackathons}{%
+\subsection*{Workflow for hackathons}\label{workflow-for-hackathons}}
+\addcontentsline{toc}{subsection}{Workflow for hackathons}
+
+A hackathon in data science and the computational science is a fixed-duration, collaborative endeavor to develop a solution for a focussed challenge. The goal is to have a reasonably functional first-approximation that is viable and/or describes the key processes for a system or dataset. It is a blend of hacking and marathon to race or sprint towards a clear endpoint in development. In the data and statistical sciences, we intensively work to deepen our understanding of evidence ideally with key data visualizations and a model that predicts or describes key outcomes. The advantage of setting a reasonably short but fair duration is that it reduces the likelihood that tangents are unduly developed. It also hones your coding, research skills, and statistical reasoning through practiced mental model application of statistics to new data to tell a balanced and reproducible, transparent story.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Get the data.
+\item
+  Read the metadata (and if you get stuck, look up from online resources or related/similar datasets the potential meaning of opaque variable names). Nomenclature and annotation shorthand terminology in a field can be highly specific at times.
+\item
+  Consider and ensure that you understand the individual vectors or variables (inspect the dataframe).
+\item
+  Develop an informal or formal \href{https://www.integrate.io/blog/data-mapping-an-overview-of-data-mapping-and-its-technology/}{data map} - picture a \href{https://www.data-to-viz.com/graph/sankey.html}{Sankey diagram} (conceptual semantic visualization of relationships between variables).
+\item
+  Dig into online resources or literature to ideate on important questions, novel gaps, key theories, or even basic fundamental science that supports these data.
+\item
+  Decide on focus and key purpose and begin to plan out an analytical workflow.
+\item
+  Determine if you have sufficient data, i.e., consider if you need to augment these data. Augmenting data can be from novel data sources or from reclassification of existing data.
+\item
+  Begin your exploration of the dimensions and scope of the variables you were interested in using (\href{https://cran.r-project.org/web/packages/skimr/vignettes/skimr.html}{skimr}, min, max, \href{https://cran.r-project.org/web/packages/fitdistrplus/index.html}{fitdistrplus}, or str-like functions or tools in R).
+\item
+  Now, adopt the r4ds workflow such as \href{https://r4ds.had.co.nz/introduction.html}{Fig 1.1}, and use plots such as histograms or boxplots to understand depth and range of data, use basic tests as the t.test to explore differences, and prepare for your final statistical model and keystone plot to show the differences you tested.
+\item
+  Code and test your main model to address the overarching goal. Decide and revise the best/most representative instance of data viz that illuminates the salient process or patterns examined.
+\end{enumerate}
+
+If you favor this method of collaborative work in your lab or team, here are \href{https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007808}{ten simple rules to run a successful BioHackathon}.
+
 \hypertarget{test-adventure-time}{%
 \subsection*{Test adventure time}\label{test-adventure-time}}
 \addcontentsline{toc}{subsection}{Test adventure time}
